@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './css/MasterLogin.css'
 
 export default function Master(){
 
@@ -16,28 +17,38 @@ export default function Master(){
 
     }
 
+    function loginButtonPressed(event){
+        event.preventDefault()
+    }
+
+    function forgetPasswordClicked(){
+
+    }
+
     return(
-        <div>
-            <div className='login--container'>
+        <div className='master--login'>
+<div className='master--login--container'>
                 <h1>Login to master account.</h1>
-                <form>
+                <form onSubmit={loginButtonPressed}>
                     <input
                         type="email"
                         placeholder="Email"
                         onChange={handleChange}
                         name="email"
-                        value={formData.email}
+                        value={loginData.email}
                     />
                     <input
                         type="password"
                         placeholder="Password"
                         onChange={handleChange}
-                        name="email"
-                        value={formData.email}
+                        name="password"
+                        value={loginData.password}
                     />
+                    <h4 className='forgot--password' onClick={forgetPasswordClicked()}>Forgot password</h4>
+                    <button className='master--login--button'>Login</button>
                 </form>
             </div>
-           
         </div>
+        
     )
 }

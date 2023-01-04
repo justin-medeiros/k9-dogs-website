@@ -1,4 +1,6 @@
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import React, { useState } from 'react'
+import {auth} from '../firebase-config'
 import './css/MasterLogin.css'
 
 export default function Master(){
@@ -17,8 +19,15 @@ export default function Master(){
 
     }
 
-    function loginButtonPressed(event){
-        event.preventDefault()
+    async function loginButtonPressed(e){
+        e.preventDefault()
+        await signInWithEmailAndPassword(auth, loginData.email, loginData.password)
+            .then((userCredential) => {
+                console.log(userCredential.user)
+            })
+            .catch((error) => {
+                console.log(error.code, error.message)
+            })
     }
 
     function forgetPasswordClicked(){

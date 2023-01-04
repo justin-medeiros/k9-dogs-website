@@ -1,12 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-export default function Master(){
-
-
-
-    return(
-        <div>
-            
-        </div>
-    )
+export default function Master() {
+  return <div></div>;
 }

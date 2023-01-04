@@ -1,5 +1,6 @@
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import {auth} from '../firebase-config'
 import './css/MasterLogin.css'
 
@@ -8,6 +9,7 @@ export default function MasterLogin(){
     const [loginData, changeLoginData] = useState({
         email: "", password: ""
     })
+    const navigate = useNavigate();
 
     function handleChange(event){
         const {name, value} = event.target
@@ -31,7 +33,7 @@ export default function MasterLogin(){
     }
 
     function forgetPasswordClicked(){
-
+        navigate("/forgotpassword");
     }
 
     return(
@@ -53,7 +55,7 @@ export default function MasterLogin(){
                         name="password"
                         value={loginData.password}
                     />
-                    <h4 className='forgot--password' onClick={forgetPasswordClicked()}>Forgot password</h4>
+                    <h4 className='forgot--password--text' onClick={forgetPasswordClicked}>Forgot password</h4>
                     <button className='master--login--button'>Login</button>
                 </form>
             </div>

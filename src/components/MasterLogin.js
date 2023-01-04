@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import {auth} from '../firebase-config'
 import './css/MasterLogin.css'
 
-export default function Master(){
+export default function MasterLogin(){
 
     const [loginData, changeLoginData] = useState({
         email: "", password: ""
@@ -36,7 +36,7 @@ export default function Master(){
 
     return(
         <div className='master--login'>
-<div className='master--login--container'>
+            <div className='master--login--container'>
                 <h1>Login to master account.</h1>
                 <form onSubmit={loginButtonPressed}>
                     <input

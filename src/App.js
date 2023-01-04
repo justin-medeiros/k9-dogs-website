@@ -1,11 +1,14 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import MasterLogin from'./components/MasterLogin';
 
 function App() {
   return (
-    <div>
-      <MasterLogin />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/master' element = {<MasterLogin />}/>
+      </Routes>
+    </Router>
   );
 }
 

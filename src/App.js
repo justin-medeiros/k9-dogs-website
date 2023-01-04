@@ -1,11 +1,16 @@
-import './App.css';
-import MasterLogin from'./components/MasterLogin';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
+import MasterLogin from "./master-account/MasterLogin";
+import ForgotPassword from "./master-account/ForgotPassword";
 
 function App() {
   return (
-    <div>
-      <MasterLogin />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/master" element={<MasterLogin />} />
+        <Route path="/reset" element={<ForgotPassword />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,8 +1,8 @@
 import { sendPasswordResetEmail } from "firebase/auth";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../firebase-config";
-import "./css/ForgotPassword.css";
+import { auth } from "../../firebase-config";
+import "./ForgotPassword.css";
 
 export default function ForgotPassword() {
   const [forgetPasswordEmail, setForgetPasswordEmail] = useState("");
@@ -10,7 +10,7 @@ export default function ForgotPassword() {
   const navigate = useNavigate();
 
   async function submitClicked() {
-    if (forgetPasswordEmail == "") {
+    if (forgetPasswordEmail === "") {
       alert("email empty");
     } else {
       await sendPasswordResetEmail(auth, forgetPasswordEmail)

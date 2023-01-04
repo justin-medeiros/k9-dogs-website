@@ -1,8 +1,8 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../firebase-config";
-import "./css/MasterLogin.css";
+import { auth } from "../../firebase-config";
+import "./MasterLogin.css";
 
 export default function MasterLogin() {
   const [loginData, changeLoginData] = useState({

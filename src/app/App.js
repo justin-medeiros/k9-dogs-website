@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import MasterLogin from "./master-account/MasterLogin";
-import ForgotPassword from "./master-account/ForgotPassword";
+import MasterLogin from "../master-account/MasterLogin/MasterLogin";
+import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
 
 function App() {
   return (

@@ -6,6 +6,7 @@ import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
 import Master from "../master-account/Master/Master";
 import AddDogs from "../master-account/MasterEdit/AddDogs/AddDogs";
 import AddPuppies from "../master-account/MasterEdit/AddPuppies/AddPuppies";
+import AddPhotos from "../master-account/MasterEdit/AddPhotos/AddPhotos";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/master-edit" element={<Master />} />
         <Route path="/master-edit/addkennel" element={<AddDogs />} />
         <Route path="/master-edit/addpuppies" element={<AddPuppies />} />
+        <Route path="/master-edit/addphotos" element={<AddPhotos />} />
       </Routes>
     </Router>
   );

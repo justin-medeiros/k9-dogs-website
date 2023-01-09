@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Master.css";
 import ItemCard from "./components/ItemCard";
 import { useNavigate } from "react-router-dom";
@@ -10,13 +10,13 @@ export default function Master() {
   function routeChange(choice) {
     switch (choice) {
       case MasterChoices.ADD_DOGS:
-        navigate("/addkennel");
+        navigate("addkennel");
         break;
       case MasterChoices.ADD_PUPPIES:
-        navigate("/addpuppies");
+        navigate("addpuppies");
         break;
       default:
-        navigate("/addphotos");
+        navigate("addphotos");
         break;
     }
   }

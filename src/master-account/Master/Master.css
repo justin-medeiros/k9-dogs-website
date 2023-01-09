@@ -1,0 +1,16 @@
+.master {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.master--container {
+  display: grid;
+  grid-template: auto auto / repeat(3, 1fr);
+  justify-content: center;
+  gap: 100px;
+}

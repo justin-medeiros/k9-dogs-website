@@ -1,15 +1,14 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../firebase-config";
-import "./css/MasterLogin.css";
+import { Link } from "react-router-dom";
+import { auth } from "../../firebase-config";
+import "./MasterLogin.css";
 
 export default function MasterLogin() {
   const [loginData, changeLoginData] = useState({
     email: "",
     password: "",
   });
-  const navigate = useNavigate();
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -30,10 +29,6 @@ export default function MasterLogin() {
       .catch((error) => {
         console.log(error.code, error.message);
       });
-  }
-
-  function forgetPasswordClicked() {
-    navigate("/reset");
   }
 
   return (

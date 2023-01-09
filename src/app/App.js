@@ -5,6 +5,7 @@ import MasterLogin from "../master-account/MasterLogin/MasterLogin";
 import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
 import Master from "../master-account/Master/Master";
 import AddDogs from "../master-account/MasterEdit/AddDogs/AddDogs";
+import AddPuppies from "../master-account/MasterEdit/AddPuppies/AddPuppies";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/reset" element={<ForgotPassword />} />
         <Route path="/master-edit" element={<Master />} />
         <Route path="/master-edit/addkennel" element={<AddDogs />} />
+        <Route path="/master-edit/addpuppies" element={<AddPuppies />} />
       </Routes>
     </Router>
   );

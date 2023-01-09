@@ -4,7 +4,7 @@ import "./App.css";
 import MasterLogin from "../master-account/MasterLogin/MasterLogin";
 import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
 import Master from "../master-account/Master/Master";
-import AddDogs from "../master-account/MasterEditItems/AddDogs/AddDogs";
+import AddDogs from "../master-account/MasterEdit/AddDogs/AddDogs";
 
 function App() {
   return (

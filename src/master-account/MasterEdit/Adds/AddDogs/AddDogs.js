@@ -1,11 +1,11 @@
+import React, { useEffect, useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import React, { useEffect, useState } from "react";
-import { db, storage } from "../../../firebase-config";
-import "./AddPuppies.css";
+import { db, storage } from "../../../../firebase-config";
+import "./AddDogs.css";
 
-export default function AddPuppies() {
-  const [newPuppyData, setPuppyData] = useState({
+export default function AddDogs() {
+  const [newDogData, setNewDogData] = useState({
     name: "",
     gender: "",
     photoUrl: "",
@@ -16,18 +16,18 @@ export default function AddPuppies() {
 
   useEffect(() => {
     const saveDataToDatabase = async () => {
-      if (newPuppyData.photoUrl != "") {
-        await setDoc(doc(db, "puppies", newPuppyData.name), newPuppyData);
-        console.log(newPuppyData);
+      if (newDogData.photoUrl != "") {
+        await setDoc(doc(db, "dogs", newDogData.name), newDogData);
+        console.log(newDogData);
         alert("data sent");
       }
     };
     saveDataToDatabase();
-  }, [newPuppyData.photoUrl]);
+  }, [newDogData.photoUrl]);
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setPuppyData((dogData) => {
+    setNewDogData((dogData) => {
       return {
         ...dogData,
         [name]: value, // Will change the value of the form name
@@ -43,15 +43,15 @@ export default function AddPuppies() {
 
   function submitForm(event) {
     event.preventDefault();
-    const imageRef = ref(storage, `puppies/${newPuppyData.name}`);
+    const imageRef = ref(storage, `dogs/${newDogData.name}`);
     uploadBytes(imageRef, newImage)
       .then(() => {
         getDownloadURL(imageRef)
           .then((url) => {
             console.log(url);
-            setPuppyData(() => {
+            setNewDogData(() => {
               return {
-                ...newPuppyData,
+                ...newDogData,
                 photoUrl: url,
               };
             });
@@ -68,32 +68,32 @@ export default function AddPuppies() {
   }
 
   return (
-    <div className="add--puppies">
-      <div className="add--puppies--container">
-        <h1 className="add--puppies--title">Add a new puppy to the litter.</h1>
-        <form className="add--puppies--form" onSubmit={submitForm}>
+    <div className="add--dogs">
+      <div className="add--dogs--container">
+        <h1 className="add--dogs--title">Add a new dog to the kennel.</h1>
+        <form className="add--dogs--form" onSubmit={submitForm}>
           <input
             type="text"
             placeholder="Name"
             onChange={handleChange}
             name="name"
-            value={newPuppyData.name}
+            value={newDogData.name}
           />
           <h3>Select a gender.</h3>
           <select
             name="gender"
             onChange={handleChange}
-            value={newPuppyData.gender}
+            value={newDogData.gender}
           >
             <option value="select">--Select--</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-          <h3>Upload a photo of your puppy.</h3>
+          <h3>Upload a photo of your dog.</h3>
           <input type="file" name="image" onChange={handleImageChange} />
           <textarea
             type="textbox"
-            value={newPuppyData.description}
+            value={newDogData.description}
             placeholder="Description"
             onChange={handleChange}
             name="description"

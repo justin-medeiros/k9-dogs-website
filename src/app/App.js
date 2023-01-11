@@ -4,9 +4,9 @@ import "./App.css";
 import MasterLogin from "../master-account/MasterLogin/MasterLogin";
 import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
 import Master from "../master-account/Master/Master";
-import AddDogs from "../master-account/MasterEdit/AddDogs/AddDogs";
-import AddPuppies from "../master-account/MasterEdit/AddPuppies/AddPuppies";
-import AddPhotos from "../master-account/MasterEdit/AddPhotos/AddPhotos";
+import AddDogs from "../master-account/MasterEdit/Adds/AddDogs/AddDogs";
+import AddPuppies from "../master-account/MasterEdit/Adds/AddPuppies/AddPuppies";
+import AddPhotos from "../master-account/MasterEdit/Adds/AddPhotos/AddPhotos";
 
 function App() {
   return (

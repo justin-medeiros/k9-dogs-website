@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { storage } from "../../../firebase-config";
+import { storage } from "../../../../firebase-config";
 import "./AddPhotos.css";
 
 export default function AddDogs() {

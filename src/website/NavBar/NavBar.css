@@ -1,0 +1,83 @@
+.navbar--container {
+  width: 100vw;
+  height: 80px;
+  background-color: #161a1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+}
+
+.navbar--logo {
+  width: 20%;
+  margin-left: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+  margin-right: 60px;
+}
+
+ul > li {
+  font-family: Rubik, sans-serif;
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
+
+.navbar--links {
+  color: #465159;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar--links.active {
+  color: white;
+  position: relative;
+}
+
+.navbar--links.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+  background-color: #e5383b;
+}
+
+.navbar--links:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: #e5383b;
+  animation: slideIn 0.2s ease-in;
+}
+
+.navbar--links:hover {
+  color: white;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

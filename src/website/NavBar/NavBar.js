@@ -1,22 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 export default function NavBar() {
-  const [currentTab, setCurrentTab] = useState("");
   const [navButton, setNavButton] = useState(false);
-  const [menuIconClick, setMenuIconClick] = useState(false);
-
-  useEffect(() => {
-    setCurrentTab(window.location.pathname);
-    console.log(currentTab);
-    console.log(navButton);
-  }, [window.location.pathname]);
+  const [click, setClick] = useState(false);
 
   const onMenuIconClick = () => {
-    setMenuIconClick((prevClick) => {
+    setClick((prevClick) => {
       return !prevClick;
     });
+  };
+
+  const closeMobileMenu = () => {
+    setClick(false);
   };
 
   const showNavButton = () => {
@@ -35,15 +32,14 @@ export default function NavBar() {
         <NavLink to="/">
           <img className="navbar--logo" src="/images/logo-w-r-v2.png"></img>
         </NavLink>
-        <ul
-          className={menuIconClick ? "navbar--items active" : "navbar--items"}
-        >
+        <ul className={click ? "navbar--items mobile" : "navbar--items"}>
           <li>
             <NavLink
               to="/"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Home
             </NavLink>
@@ -52,8 +48,9 @@ export default function NavBar() {
             <NavLink
               to="/ourdogs"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Our Dogs
             </NavLink>
@@ -62,8 +59,9 @@ export default function NavBar() {
             <NavLink
               to="/puppies"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Puppies
             </NavLink>
@@ -72,8 +70,9 @@ export default function NavBar() {
             <NavLink
               to="/gallery"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Gallery
             </NavLink>
@@ -82,8 +81,9 @@ export default function NavBar() {
             <NavLink
               to="/testimonials"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Testimonials
             </NavLink>
@@ -92,8 +92,9 @@ export default function NavBar() {
             <NavLink
               to="/faq"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               FAQ
             </NavLink>
@@ -102,17 +103,16 @@ export default function NavBar() {
             <NavLink
               to="/contact"
               className={
-                menuIconClick ? "navbar--mobile--links" : "navbar--links"
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
+              onClick={closeMobileMenu}
             >
               Contact Us
             </NavLink>
           </li>
         </ul>
         <div className="menu--icon" onClick={onMenuIconClick}>
-          <i
-            className={menuIconClick ? "fa-solid fa-xmark" : "fa-solid fa-bars"}
-          ></i>
+          <i className={click ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
         </div>
       </div>
     </nav>

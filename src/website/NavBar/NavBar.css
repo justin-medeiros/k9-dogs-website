@@ -1,0 +1,166 @@
+.navbar {
+  background: #161a1d;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar--container {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar--logo {
+  width: 200px;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar--items {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  column-gap: 40px;
+  margin-right: 50px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
+  justify-content: end;
+}
+
+.navbar--links {
+  color: #465159;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar--links.active {
+  color: white;
+  position: relative;
+}
+
+.navbar--links.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 100%;
+  background-color: #e5383b;
+}
+
+.navbar--links:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 2px;
+  background-color: #e5383b;
+  animation: slideIn 0.2s ease-in;
+}
+
+.navbar--links:hover {
+  color: white;
+  position: relative;
+}
+
+.navbar--mobile--links {
+  display: none;
+}
+
+.menu--icon {
+  display: none;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .navbar--links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .menu--icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    justify-self: end;
+    margin-right: 40px;
+    font-size: 1.6rem;
+    right: 0;
+    position: absolute;
+    visibility: visible;
+  }
+
+  .navbar--items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navbar--links.active::before {
+    background-color: transparent;
+  }
+
+  .navbar--items.mobile {
+    background: #161a1d;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbar--mobile--links {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    text-decoration: none;
+    color: #465159;
+  }
+
+  .navbar--mobile--links.active {
+    color: white;
+    background-color: #e5383b;
+    border-radius: 0;
+  }
+
+  .navbar--mobile--links:hover {
+    color: white;
+    background-color: #e5383b;
+    border-radius: 0;
+  }
+}

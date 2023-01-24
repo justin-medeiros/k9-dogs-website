@@ -9,10 +9,10 @@ export default function Master() {
 
   function routeChange(choice) {
     switch (choice) {
-      case MasterChoices.ADD_DOGS:
+      case MasterChoices.KENNEL:
         navigate("addkennel");
         break;
-      case MasterChoices.ADD_PUPPIES:
+      case MasterChoices.PUPPIES:
         navigate("addpuppies");
         break;
       default:
@@ -25,16 +25,16 @@ export default function Master() {
     <div className="master">
       <div className="master--container">
         <ItemCard
-          title={MasterChoices.ADD_DOGS}
-          handleClick={() => routeChange(MasterChoices.ADD_DOGS)}
+          title={MasterChoices.KENNEL}
+          handleClick={() => routeChange(MasterChoices.KENNEL)}
         />
         <ItemCard
-          title={MasterChoices.ADD_PUPPIES}
-          handleClick={() => routeChange(MasterChoices.ADD_PUPPIES)}
+          title={MasterChoices.PUPPIES}
+          handleClick={() => routeChange(MasterChoices.PUPPIES)}
         />
         <ItemCard
-          title={MasterChoices.ADD_PHOTOS}
-          handleClick={() => routeChange(MasterChoices.ADD_PHOTOS)}
+          title={MasterChoices.PHOTO_GALLERY}
+          handleClick={() => routeChange(MasterChoices.PHOTO_GALLERY)}
         />
       </div>
     </div>

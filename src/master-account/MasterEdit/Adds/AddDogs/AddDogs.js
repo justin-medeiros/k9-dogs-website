@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { db, storage } from "../../../firebase-config";
+import { db, storage } from "../../../../firebase-config";
 import "./AddDogs.css";
 
 export default function AddDogs() {

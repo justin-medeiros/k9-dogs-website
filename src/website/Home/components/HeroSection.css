@@ -1,0 +1,54 @@
+.hero--container {
+  height: 91.5vh;
+  width: 100%;
+  background-image: url("../../../../public/images/HomePage-dogs.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.hero--image {
+  width: 50%;
+  min-width: 500px;
+  object-fit: contain;
+}
+
+.hero--text {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+
+.hero--socials > p {
+  font-size: 26px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.icons--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+  column-gap: 80px;
+  position: relative;
+}
+
+.twitter--icon,
+.instagram--icon,
+.facebook--icon {
+  color: white;
+}
+
+.twitter--icon:hover,
+.instagram--icon:hover,
+.facebook--icon:hover {
+  color: #e5383b;
+  cursor: pointer;
+}

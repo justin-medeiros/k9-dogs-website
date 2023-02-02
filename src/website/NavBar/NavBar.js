@@ -30,7 +30,7 @@ export default function NavBar() {
     <nav className="navbar">
       <div className="navbar--container">
         <NavLink to="/">
-          <img className="navbar--logo" src="/images/logo-w-r-v2.png"></img>
+          <img className="navbar--logo" src="images/logo.png"></img>
         </NavLink>
         <ul className={click ? "navbar--items mobile" : "navbar--items"}>
           <li>

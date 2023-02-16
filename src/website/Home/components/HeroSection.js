@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import "./HeroSection.css";
 
 export default function HeroSection() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [window.innerWidth]);
+
   return (
     <div>
       <div className="hero--container">
@@ -20,21 +30,30 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Twitter className="twitter--icon" size={42} />
+              <Twitter
+                className="twitter--icon"
+                size={windowWidth > 960 ? 42 : 36}
+              />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook className="facebook--icon" size={42} />
+              <Facebook
+                className="facebook--icon"
+                size={windowWidth > 960 ? 42 : 36}
+              />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="instagram--icon" size={42} />
+              <Instagram
+                className="instagram--icon"
+                size={windowWidth > 960 ? 42 : 36}
+              />
             </a>
           </div>
         </div>

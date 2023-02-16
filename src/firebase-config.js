@@ -19,6 +19,8 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
+//Change to dotenv
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);

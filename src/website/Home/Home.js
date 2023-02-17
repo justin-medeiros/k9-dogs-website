@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
+import OurDogs from "./components/OurDogs";
 import "./Home.css";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <About />
+      <OurDogs />
     </div>
   );
 }

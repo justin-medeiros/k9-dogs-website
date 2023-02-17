@@ -4,3 +4,8 @@
   padding: 0;
   font-family: Rubik, sans-serif;
 }
+
+html {
+  --red: #e5383b;
+  --black: #161a1d;
+}

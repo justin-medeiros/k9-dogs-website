@@ -15,7 +15,10 @@
 }
 
 .home--dogs--swiper--container {
-  margin: 50px 80px;
+  margin: 40px 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .swiper {
@@ -24,16 +27,23 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 200px 0px;
+  border-radius: 20px;
 }
 
 .swiper-slide-active {
-  background-color: var(--red);
+  z-index: 1;
+}
+
+.swiper-slide-next {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.swiper-slide-prev {
+  opacity: 0.5;
+  z-index: 0;
 }

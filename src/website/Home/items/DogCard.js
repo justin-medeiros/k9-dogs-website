@@ -11,7 +11,7 @@ export default function DogCard() {
       </div>
       <div className="dogcard--text--container">
         <div className="dogcard--title--container">
-          <h1 className="dogcard--title">Ivey dei Precision</h1>
+          <h1 className="dogcard--title">VA2 Ivey dei Precision IGP 2</h1>
           <i
             className="fa-solid fa-mars"
             style={{

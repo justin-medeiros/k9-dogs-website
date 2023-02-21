@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1000px #161a1d33;
 }
 
 .hero--image {
@@ -49,7 +49,7 @@
 .twitter--icon:hover,
 .instagram--icon:hover,
 .facebook--icon:hover {
-  color: #e5383b;
+  color: var(--red);
   cursor: pointer;
 }
 

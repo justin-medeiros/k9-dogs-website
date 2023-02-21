@@ -1,5 +1,16 @@
 {
   "about": {
     "text": "At Clarot’s German Shepherds, we strive to produce dogs who embody superior temperament, correct conformation, a keen will to work and above all great health. Our selective breeding program allows you to choose from the finest blood lines Germany has to offer. Our love for the German Shepherd dog started over 30 years ago. I have enjoyed working with my dogs both in the sport of Schutzhund and in the show ring. The ideal German Shepherd dog is a working dog with a reliable character that shows a strong degree of beauty and nobility.\n\nI am among countless people worldwide whose lives are richer for knowing and loving a German Shepherd, the most versatile of dog breeds. The breed was developed to serve man and woman, and also to work for us and with us.\n\nAs a breeder, it is my goal to continue producing dogs that are loyal and amazing companions that are able to succeed and adapt to the lifestyle that they are given."
-  }
+  },
+  "dogs": [
+    {
+      "0": {
+        "name": "Ted",
+        "imgUrl": "dhsjbjdsbfhjb",
+        "about": "This is ACJ-890",
+        "gender": "M"
+      },
+      "1": {}
+    }
+  ]
 }

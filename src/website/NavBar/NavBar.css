@@ -1,5 +1,5 @@
 .navbar {
-  background: #161a1d;
+  background: var(--black);
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@
   bottom: -10px;
   height: 2px;
   width: 100%;
-  background-color: #e5383b;
+  background-color: var(--red);
 }
 
 .navbar--links:hover::before {
@@ -73,7 +73,7 @@
   right: 0;
   bottom: -10px;
   height: 2px;
-  background-color: #e5383b;
+  background-color: var(--red);
   animation: slideIn 0.2s ease-in;
 }
 
@@ -135,7 +135,7 @@
   }
 
   .navbar--items.mobile {
-    background: #161a1d;
+    background: var(--black);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -154,13 +154,13 @@
 
   .navbar--mobile--links.active {
     color: white;
-    background-color: #e5383b;
+    background-color: var(--red);
     border-radius: 0;
   }
 
   .navbar--mobile--links:hover {
     color: white;
-    background-color: #e5383b;
+    background-color: var(--red);
     border-radius: 0;
   }
 }

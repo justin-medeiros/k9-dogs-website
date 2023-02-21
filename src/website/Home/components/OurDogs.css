@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background-color: var(--dark-grey);
 }
 
 .home--dogs--title {
   align-self: center;
   margin-top: 40px;
   font-size: 42px;
-  color: var(--black);
+  color: white;
   border-bottom: 4px solid var(--red);
   padding-bottom: 10px;
 }
@@ -17,35 +17,36 @@
 .home--dogs--swiper--container {
   assign-self: center;
   margin: 40px 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 60px;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+  background-color: var(--light-grey);
 }
 
 .slick-dots li button::before {
-  color: var(--red) !important;
+  color: white !important;
   font-size: 10px !important;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: var(--red) !important;
+  color: white !important;
   font-size: 30px !important;
-  opacity: 0.8 !important;
+  opacity: 1 !important;
 }
 
 .slick-prev:hover:before,
 .slick-next:hover:before {
-  color: var(--red) !important;
-  opacity: 0.8 !important;
+  color: white !important;
+  opacity: 1 !important;
 }
 
 .slick-prev:focus:before,
 .slick-next:focus:before {
-  color: var(--red) !important;
-  opacity: 0.8 !important;
+  color: white !important;
+  opacity: 1 !important;
 }
 
 .home--dogs--swiper--container .slick-prev {

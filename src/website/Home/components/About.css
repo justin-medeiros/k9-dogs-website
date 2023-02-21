@@ -21,7 +21,7 @@
 }
 
 .about--title {
-  font-size: 60px;
+  font-size: 50px;
   color: white;
 }
 
@@ -34,14 +34,14 @@
 
 .about--text {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
 }
 
 .about--image {
   object-fit: cover;
   width: 40vw;
-  height: 650px;
+  height: 600px;
   border-radius: 20px;
   margin-right: 120px;
   border: 10px solid var(--black);

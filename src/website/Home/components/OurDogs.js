@@ -4,6 +4,7 @@ import DogCard from "../items/DogCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 export default function OurDogs() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -63,6 +64,9 @@ export default function OurDogs() {
           </div>
         </Slider>
       </div>
+      <Link to="/ourdogs" className="home--dogs--see--more">
+        Click to see more!
+      </Link>
     </div>
   );
 }

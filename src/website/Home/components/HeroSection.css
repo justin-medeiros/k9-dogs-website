@@ -18,17 +18,20 @@
 }
 
 .hero--text {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
   color: white;
 }
 
 .hero--socials > p {
-  font-size: 26px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 400;
   color: white;
   text-align: center;
   margin-top: 100px;
+  padding: 4px 0px;
+  border-radius: 10px;
+  background-color: var(--red);
 }
 
 .icons--container {
@@ -55,7 +58,7 @@
 
 @media only screen and (max-width: 768px) {
   .hero--socials > p {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .hero--text {

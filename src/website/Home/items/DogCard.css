@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
-  height: 460px;
+  width: 380px;
+  height: 440px;
   margin: 0 auto;
 }
 
@@ -80,4 +80,68 @@
   font-weight: 500;
   padding: 4px 12px;
   border-radius: 10px;
+}
+
+.fa-solid.fa-mars {
+  font-size: 26px;
+  color: var(--red);
+}
+
+@media only screen and (max-width: 1300px) {
+  .dogcard--overall--container {
+    width: 320px;
+    height: 380px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .dogcard--overall--container {
+    width: 320px;
+    height: 380px;
+  }
+  .dogcard--title {
+    font-size: 18px;
+  }
+
+  .dogcard--subtitle {
+    font-size: 14px;
+  }
+
+  .dogcard--text--about {
+    font-size: 12px;
+  }
+
+  .dogcard--btn {
+    font-size: 16px;
+  }
+  .fa-solid.fa-mars {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dogcard--overall--container {
+    width: 280px;
+    height: 340px;
+  }
+
+  .dogcard--title {
+    font-size: 16px;
+  }
+
+  .dogcard--subtitle {
+    font-size: 12px;
+  }
+
+  .dogcard--text--about {
+    font-size: 10px;
+  }
+
+  .dogcard--btn {
+    font-size: 14px;
+  }
+
+  .fa-solid.fa-mars {
+    font-size: 20px;
+  }
 }

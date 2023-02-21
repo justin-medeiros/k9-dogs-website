@@ -15,6 +15,7 @@
 }
 
 .home--dogs--swiper--container {
+  assign-self: center;
   margin: 40px 40px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -49,4 +50,16 @@
 
 .home--dogs--swiper--container .slick-prev {
   margin-left: -10px;
+}
+
+@media only screen and (max-width: 960px) {
+  .home--dogs--title {
+    font-size: 44px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home--dogs--title {
+    font-size: 36px;
+  }
 }

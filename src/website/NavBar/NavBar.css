@@ -41,6 +41,7 @@
 
 .navbar--links {
   color: #465159;
+  font-weight: 500;
   display: flex;
   align-items: center;
   height: 100%;
@@ -80,7 +81,6 @@
 
 .navbar--links:hover {
   color: white;
-  font-weight: 500;
   position: relative;
 }
 

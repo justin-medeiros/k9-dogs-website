@@ -53,8 +53,20 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer--icons--container">
-          <i className="fa-brands fa-instagram"></i>
-          <i className="fa-brands fa-square-facebook"></i>
+          <a
+            href="https://www.instagram.com/clarotgermanshepherds/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/k9dogs.ca/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-square-facebook"></i>
+          </a>
         </div>
       </div>
     </div>

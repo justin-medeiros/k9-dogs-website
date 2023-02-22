@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Facebook, Instagram, Twitter } from "react-feather";
+import { Facebook, Instagram } from "react-feather";
 import "./HeroSection.css";
 
 export default function HeroSection() {
@@ -19,39 +19,29 @@ export default function HeroSection() {
         <img className="hero--image" src="/images/logo.png"></img>
         <p className="hero--text">Breeding German Shepherds That Matter!</p>
         <div className="hero--socials">
-          <p>Connect with me!</p>
+          <p className="hero--box">Connect with me!</p>
           <div
             className="icons--container"
             target="_blank"
             rel="noopener noreferrer"
           >
             <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter
-                className="twitter--icon"
-                size={windowWidth > 960 ? 42 : 36}
-              />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Facebook
-                className="facebook--icon"
-                size={windowWidth > 960 ? 42 : 36}
-              />
-            </a>
-            <a
-              href="https://twitter.com"
+              href="https://www.instagram.com/clarotgermanshepherds/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram
                 className="instagram--icon"
+                size={windowWidth > 960 ? 42 : 36}
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/k9dogs.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook
+                className="facebook--icon"
                 size={windowWidth > 960 ? 42 : 36}
               />
             </a>

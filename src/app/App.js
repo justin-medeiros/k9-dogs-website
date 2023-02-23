@@ -10,6 +10,7 @@ import AddPhotos from "../master-account/MasterEdit/Adds/AddPhotos/AddPhotos";
 import Home from "../website/Home/Home";
 import NavBar from "../website/NavBar/NavBar";
 import Footer from "../website/Footer/Footer";
+import Gallery from "../website/Gallery/Gallery";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/gallery" element={<Gallery />}></Route>
         <Route path="/master" element={<MasterLogin />}></Route>
         <Route path="/reset" element={<ForgotPassword />} />
         <Route path="/master-edit" element={<Master />} />

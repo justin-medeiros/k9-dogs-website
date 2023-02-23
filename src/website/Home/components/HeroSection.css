@@ -18,35 +18,40 @@
 }
 
 .hero--text {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   color: white;
 }
 
-.hero--socials > p {
-  font-size: 26px;
-  font-weight: 300;
+.hero--box {
+  font-size: 20px;
+  font-weight: 400;
   color: white;
   text-align: center;
   margin-top: 100px;
+  padding: 4px 40px;
+  border-radius: 10px;
+  background-color: var(--red);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .icons--container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
   margin-top: 40px;
-  column-gap: 80px;
-  position: relative;
 }
 
-.twitter--icon,
 .instagram--icon,
 .facebook--icon {
   color: white;
   size: 30px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.twitter--icon:hover,
 .instagram--icon:hover,
 .facebook--icon:hover {
   color: var(--red);
@@ -55,7 +60,7 @@
 
 @media only screen and (max-width: 768px) {
   .hero--socials > p {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .hero--text {

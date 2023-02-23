@@ -9,6 +9,7 @@ import AddPuppies from "../master-account/MasterEdit/Adds/AddPuppies/AddPuppies"
 import AddPhotos from "../master-account/MasterEdit/Adds/AddPhotos/AddPhotos";
 import Home from "../website/Home/Home";
 import NavBar from "../website/NavBar/NavBar";
+import Footer from "../website/Footer/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/master-edit/addpuppies" element={<AddPuppies />} />
         <Route path="/master-edit/addphotos" element={<AddPhotos />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

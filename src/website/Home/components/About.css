@@ -6,6 +6,7 @@
   width: 100%;
   padding: 60px 0px;
   border-radius: 0 0 80% 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about--container {
@@ -20,37 +21,27 @@
 }
 
 .about--title {
-  font-size: 80px;
+  font-size: 50px;
   color: white;
-  border-bottom: 6px solid var(--red);
 }
 
-.about--slogan {
-  background-color: white;
-  padding: 10px;
-  margin: 40px 0px;
+.about--underline {
+  height: 6px;
+  background-color: var(--red);
+  width: 300px;
+  margin-bottom: 20px;
 }
 
 .about--text {
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
-}
-
-.about--image--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 700px;
-  height: 750px;
-  min-height: 400px;
-  margin-right: 120px;
 }
 
 .about--image {
   object-fit: cover;
-  width: 35vw;
-  height: 800px;
+  width: 40vw;
+  height: 600px;
   border-radius: 20px;
   margin-right: 120px;
   border: 10px solid var(--black);
@@ -71,17 +62,11 @@
   }
 
   .about--title {
-    font-size: 44px;
-    color: white;
-    border-bottom: 6px solid var(--red);
+    font-size: 40px;
   }
 
-  .about--slogan {
-    background-color: white;
-    text-align: center;
-    font-size: 22px;
-    padding: 10px;
-    margin: 40px 0px;
+  .about--underline {
+    width: 240px;
   }
 
   .about--text {
@@ -103,23 +88,18 @@
     align-self: center;
     border-radius: 20px;
     margin-right: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about--title {
-    font-size: 36px;
+    font-size: 34px;
     color: white;
-    border-bottom: 6px solid var(--red);
   }
 
-  .about--slogan {
-    background-color: white;
-    text-align: center;
-    font-size: 22px;
-    padding: 10px;
-    margin: 40px 0px;
+  .about--underline {
+    width: 185px;
   }
 
   .about--text {

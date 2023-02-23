@@ -4,6 +4,8 @@ import DogCard from "../items/DogCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import data from "./../../../data.json";
 
 export default function OurDogs() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -28,6 +30,14 @@ export default function OurDogs() {
     }
   }, [windowWidth]);
 
+  const allDogs = data.dogs.map((dogData) => {
+    return (
+      <div key={dogData.id}>
+        <DogCard dog={dogData} />
+      </div>
+    );
+  });
+
   const settings = {
     dots: true,
     infinite: true,
@@ -42,27 +52,11 @@ export default function OurDogs() {
     <div className="home--dogs--overall--container">
       <h1 className="home--dogs--title">Our Dogs</h1>
       <div className="home--dogs--swiper--container">
-        <Slider {...settings}>
-          <div>
-            <DogCard />
-          </div>
-          <div>
-            <DogCard />
-          </div>
-          <div>
-            <DogCard />
-          </div>
-          <div>
-            <DogCard />
-          </div>
-          <div>
-            <DogCard />
-          </div>
-          <div>
-            <DogCard />
-          </div>
-        </Slider>
+        <Slider {...settings}>{allDogs}</Slider>
       </div>
+      <Link to="/ourdogs" className="home--dogs--see--more">
+        Click to see more!
+      </Link>
     </div>
   );
 }

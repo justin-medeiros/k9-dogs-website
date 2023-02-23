@@ -92,7 +92,8 @@
   box-shadow: inset 400px 0 0 0 white;
 }
 
-.fa-solid.fa-mars {
+.fa-solid.fa-mars,
+.fa-solid.fa-venus {
   font-size: 26px;
   color: var(--red);
 }

@@ -4,13 +4,44 @@
   },
   "dogs": [
     {
-      "0": {
-        "name": "Ted",
-        "imgUrl": "dhsjbjdsbfhjb",
-        "about": "This is ACJ-890",
-        "gender": "M"
-      },
-      "1": {}
+      "id": 0,
+      "name": "VA2 Ivey Dei Precision IGP 2",
+      "subtitle": "“a” normal, elbows normal",
+      "sire": "Sire : VA1 X-Box Dei Precision",
+      "dam": "Dam : V1  Jetta Dei Precision",
+      "gender": "F"
+    },
+    {
+      "id": 1,
+      "name": "V 24 (BSZS) IGP1 Gemma Vom Frankengold",
+      "subtitle": "“a” normal, elbows normal",
+      "sire": "Sire : Fred Vom Rumbachtal",
+      "dam": "Dam: ANUSCH VOM FRANKENGOLD",
+      "gender": "F"
+    },
+    {
+      "id": 2,
+      "name": "Quinoa Dei Precision",
+      "subtitle": "“a” normal, elbows normal",
+      "sire": "Sire : Team Leiksaid Wuller",
+      "dam": "Dam : SG BSZS ADEL WESTBACK IGP! KKl",
+      "gender": "F"
+    },
+    {
+      "id": 3,
+      "name": "BH Clarot’s Chloe",
+      "subtitle": "",
+      "sire": "Sire : VA1 BOBO Von ARLETTCA ",
+      "dam": "Dam : SG1  Doli Psino Bins",
+      "gender": "F"
+    },
+    {
+      "id": 4,
+      "name": "Clarot’s Alie",
+      "subtitle": "“a” normal, elbows normal",
+      "sire": "Sire : VA1 Oargos Dei Precision IGP 3 KKL",
+      "dam": "Dam : V24( BSZS) Gemma Vom Frankengold IGP 1",
+      "gender": "F"
     }
   ]
 }

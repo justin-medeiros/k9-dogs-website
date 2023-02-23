@@ -1,7 +1,7 @@
 import React from "react";
 import "./DogCard.css";
 
-export default function DogCard() {
+export default function DogCard(props) {
   return (
     <div className="dogcard--overall--container">
       <div className="dogcard--container">
@@ -11,14 +11,22 @@ export default function DogCard() {
       </div>
       <div className="dogcard--text--container">
         <div className="dogcard--title--container">
-          <h1 className="dogcard--title">VA2 Ivey dei Precision IGP 2</h1>
-          <i className="fa-solid fa-mars"></i>
+          <h1 className="dogcard--title">{props.dog.name}</h1>
+          <i
+            className={
+              props.dog.gender === "M"
+                ? "fa-solid fa-mars"
+                : "fa-solid fa-venus"
+            }
+          ></i>
         </div>
 
-        <h1 className="dogcard--subtitle">VA2 IPO2, KKL1</h1>
+        <h1 className="dogcard--subtitle">{props.dog.subtitle}</h1>
         <div className="dogcard--text--line"></div>
         <p className="dogcard--text--about">
-          jkdbchjhjsbddnchbdhcbjh cbchjb jhsabch jasbchsabcab
+          {props.dog.sire}
+          <br />
+          {props.dog.dam}
         </p>
         <button className="dogcard--btn">Click More!</button>
       </div>

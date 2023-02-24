@@ -1,8 +1,8 @@
 import React from "react";
 import About from "./components/About";
 import HeroSection from "./components/HeroSection";
-import OurDogs from "./components/OurDogs";
-import Testimonials from "./components/Testimonials";
+import HomeOurDogs from "./components/HomeOurDogs";
+import HomeTestimonials from "./components/HomeTestimonials";
 import "./Home.css";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
     <div className="home--container">
       <HeroSection />
       <About />
-      <OurDogs />
-      <Testimonials />
+      <HomeOurDogs />
+      <HomeTestimonials />
     </div>
   );
 }

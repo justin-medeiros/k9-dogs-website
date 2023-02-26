@@ -5,35 +5,31 @@ export default function Gallery() {
   const data = [
     {
       id: 0,
-      imgSrc: "/images/image-gs.jpeg",
+      imgSrc: "/images/gallery/dog1.jpeg",
     },
     {
       id: 1,
-      imgSrc: "/images/image-gs.jpeg",
+      imgSrc: "/images/gallery/dog2.jpeg",
     },
     {
       id: 2,
-      imgSrc: "/images/image-gs.jpeg",
+      imgSrc: "/images/gallery/dog3.jpeg",
     },
     {
       id: 3,
-      imgSrc: "/images/test.jpeg",
+      imgSrc: "/images/gallery/dog4.jpeg",
     },
     {
       id: 4,
-      imgSrc: "/images/test.png",
+      imgSrc: "/images/gallery/dog5.jpeg",
     },
     {
       id: 5,
-      imgSrc: "/images/image-gs.jpeg",
+      imgSrc: "/images/gallery/dog6.jpeg",
     },
     {
       id: 6,
-      imgSrc: "/images/image-gs.jpeg",
-    },
-    {
-      id: 7,
-      imgSrc: "/images/test.jpeg",
+      imgSrc: "/images/gallery/dog7.jpg",
     },
   ];
 

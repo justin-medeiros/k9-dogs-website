@@ -10,24 +10,26 @@ export default function DogCard(props) {
         </div>
       </div>
       <div className="dogcard--text--container">
-        <div className="dogcard--title--container">
-          <h1 className="dogcard--title">{props.dog.name}</h1>
-          <i
-            className={
-              props.dog.gender === "M"
-                ? "fa-solid fa-mars"
-                : "fa-solid fa-venus"
-            }
-          ></i>
-        </div>
+        <div>
+          <div className="dogcard--title--container">
+            <h1 className="dogcard--title">{props.dog.name}</h1>
+            <i
+              className={
+                props.dog.gender === "M"
+                  ? "fa-solid fa-mars"
+                  : "fa-solid fa-venus"
+              }
+            ></i>
+          </div>
 
-        <h1 className="dogcard--subtitle">{props.dog.subtitle}</h1>
-        <div className="dogcard--text--line"></div>
-        <p className="dogcard--text--about">
-          {props.dog.sire}
-          <br />
-          {props.dog.dam}
-        </p>
+          {/* <h1 className="dogcard--subtitle">{props.dog.subtitle}</h1> */}
+          <div className="dogcard--text--line"></div>
+          <p className="dogcard--text--about">
+            {props.dog.sire}
+            <br />
+            {props.dog.dam}
+          </p>
+        </div>
         <button className="dogcard--btn">Click More!</button>
       </div>
     </div>

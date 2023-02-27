@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
+import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
-  const [validationMessage, setValidationMessage] = useState(null);
-  const [formData, setFormData] = useState({
+  const formDataEmptyObject = {
     name: "",
     email: "",
     subject: "",
     message: "",
-  });
+  };
+  const [validationMessage, setValidationMessage] = useState(null);
+  const [formData, setFormData] = useState(formDataEmptyObject);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -23,10 +25,16 @@ export default function ContactUs() {
   const submitForm = (e) => {
     e.preventDefault();
     if (Object.values(formData).some((data) => data == "")) {
-      alert("Fields empty");
       setValidationMessage(false);
     } else {
       setValidationMessage(true);
+      setFormData(formDataEmptyObject);
+      emailjs.sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      );
     }
   };
 
@@ -51,7 +59,7 @@ export default function ContactUs() {
             <h1 className="contactus--form--title">Email</h1>
             <input
               className="contactus--input--box"
-              type="text"
+              type="email"
               placeholder="Email"
               value={formData.email}
               name="email"
@@ -95,9 +103,9 @@ export default function ContactUs() {
                 }`}
               >
                 {validationMessage === true
-                  ? "Email sent successfully"
+                  ? "Email sent successfully."
                   : validationMessage === false
-                  ? "Some or all fields are empty. Please try again"
+                  ? "Fields are invalid or empty. Please try again."
                   : null}
               </h2>
             </div>

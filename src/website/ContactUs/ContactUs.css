@@ -56,7 +56,6 @@
   height: 10em;
   padding: 10px;
   resize: none;
-  overflow-y: scroll;
   text-align: left;
   display: block;
 }

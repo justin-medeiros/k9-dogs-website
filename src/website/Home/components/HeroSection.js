@@ -17,7 +17,9 @@ export default function HeroSection() {
     <div>
       <div className="hero--container">
         <img className="hero--image" src="/images/logo.png"></img>
-        <p className="hero--text">Breeding German Shepherds That Matter!</p>
+        <p className="hero--text">
+          Breeding German Shepherds For Over 30 Years!
+        </p>
         <div className="hero--socials">
           <p className="hero--box">Connect with me!</p>
           <div

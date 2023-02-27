@@ -43,5 +43,22 @@
       "dam": "Dam : V24( BSZS) Gemma Vom Frankengold IGP 1",
       "gender": "F"
     }
+  ],
+  "testimonials": [
+    {
+      "id": 0,
+      "text": "Thank you for the excellent German shepherd After having Cassie for half a year, we really want to thank Lino for providing us thisexcellent dog and his always kind support. First of all, Cassie hasbrought us so much Joy after she joined our family. She has very goodtemperament... Lino is such a responsible person. We don’t haveexperience with dogs at all. Whenever we have any questions, we eithermessage or email Lino, he always respond promptly and give us a lot ofvaluable suggestions. Lino is so helpful and supportive. I wouldrecommend Clarot’s German Shepherds to my friends.",
+      "author": "Lucy and family from Richmond Hill"
+    },
+    {
+      "id": 1,
+      "text": "Our family purchased our puppy (Tasha) from Clarot’s German Shepherd’s just before Christmas and we have been very pleased with the new addition to our family. As a Mother of 2 girls ages 7&9 and also an inexperienced dog owner I was very pleased with Lino’s Knowledge and experience with German Shepherd’s and very thankful as well that any questions I asked he was able to answer. His support both before and after bringing Tasha home has been greatly appreciated. I would definitely recommend Clarot’s to anyone looking for the highest quality in both breeders and German Shepherd’s. Thank you so much Lino!",
+      "author": "The Bowker familyl"
+    },
+    {
+      "id": 2,
+      "text": "For me, good temperament is paramount for a family pet and Amara’s temperament is wonderful. She played with many dogs tonight, including a few new ones and although the energy level rose quite high, we never saw her pass her threshold. Not even remotely! That’s amazing, especially for her first time on a Thursday night with a bunch of high energy dogs. I am very impressed with this dog. I am also impressed with the amount of self confidence and confidence she has. When things escalated between other dogs, she didn’t shy back nor become reactive to the situation. She has a great deal of control over her emotions. She is forgiving, but not too forgiving, which is absolutely perfect as a family pet.",
+      "author": "Rachelle"
+    }
   ]
 }

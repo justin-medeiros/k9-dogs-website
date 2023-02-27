@@ -1,4 +1,4 @@
-.testimonials--container {
+.home--testimonials--container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,13 +10,13 @@
   box-shadow: 0px 0px 10px rgb(255, 7, 7, 0.5);
 }
 
-.testimonials--title {
+.home--testimonials--title {
   font-size: 42px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   color: white;
 }
 
-.testimonials--subtitle {
+.home--testimonials--subtitle {
   font-size: 18px;
   color: white;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
@@ -26,7 +26,7 @@
   margin-top: 10px;
 }
 
-.testimonials--grid {
+.home--testimonials--grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -34,7 +34,7 @@
   margin-bottom: 20px;
 }
 
-.testimonials--show--all {
+.home--testimonials--show--all {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
@@ -48,39 +48,39 @@
   transition: ease-out 0.5s;
 }
 
-.testimonials--show--all:hover {
+.home--testimonials--show--all:hover {
   background-color: var(--light-grey);
   box-shadow: inset 400px 0 0 0 var(--light-grey);
 }
 
 @media only screen and (max-width: 960px) {
-  .testimonials--grid {
+  .home--testimonials--grid {
     display: flex;
     flex-direction: column;
   }
-  .testimonials--title {
+  .home--testimonials--title {
     font-size: 40px;
   }
 
-  .testimonials--subtitle {
+  .home--testimonials--subtitle {
     font-size: 16px;
   }
 
-  .testimonials--show--all {
+  .home--testimonials--show--all {
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .testimonials--title {
+  .home--testimonials--title {
     font-size: 34px;
   }
 
-  .testimonials--subtitle {
+  .home--testimonials--subtitle {
     font-size: 14px;
   }
 
-  .testimonials--show--all {
+  .home--testimonials--show--all {
     font-size: 16px;
   }
 }

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "./OurDogs.css";
+import "./HomeOurDogs.css";
 import DogCard from "../items/DogCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import data from "./../../../data.json";
+import data from "../../../data.json";
 
-export default function OurDogs() {
+export default function HomeOurDogs() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
   useEffect(() => {

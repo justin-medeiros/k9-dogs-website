@@ -75,21 +75,32 @@ export default function ContactUs() {
               onChange={handleChange}
             ></textarea>
             <button className="contactus--button">Submit</button>
-            <h2
-              className={`contactus--validation ${
-                validationMessage === true
-                  ? "success"
+            <div className="contactus--validation--container">
+              <i
+                className={`${
+                  validationMessage === true
+                    ? "fa-solid fa-check"
+                    : validationMessage === false
+                    ? "fa-solid fa-xmark"
+                    : ""
+                }`}
+              ></i>
+              <h2
+                className={`contactus--validation ${
+                  validationMessage === true
+                    ? "success"
+                    : validationMessage === false
+                    ? "error"
+                    : ""
+                }`}
+              >
+                {validationMessage === true
+                  ? "Email sent successfully"
                   : validationMessage === false
-                  ? "error"
-                  : ""
-              }`}
-            >
-              {validationMessage === true
-                ? "Email sent successfully"
-                : validationMessage === false
-                ? "Some or all fields are empty. Please try again"
-                : null}
-            </h2>
+                  ? "Some or all fields are empty. Please try again"
+                  : null}
+              </h2>
+            </div>
           </form>
         </div>
       </div>

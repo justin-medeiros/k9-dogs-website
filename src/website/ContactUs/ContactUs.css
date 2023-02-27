@@ -84,10 +84,40 @@
   box-shadow: inset 400px 0 0 0 white;
 }
 
-.contactus--validation {
+.contactus--validation--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
   margin-top: 20px;
+}
+.contactus--validation {
   font-size: 16px;
+  font-weight: 400;
   color: white;
+}
+
+.contactus--validation.success {
+  color: green;
+}
+
+.contactus--validation.error {
+  color: red;
+}
+
+.fa-solid.fa-check {
+  color: green;
+  display: flex;
+  align-self: center;
+  font-size: 20px;
+}
+
+.fa-solid.fa-xmark {
+  color: red;
+  display: flex;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 960px) {

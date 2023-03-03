@@ -2,48 +2,6 @@
   "about": {
     "text": "At Clarot’s German Shepherds, we strive to produce dogs who embody superior temperament, correct conformation, a keen will to work and above all great health. Our selective breeding program allows you to choose from the finest blood lines Germany has to offer. Our love for the German Shepherd dog started over 30 years ago. I have enjoyed working with my dogs both in the sport of Schutzhund and in the show ring. The ideal German Shepherd dog is a working dog with a reliable character that shows a strong degree of beauty and nobility.\n\nI am among countless people worldwide whose lives are richer for knowing and loving a German Shepherd, the most versatile of dog breeds. The breed was developed to serve man and woman, and also to work for us and with us.\n\nAs a breeder, it is my goal to continue producing dogs that are loyal and amazing companions that are able to succeed and adapt to the lifestyle that they are given."
   },
-  "dogs": [
-    {
-      "id": 0,
-      "name": "VA2 Ivey Dei Precision IGP 2",
-      "subtitle": "“a” normal, elbows normal",
-      "sire": "Sire : VA1 X-Box Dei Precision",
-      "dam": "Dam : V1  Jetta Dei Precision",
-      "gender": "F"
-    },
-    {
-      "id": 1,
-      "name": "V 24 (BSZS) IGP1 Gemma Vom Frankengold",
-      "subtitle": "“a” normal, elbows normal",
-      "sire": "Sire : Fred Vom Rumbachtal",
-      "dam": "Dam: ANUSCH VOM FRANKENGOLD",
-      "gender": "F"
-    },
-    {
-      "id": 2,
-      "name": "Quinoa Dei Precision",
-      "subtitle": "“a” normal, elbows normal",
-      "sire": "Sire : Team Leiksaid Wuller",
-      "dam": "Dam : SG BSZS ADEL WESTBACK IGP! KKl",
-      "gender": "F"
-    },
-    {
-      "id": 3,
-      "name": "BH Clarot’s Chloe",
-      "subtitle": "",
-      "sire": "Sire : VA1 BOBO Von ARLETTCA ",
-      "dam": "Dam : SG1  Doli Psino Bins",
-      "gender": "F"
-    },
-    {
-      "id": 4,
-      "name": "Clarot’s Alie",
-      "subtitle": "“a” normal, elbows normal",
-      "sire": "Sire : VA1 Oargos Dei Precision IGP 3 KKL",
-      "dam": "Dam : V24( BSZS) Gemma Vom Frankengold IGP 1",
-      "gender": "F"
-    }
-  ],
   "testimonials": [
     {
       "id": 0,

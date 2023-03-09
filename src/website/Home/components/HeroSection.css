@@ -1,7 +1,7 @@
 .hero--container {
   height: 91.5vh;
   width: 100%;
-  background-image: url("../../../../public/images/HomePage-dogs.png");
+  background-image: url("../../../../images/HomePage-dogs.png");
   background-size: cover;
   background-position: center;
   display: flex;

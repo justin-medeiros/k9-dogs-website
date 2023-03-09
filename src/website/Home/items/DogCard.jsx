@@ -21,8 +21,6 @@ export default function DogCard(props) {
               }
             ></i>
           </div>
-
-          {/* <h1 className="dogcard--subtitle">{props.dog.subtitle}</h1> */}
           <div className="dogcard--text--line"></div>
           <p className="dogcard--text--about">
             {props.dog.sire}

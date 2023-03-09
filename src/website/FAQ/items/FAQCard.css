@@ -1,0 +1,44 @@
+.faq--card--container {
+  width: 800px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: white;
+  overflow: hidden;
+}
+
+.faq--card--top--section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--black);
+  cursor: pointer;
+  transition: background-color 800ms;
+}
+
+.faq--card--top--section.open {
+  background-color: var(--red);
+  transition: background-color 800ms;
+}
+
+.faq--card--title {
+  color: white;
+  font-size: 26px;
+}
+
+.fa-solid.fa-square-minus,
+.fa-solid.fa-square-plus {
+  font-size: 26px;
+  color: white;
+}
+
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}
+
+.faq--card--text {
+  padding: 20px;
+}

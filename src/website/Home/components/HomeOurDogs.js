@@ -5,11 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import data from "../../../data.json";
+import { db } from "../../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 
 export default function HomeOurDogs() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
+  const [ourDogs, setOurDogs] = useState([]);
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -30,13 +32,21 @@ export default function HomeOurDogs() {
     }
   }, [windowWidth]);
 
-  const allDogs = data.dogs.map((dogData) => {
-    return (
-      <div key={dogData.id}>
-        <DogCard dog={dogData} />
-      </div>
-    );
-  });
+  useEffect(() => {
+    async function getDogs() {
+      const querySnapshot = await getDocs(collection(db, "dogs"));
+      const allDogs = querySnapshot.docs.map((doc) => {
+        const dogData = doc.data();
+        return (
+          <div key={doc.id}>
+            <DogCard dog={dogData} />
+          </div>
+        );
+      });
+      setOurDogs(allDogs);
+    }
+    getDogs();
+  }, []);
 
   const settings = {
     dots: true,
@@ -52,7 +62,7 @@ export default function HomeOurDogs() {
     <div className="home--dogs--overall--container">
       <h1 className="home--dogs--title">Our Dogs</h1>
       <div className="home--dogs--swiper--container">
-        <Slider {...settings}>{allDogs}</Slider>
+        <Slider {...settings}>{ourDogs}</Slider>
       </div>
       <Link to="/ourdogs" className="home--dogs--see--more">
         Click to see more!

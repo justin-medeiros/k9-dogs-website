@@ -13,6 +13,7 @@ import Footer from "../website/Footer/Footer";
 import Gallery from "../website/Gallery/Gallery";
 import OurDogs from "../website/OurDogs/OurDogs";
 import ContactUs from "../website/ContactUs/ContactUs";
+import FAQ from "../website/FAQ/FAQ";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />}></Route>
         <Route path="/ourdogs" element={<OurDogs />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
+        <Route path="/faq" element={<FAQ />}></Route>
         <Route path="/master" element={<MasterLogin />}></Route>
         <Route path="/reset" element={<ForgotPassword />} />
         <Route path="/master-edit" element={<Master />} />

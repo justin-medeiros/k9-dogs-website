@@ -1,0 +1,14 @@
+.faq--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--dark-grey);
+  border-top: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+}
+
+.faq--title {
+  color: white;
+  margin: 20px 0px;
+}

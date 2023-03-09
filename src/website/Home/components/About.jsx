@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import data from "./../../../data.json";
+import data from "../../../data.json";
 
 export default function About() {
   const aboutText = data.about.text.split("\n");

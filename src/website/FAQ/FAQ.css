@@ -4,11 +4,35 @@
   justify-content: center;
   flex-direction: column;
   background-color: var(--dark-grey);
-  border-top: 2px solid var(--red);
-  border-bottom: 2px solid var(--red);
 }
 
 .faq--title {
   color: white;
-  margin: 20px 0px;
+  font-size: 38px;
+  padding: 40px 0px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--red);
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq--contact {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.faq--contact--us {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+}
+
+.faq--contact--us:hover {
+  color: var(--red);
 }

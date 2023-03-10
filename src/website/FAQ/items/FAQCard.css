@@ -4,6 +4,7 @@
   border-radius: 10px;
   background-color: var(--black);
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .faq--card--top--section {
@@ -13,18 +14,20 @@
   align-items: center;
   padding: 20px 20px;
   border-radius: 10px;
+  margin: 1px;
   cursor: pointer;
-  transition: background-color 800ms, border 400ms;
+  transition: background-color 800ms, outline 400ms;
 }
 
 .faq--card--top--section.open {
   background-color: var(--red);
-  transition: background-color 800ms, border 400ms;
+  transition: background-color 800ms, outline 400ms;
 }
 
 .faq--card--top--section:hover {
-  border: 1px solid white;
-  transition: background-color 800ms, border 400ms;
+  outline: 1px solid white;
+  transition: background-color 800ms, outline 400ms;
+  box-sizing: border-box;
 }
 
 .faq--card--title {
@@ -42,10 +45,12 @@
 .fa-solid.fa-square-plus {
   font-size: 22px;
   color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .fa-solid.fa-square-minus {
   color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ReactCollapse--collapse {
@@ -56,4 +61,5 @@
   font-size: 18px;
   padding: 20px;
   color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

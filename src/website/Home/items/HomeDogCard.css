@@ -96,6 +96,11 @@
   box-shadow: inset 400px 0 0 0 white;
 }
 
+.dogcard--btn:active {
+  transition: 0s;
+  opacity: 0.5;
+}
+
 .fa-solid.fa-mars,
 .fa-solid.fa-venus {
   font-size: 26px;

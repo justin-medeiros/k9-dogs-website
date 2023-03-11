@@ -117,6 +117,11 @@
   box-shadow: inset 400px 0 0 0 var(--black);
 }
 
+.testimonials--share--button:active {
+  transition: 0s;
+  opacity: 0.5;
+}
+
 .testimonials--share--validation--container {
   display: flex;
   flex-direction: row;

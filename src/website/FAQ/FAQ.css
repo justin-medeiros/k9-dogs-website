@@ -3,9 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url("/images/faq-background.png");
   background-color: var(--dark-grey);
-  background-size: auto;
 }
 
 .faq--title {

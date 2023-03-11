@@ -91,6 +91,11 @@
   box-shadow: inset 400px 0 0 0 white;
 }
 
+.contactus--button:active {
+  transition: 0s;
+  opacity: 0.5;
+}
+
 .contactus--validation--container {
   display: flex;
   flex-direction: row;

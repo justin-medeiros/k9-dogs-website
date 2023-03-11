@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TestimonialCard from "../items/TestimonialCard";
+import TestimonialCard from "../items/HomeTestimonialCard";
 import "./HomeTestimonials.css";
 import data from "../../../data.json";
 
 export default function HomeTestimonials() {
-  const allTestimonials = data.testimonials.map((testCard) => {
+  const allTestimonials = data.testimonials.slice(0, 3).map((testCard) => {
     return <TestimonialCard key={testCard.id} info={testCard} />;
   });
   return (

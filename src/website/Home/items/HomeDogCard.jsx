@@ -1,5 +1,5 @@
 import React from "react";
-import "./DogCard.css";
+import "./HomeDogCard.css";
 
 export default function DogCard(props) {
   return (

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import "./ContactUs.css";
+import TestimonialCard from "./items/TestimonialCard";
+import data from "../../data.json";
 import emailjs from "@emailjs/browser";
 
-export default function ContactUs() {
+import "./Testimonials.css";
+
+export default function Testimonials() {
   const formDataEmptyObject = {
     name: "",
-    email: "",
-    subject: "",
     message: "",
   };
   const [validationMessage, setValidationMessage] = useState(null);
@@ -31,59 +32,49 @@ export default function ContactUs() {
       setFormData(formDataEmptyObject);
       emailjs.sendForm(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
-        import.meta.env.VITE_EMAIL_TEMPLATE_CONTACT_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_TESTIMONIAL_ID,
         e.target,
         import.meta.env.VITE_EMAIL_PUBLIC_KEY_CONTACT
       );
     }
   };
 
+  const allTestimonials = data.testimonials.map((testCard) => {
+    return <TestimonialCard key={testCard.id} info={testCard} />;
+  });
+
   return (
-    <div className="contactus--overall--container">
-      <div className="contactus--container">
-        <div className="contactus--text--container">
-          <h1>Contact Us</h1>
-          <p>Send us a message!</p>
-        </div>
-        <div className="contactus--form">
+    <div className="testimonials--overall--container">
+      <h1 className="testimonials--title">Testimonials</h1>
+      <h2 className="testimonials--subtitle">
+        See why clients trust us for their German Shepherd needs!
+      </h2>
+      <div className="testimonials--container">
+        <div className="testimonials--cards">{allTestimonials}</div>
+      </div>
+
+      <div className="testimonials--share--container">
+        <div className="testimonials--share--form">
           <form onSubmit={submitForm}>
-            <h1 className="contactus--form--title">Name</h1>
+            <h1 className="testimonials--share--title">Name</h1>
             <input
-              className="contactus--input--box"
+              className="testimonials--share--box"
               type="text"
               placeholder="Name"
               value={formData.name}
               name="name"
               onChange={handleChange}
             ></input>
-            <h1 className="contactus--form--title">Email</h1>
-            <input
-              className="contactus--input--box"
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              name="email"
-              onChange={handleChange}
-            ></input>
-            <h1 className="contactus--form--title">Subject</h1>
-            <input
-              className="contactus--input--box"
-              type="text"
-              placeholder="Subject"
-              value={formData.subject}
-              name="subject"
-              onChange={handleChange}
-            ></input>
-            <h1 className="contactus--form--title">Message</h1>
+            <h1 className="testimonials--share--title">Message</h1>
             <textarea
-              className="contactus--input--textarea"
+              className="testimonials--share--textarea"
               placeholder="Message"
               value={formData.message}
               name="message"
               onChange={handleChange}
             ></textarea>
-            <button className="contactus--button">Submit</button>
-            <div className="contactus--validation--container">
+            <button className="testimonials--share--button">Submit</button>
+            <div className="testimonials--share--validation--container">
               <i
                 className={`${
                   validationMessage === true
@@ -94,7 +85,7 @@ export default function ContactUs() {
                 }`}
               ></i>
               <h2
-                className={`contactus--validation ${
+                className={`testimonials--share--valid--text ${
                   validationMessage === true
                     ? "success"
                     : validationMessage === false
@@ -110,6 +101,12 @@ export default function ContactUs() {
               </h2>
             </div>
           </form>
+        </div>
+        <div className="testimonials--share--text--container">
+          <h1>
+            Share your <span>story</span>!
+          </h1>
+          <p>Your experience matters to us!</p>
         </div>
       </div>
     </div>

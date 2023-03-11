@@ -1,0 +1,177 @@
+.testimonials--overall--container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-grey);
+  align-items: center;
+}
+
+.testimonials--title {
+  color: white;
+  font-size: 36px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 4px solid var(--red);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.testimonials--subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.testimonials--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  width: 100%;
+  padding: 80px 0px;
+  border-radius: 50% 50% 50% 50% / 6%;
+  box-shadow: 0px 0px 10px rgb(255, 7, 7, 0.5);
+}
+
+.testimonials--cards {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.testimonials--share--container {
+  display: flex;
+  background-color: white;
+  border-radius: 50% 50% 0 0 / 6%;
+  padding: 60px 0px;
+  margin-top: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.testimonials--share--form {
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.testimonials--share--title {
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.testimonials--share--box,
+.testimonials--share--textarea {
+  font-size: 14px;
+  width: 440px;
+  margin: 0;
+  margin: 20px 0px;
+  background-color: transparent;
+  border: 3px solid var(--red);
+  border-radius: 10px;
+  color: var(--black);
+  font-weight: 500;
+  transition: border 200ms ease-in-out;
+}
+
+.testimonials--share--box:focus,
+.testimonials--share--textarea:focus {
+  transition: border 200ms ease-in-out;
+  outline: none;
+  border: 3px solid var(--dark-grey);
+}
+
+.testimonials--share--textarea {
+  height: 10em;
+  padding: 10px;
+  resize: none;
+  text-align: left;
+  display: block;
+}
+
+.testimonials--share--button {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 4px 12px;
+  background-color: var(--red);
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: inset 0 0 0 0 var(--black);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.testimonials--share--button:hover {
+  box-shadow: inset 400px 0 0 0 var(--black);
+}
+
+.testimonials--share--button:active {
+  transition: 0s;
+  opacity: 0.5;
+}
+
+.testimonials--share--validation--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.testimonials--share--valid--text {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.testimonials--share--valid--text.success {
+  color: green;
+}
+
+.testimonials--share--valid--text.error {
+  color: var(--red);
+}
+
+.fa-solid.fa-check {
+  color: green;
+  display: flex;
+  align-self: center;
+  font-size: 20px;
+}
+
+.fa-solid.fa-xmark {
+  color: var(--red);
+  display: flex;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.testimonials--share--text--container > h1 {
+  font-size: 62px;
+  color: var(--black);
+}
+
+.testimonials--share--text--container > h1 > span {
+  border-bottom: 4px solid var(--red);
+}
+
+.testimonials--share--text--container > p {
+  font-size: 20px;
+  color: var(--red);
+  font-weight: 500;
+  margin-top: 18px;
+  text-align: left;
+}

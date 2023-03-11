@@ -42,3 +42,22 @@
   color: var(--red);
   transition: color 200ms ease-in-out;
 }
+
+@media only screen and (max-width: 960px) {
+  .faq--title {
+    font-size: 32px;
+  }
+  .faq--contact {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .faq--title {
+    font-size: 28px;
+  }
+
+  .faq--contact {
+    font-size: 16px;
+  }
+}

@@ -30,10 +30,10 @@ export default function ContactUs() {
       setValidationMessage(true);
       setFormData(formDataEmptyObject);
       emailjs.sendForm(
-        process.env.REACT_APP_EMAIL_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_CONTACT_ID,
         e.target,
-        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY_CONTACT
       );
     }
   };

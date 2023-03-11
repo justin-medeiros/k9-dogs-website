@@ -2,11 +2,12 @@ import React from "react";
 import "./HomeDogCard.css";
 
 export default function DogCard(props) {
+  console.log(props.dog.img);
   return (
     <div className="dogcard--overall--container">
       <div className="dogcard--container">
         <div className="dogcard--img--container">
-          <img className="dogcard--img" src="/images/image-gs.jpeg"></img>
+          <img className="dogcard--img" src={props.dog.img}></img>
         </div>
       </div>
       <div className="dogcard--text--container">

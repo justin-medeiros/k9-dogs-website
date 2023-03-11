@@ -22,6 +22,7 @@
 
 .dogcard--img {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0px 0px;
@@ -112,8 +113,13 @@
     width: 320px;
     height: 380px;
   }
+
   .dogcard--title {
     font-size: 16px;
+  }
+
+  .dogcard--text--container {
+    height: 220px;
   }
 
   .dogcard--subtitle {
@@ -136,6 +142,10 @@
   .dogcard--overall--container {
     width: 300px;
     height: 360px;
+  }
+
+  .dogcard--text--container {
+    height: 200px;
   }
 
   .dogcard--title {

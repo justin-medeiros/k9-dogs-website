@@ -39,6 +39,7 @@
   .home--testimonial--card--container {
     width: 75%;
     align-self: center;
+    margin-top: 30px;
   }
   .home--testimonial--card--quote {
     font-size: 14px;

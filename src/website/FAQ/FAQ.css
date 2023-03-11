@@ -3,12 +3,42 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("/images/faq-background.png");
   background-color: var(--dark-grey);
-  border-top: 2px solid var(--red);
-  border-bottom: 2px solid var(--red);
+  background-size: auto;
 }
 
 .faq--title {
   color: white;
-  margin: 20px 0px;
+  font-size: 38px;
+  padding: 40px 0px;
+  border-radius: 20px;
+  margin: 40px;
+  width: 90%;
+  text-align: center;
+  background-color: var(--red);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq--contact {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.faq--contact--us {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 2px solid var(--red);
+  transition: color 200ms ease-in-out;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq--contact--us:hover {
+  color: var(--red);
+  transition: color 200ms ease-in-out;
 }

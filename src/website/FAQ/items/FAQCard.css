@@ -1,10 +1,10 @@
 .faq--card--container {
-  width: 800px;
-  margin-bottom: 20px;
+  width: 850px;
+  margin-bottom: 30px;
   border-radius: 10px;
-  border: 1px solid white;
-  background-color: white;
+  background-color: var(--black);
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .faq--card--top--section {
@@ -12,27 +12,45 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 10px;
-  background-color: var(--black);
+  margin: 1px;
   cursor: pointer;
-  transition: background-color 800ms;
+  transition: background-color 800ms, outline 400ms;
 }
 
 .faq--card--top--section.open {
   background-color: var(--red);
-  transition: background-color 800ms;
+  transition: background-color 800ms, outline 400ms;
+}
+
+.faq--card--top--section:hover {
+  outline: 1px solid white;
+  transition: background-color 800ms, outline 400ms;
+  box-sizing: border-box;
 }
 
 .faq--card--title {
   color: white;
-  font-size: 26px;
+  font-size: 22px;
+  font-weight: 500;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faq--card--title.open {
+  color: white;
 }
 
 .fa-solid.fa-square-minus,
 .fa-solid.fa-square-plus {
-  font-size: 26px;
+  font-size: 22px;
   color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fa-solid.fa-square-minus {
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .ReactCollapse--collapse {
@@ -40,5 +58,8 @@
 }
 
 .faq--card--text {
+  font-size: 18px;
   padding: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

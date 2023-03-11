@@ -29,19 +29,20 @@ export default function Footer() {
           </div>
           <div className="footer--affiliates">
             <h1>Affiliates</h1>
-            <div className="footer--affiliates--images"></div>
-            <a href="https://www.ckc.ca/en" target="_blank" rel="noreferrer">
-              <img
-                src="/images/ckc-logo.png"
-                className="footer--ckc--img"
-              ></img>
-            </a>
-            <a href="http://www.gsscc.ca/" target="_blank" rel="noreferrer">
-              <img
-                src="/images/gsscc-logo.png"
-                className="footer--gsscc--img"
-              ></img>
-            </a>
+            <div className="footer--affiliates--images">
+              <a href="https://www.ckc.ca/en" target="_blank" rel="noreferrer">
+                <img
+                  src="/images/ckc-logo.png"
+                  className="footer--ckc--img"
+                ></img>
+              </a>
+              <a href="http://www.gsscc.ca/" target="_blank" rel="noreferrer">
+                <img
+                  src="/images/gsscc-logo.png"
+                  className="footer--gsscc--img"
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
       </div>

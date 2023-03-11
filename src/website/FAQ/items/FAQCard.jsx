@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Collapse } from "react-collapse";
 import "./FAQCard.css";
 
-export default function FAQCard() {
+export default function FAQCard(props) {
   const [cardClicked, setCardClicked] = useState(false);
   const handleClick = () => {
     setCardClicked((prevClick) => !prevClick);
@@ -10,10 +10,12 @@ export default function FAQCard() {
   return (
     <div className="faq--card--container">
       <div
-        className={`faq--card--top--section ${cardClicked ? "open" : "closed"}`}
+        className={`faq--card--top--section ${cardClicked && "open"}`}
         onClick={handleClick}
       >
-        <h1 className="faq--card--title">1. Title</h1>
+        <h1 className={`faq--card--title ${cardClicked && "open"}`}>
+          {props.data.title}
+        </h1>
         <i
           className={
             cardClicked ? "fa-solid fa-square-minus" : "fa-solid fa-square-plus"
@@ -22,7 +24,7 @@ export default function FAQCard() {
       </div>
       <Collapse isOpened={cardClicked}>
         <div className="faq--card--text--container">
-          <p className="faq--card--text">djihfkjgbdfjhbsdjhfvdshg</p>
+          <p className="faq--card--text">{props.data.body}</p>
         </div>
       </Collapse>
     </div>

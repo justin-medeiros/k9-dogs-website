@@ -2,7 +2,6 @@ import React from "react";
 import "./HomeDogCard.css";
 
 export default function DogCard(props) {
-  console.log(props.dog.img);
   return (
     <div className="dogcard--overall--container">
       <div className="dogcard--container">

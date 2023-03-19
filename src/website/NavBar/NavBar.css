@@ -102,6 +102,10 @@
 }
 
 @media only screen and (max-width: 960px) {
+  .fa-solid.fa-xmark {
+    font-size: 28px !important;
+    color: white !important;
+  }
   .navbar--links {
     text-align: center;
     padding: 2rem;

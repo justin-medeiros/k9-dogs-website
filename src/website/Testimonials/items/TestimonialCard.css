@@ -44,6 +44,7 @@
   .testimonial--card--container {
     width: 75%;
     align-self: center;
+    min-height: 0;
   }
   .testimonial--card--quote {
     font-size: 14px;

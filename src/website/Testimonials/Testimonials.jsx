@@ -54,6 +54,12 @@ export default function Testimonials() {
       </div>
 
       <div className="testimonials--share--container">
+        <div className="testimonials--share--text--container">
+          <h1>
+            Share your <span>story</span>!
+          </h1>
+          <p>Your experience matters to us!</p>
+        </div>
         <div className="testimonials--share--form">
           <form onSubmit={submitForm}>
             <h1 className="testimonials--share--title">Name</h1>
@@ -101,12 +107,6 @@ export default function Testimonials() {
               </h2>
             </div>
           </form>
-        </div>
-        <div className="testimonials--share--text--container">
-          <h1>
-            Share your <span>story</span>!
-          </h1>
-          <p>Your experience matters to us!</p>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function HomeOurDogs() {
   }, [window.innerWidth]);
 
   useEffect(() => {
-    if (windowWidth < 825) {
+    if (windowWidth < 865) {
       setSlidesToShow(1);
     } else if (windowWidth < 960) {
       setSlidesToShow(2);

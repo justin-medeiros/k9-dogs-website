@@ -5,6 +5,7 @@
 }
 
 .litters--card--slider--container {
+  position: relative;
   height: 420px;
   border-radius: 0px 0px 20px 20px;
 }
@@ -45,14 +46,39 @@
   border-radius: 10px 10px 0px 0px;
 }
 
-.slick-dots li button::before {
+.litters--card--slider--container .slick-dots li button::before {
   color: white !important;
   font-size: 10px !important;
   margin-top: -4px;
 }
 
-.slick-dots li button:focus:before {
+.litters--card--slider--container .slick-dots li button:focus:before {
   color: white !important;
-  opacity: 1 !important;
+}
+
+.litters--card--slider--container {
+  position: relative;
+}
+
+.slider--buttons--container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
   z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next--button,
+.prev--button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin: 0 14px;
+  outline: none;
+  cursor: pointer;
+  text-shadow: 0px 0 6px rgba(0, 0, 0, 0.8);
 }

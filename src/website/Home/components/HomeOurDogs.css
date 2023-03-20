@@ -29,6 +29,11 @@
   font-size: 10px !important;
 }
 
+.slick-dots li button:focus:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: white !important;

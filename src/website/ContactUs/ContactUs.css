@@ -133,79 +133,46 @@
 }
 
 @media only screen and (max-width: 960px) {
+  .contactus--text--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .contactus--container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
     gap: 0px;
+    margin-top: -20px;
   }
 
   .contactus--text--container > h1 {
     font-size: 42px;
-    color: white;
     text-align: center;
+    border-bottom: 4px solid var(--red);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   .contactus--text--container > p {
-    font-size: 16px;
-    color: white;
+    font-size: 18px;
     border-left: none;
     text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 4px solid var(--red);
-    padding-bottom: 20px;
-  }
-
-  .contactus--text--container > h1::before {
-    content: "";
-    position: relative;
-    height: 5px;
-    width: 100px;
-    background-color: var(--red);
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .contactus--overall--container {
-    padding-top: 20px;
-  }
-  .contactus--container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-  }
-
   .contactus--text--container > h1 {
     font-size: 38px;
-    color: white;
-    text-align: center;
   }
 
   .contactus--text--container > p {
-    font-size: 14px;
-    color: white;
-    border-left: none;
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 4px solid var(--red);
-    padding-bottom: 20px;
-  }
-
-  .contactus--text--container > h1::before {
-    content: "";
-    position: relative;
-    height: 5px;
-    width: 100px;
-    background-color: var(--red);
-  }
-
-  .contactus--form {
-    background-color: var(--black);
-    padding: 40px;
-    border-radius: 20px;
-    display: flex;
+    font-size: 16px;
+    padding: 0px;
   }
 
   .contactus--form--title {
@@ -231,7 +198,6 @@
     height: 10em;
     padding: 10px;
     resize: none;
-    overflow-y: scroll;
     text-align: left;
     display: block;
   }

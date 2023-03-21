@@ -1,0 +1,90 @@
+.upcoming--litters--container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 220px;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.upcoming--litters--title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--red);
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.1);
+}
+
+.upcoming--litters--date {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--black);
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.upcoming--litters--quantity {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 22px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming--litters--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 16px 0px;
+  border-radius: 20px;
+}
+
+.upcoming--litters--image--container {
+  width: 420px;
+  height: 320px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.upcoming--litters--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.upcoming--litters--first > h1,
+.upcoming--litters--second > h1 {
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.upcoming--litters--contact {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 white;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  border: 2px solid white;
+}
+
+.upcoming--litters--contact:hover {
+  color: var(--red);
+  background-color: white;
+  box-shadow: inset 400px 0 0 0 white;
+}
+
+.upcoming--litters--contact:active {
+  transition: 0s;
+  opacity: 0.5;
+}

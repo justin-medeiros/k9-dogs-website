@@ -57,13 +57,13 @@ export default function NavBar() {
           </li>
           <li>
             <NavLink
-              to="/puppies"
+              to="/litters"
               className={
                 click && navButton ? "navbar--mobile--links" : "navbar--links"
               }
               onClick={closeMobileMenu}
             >
-              Puppies
+              Litters
             </NavLink>
           </li>
           <li>

@@ -108,12 +108,7 @@
   color: var(--red);
 }
 
-@media only screen and (max-width: 1300px) {
-  .dogcard--overall--container {
-    width: 320px;
-    height: 380px;
-  }
-
+@media only screen and (max-width: 1400px) {
   .dogcard--title {
     font-size: 16px;
   }
@@ -138,10 +133,17 @@
   }
 }
 
+@media only screen and (max-width: 1150px) {
+  .dogcard--overall--container {
+    width: 360px;
+    height: 460px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .dogcard--overall--container {
-    width: 300px;
-    height: 360px;
+    width: 360px;
+    height: 460px;
   }
 
   .dogcard--text--container {
@@ -166,5 +168,12 @@
 
   .fa-solid.fa-mars {
     font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .dogcard--overall--container {
+    width: 330px;
+    height: 400px;
   }
 }

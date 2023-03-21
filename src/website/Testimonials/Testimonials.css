@@ -17,6 +17,7 @@
 .testimonials--subtitle {
   font-size: 20px;
   margin-bottom: 30px;
+  text-align: center;
   color: white;
   font-weight: 500;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -44,15 +45,14 @@
 
 .testimonials--share--container {
   display: flex;
-  padding: 60px 0px;
+  padding: 60px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
 }
 
 .testimonials--share--form {
-  padding: 40px;
   border-radius: 20px;
   display: flex;
 }
@@ -171,4 +171,87 @@
   font-weight: 500;
   margin-top: 18px;
   text-align: left;
+}
+
+@media only screen and (max-width: 960px) {
+  .testimonials--cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials--title {
+    font-size: 32px;
+  }
+  .testimonials--subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .testimonials--share--container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .testimonials--share--title {
+    font-size: 14px;
+  }
+
+  .testimonials--share--text--container > h1 {
+    font-size: 48px;
+  }
+
+  .testimonials--share--text--container > p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .testimonials--share--valid--text {
+    font-size: 14px;
+  }
+
+  .testimonials--share--box,
+  .testimonials--share--textarea {
+    font-size: 12px;
+  }
+
+  .testimonials--share--button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .testimonials--title {
+    font-size: 28px;
+  }
+  .testimonials--subtitle {
+    font-size: 16px;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+  }
+
+  .testimonials--share--title {
+    font-size: 12px;
+  }
+
+  .testimonials--share--text--container > h1 {
+    font-size: 40px;
+  }
+
+  .testimonials--share--text--container > p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .testimonials--share--valid--text {
+    font-size: 14px;
+  }
+
+  .testimonials--share--box,
+  .testimonials--share--textarea {
+    font-size: 12px;
+  }
+
+  .testimonials--share--button {
+    font-size: 14px;
+  }
 }

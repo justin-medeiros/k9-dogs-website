@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
 export default function Litters() {
+  const [upcomingLitters, setUpcomingLitters] = useState(true);
+
   return (
     <div className="litters--container">
-      <div className="upcoming--litters--container">
+      <div className="litters--upcoming--container">
         <h1 className="litters--upcoming--title">Upcoming Litters</h1>
-        <p>
-          There are no upcoming litters at the moment. Please follow us on
-          social media to stay up to date!
-        </p>
+        <div className="litters--upcoming--title--underline"></div>
+        {upcomingLitters ? (
+          <UpcomingLitters />
+        ) : (
+          <p>
+            There are no upcoming litters at the moment. Please follow us on
+            social media to stay up to date!
+          </p>
+        )}
       </div>
       <div className="arrow--divider">
         <svg

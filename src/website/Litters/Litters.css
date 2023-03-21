@@ -1,4 +1,4 @@
-.upcoming--litters--container,
+.litters--upcoming--container,
 .past--litters--container {
   display: flex;
   flex-direction: column;
@@ -6,11 +6,25 @@
   align-items: center;
 }
 
-.upcoming--litters--container {
+.litters--upcoming--container {
   background-color: var(--red);
   padding: 40px;
 }
-
+.litters--upcoming--title {
+  color: white;
+  font-size: 40px;
+  z-index: 3;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.litters--upcoming--title--underline {
+  height: 14px;
+  width: 420px;
+  background-color: var(--black);
+  opacity: 0.4;
+  margin-top: -23px;
+  z-index: 2;
+  margin-bottom: 30px;
+}
 .arrow--divider {
   position: relative;
   top: 0;
@@ -40,12 +54,14 @@
   font-size: 36px;
   margin-top: 10px;
   z-index: 2;
+  color: var(--black);
 }
 
 .past--litters--subtitle {
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 40px;
+  color: var(--black);
 }
 
 .past--litters--underline {
@@ -55,11 +71,6 @@
   opacity: 0.2;
   margin-top: -22px;
   z-index: 1;
-}
-
-.litters--upcoming--title {
-  color: white;
-  margin-bottom: 20px;
 }
 
 .past--litters--cards--container {

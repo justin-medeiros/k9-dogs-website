@@ -16,10 +16,12 @@ import ContactUs from "../website/ContactUs/ContactUs";
 import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
 import Litters from "../website/Litters/Litters";
+import ScrollToTop from "../wrappers/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -31,10 +33,10 @@ function App() {
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/master" element={<MasterLogin />}></Route>
         <Route path="/reset" element={<ForgotPassword />} />
-        <Route path="/master-edit" element={<Master />} />
+        {/* <Route path="/master-edit" element={<Master />} />
         <Route path="/master-edit/addkennel" element={<AddDogs />} />
         <Route path="/master-edit/addpuppies" element={<AddPuppies />} />
-        <Route path="/master-edit/addphotos" element={<AddPhotos />} />
+        <Route path="/master-edit/addphotos" element={<AddPhotos />} /> */}
       </Routes>
       <Footer />
     </Router>

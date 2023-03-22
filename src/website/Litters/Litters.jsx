@@ -14,7 +14,7 @@ export default function Litters() {
         {upcomingLitters ? (
           <UpcomingLitters />
         ) : (
-          <p>
+          <p className="litters--upcoming--subtitle">
             There are no upcoming litters at the moment. Please follow us on
             social media to stay up to date!
           </p>

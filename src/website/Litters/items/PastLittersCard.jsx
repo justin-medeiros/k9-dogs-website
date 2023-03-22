@@ -58,8 +58,6 @@ export default function PastLittersCard() {
       <div className="litters--card--dot--container"></div>
       <div className="litters--card--text--container">
         <p className="litters--date">August, 2020</p>
-        <div className="litters--underline"></div>
-        <p className="litters--quantity">4 Females and 1 Male</p>
       </div>
     </div>
   );

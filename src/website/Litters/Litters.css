@@ -16,6 +16,12 @@
   z-index: 3;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
+
+.litters--upcoming--subtitle {
+  color: white;
+  font-size: 16px;
+}
+
 .litters--upcoming--title--underline {
   height: 14px;
   width: 420px;

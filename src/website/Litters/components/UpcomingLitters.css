@@ -6,7 +6,7 @@
   border-radius: 10px;
   align-items: center;
   text-align: center;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 .upcoming--litters--title {
   font-size: 28px;
@@ -40,6 +40,23 @@
   padding: 20px;
   margin: 16px 0px;
   border-radius: 20px;
+  z-index: 2;
+}
+
+.upcoming--litters--background {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 1200px;
+  background-color: var(--black);
+  padding: 10px;
+  margin-top: 150px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .upcoming--litters--image--container {

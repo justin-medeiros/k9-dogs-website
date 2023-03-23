@@ -8,7 +8,6 @@ export default function UpcomingLitters() {
       <div className="upcoming--litters--container">
         <p className="upcoming--litters--title">New Litter Coming!</p>
         <p className="upcoming--litters--date">August, 2020</p>
-        <p className="upcoming--litters--quantity">1 Female and 4 Males</p>
       </div>
       <div className="upcoming--litters--grid">
         <div className="upcoming--litters--first">
@@ -30,6 +29,7 @@ export default function UpcomingLitters() {
           <h1>Dam</h1>
         </div>
       </div>
+      <div className="upcoming--litters--background"></div>
       <Link to="/contact" className="upcoming--litters--contact">
         Contact us to reserve your puppy now!
       </Link>

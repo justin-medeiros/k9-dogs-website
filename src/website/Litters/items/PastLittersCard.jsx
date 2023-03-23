@@ -2,9 +2,8 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "./PastLittersCard.css";
 
-export default function PastLittersCard() {
+export default function PastLittersCard({ photos, date }) {
   const sliderRef = useRef(null);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -22,6 +21,14 @@ export default function PastLittersCard() {
     sliderRef.current.slickPrev(); // Call slickNext() method to go to the next slide
   };
 
+  const pastLittersPhotos = photos.map((photoUrl, key) => {
+    return (
+      <div className="litters--card--image--container" key={key}>
+        <img className="litters--card--image" src={photoUrl}></img>
+      </div>
+    );
+  });
+
   return (
     <div className="litters--card--container">
       <div className="litters--card--slider--container">
@@ -35,31 +42,12 @@ export default function PastLittersCard() {
         </div>
 
         <Slider {...settings} ref={sliderRef}>
-          <div className="litters--card--image--container">
-            <img
-              className="litters--card--image"
-              src="images/gallery/dog1.jpeg"
-            ></img>
-          </div>
-          <div className="litters--card--image--container">
-            <img
-              className="litters--card--image"
-              src="images/gallery/dog1.jpeg"
-            ></img>
-          </div>
-          <div className="litters--card--image--container">
-            <img
-              className="litters--card--image"
-              src="images/gallery/dog1.jpeg"
-            ></img>
-          </div>
+          {pastLittersPhotos}
         </Slider>
       </div>
       <div className="litters--card--dot--container"></div>
       <div className="litters--card--text--container">
-        <p className="litters--date">August, 2020</p>
-        <div className="litters--underline"></div>
-        <p className="litters--quantity">4 Females and 1 Male</p>
+        <p className="litters--date">{date}</p>
       </div>
     </div>
   );

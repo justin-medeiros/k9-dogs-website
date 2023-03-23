@@ -1,13 +1,14 @@
 import { async } from "@firebase/util";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import React, { useEffect, useState } from "react";
+import { Facebook, Instagram } from "react-feather";
 import { storage } from "../../firebase-config";
 import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
 export default function Litters() {
-  const [upcomingLitters, setUpcomingLitters] = useState(true);
+  const [upcomingLitters, setUpcomingLitters] = useState(false);
   const [allPastLittersCards, setAllPastLittersCards] = useState();
 
   useEffect(() => {
@@ -53,10 +54,38 @@ export default function Litters() {
         {upcomingLitters ? (
           <UpcomingLitters />
         ) : (
-          <p className="litters--upcoming--subtitle">
-            There are no upcoming litters at the moment. Please follow us on
-            social media to stay up to date!
-          </p>
+          <div>
+            <p className="litters--upcoming--subtitle">
+              There are no upcoming litters at the moment. Please follow us on
+              social media to stay up to date!
+            </p>
+            <div
+              className="litters--upcoming--icons--container"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <a
+                href="https://www.instagram.com/clarotgermanshepherds/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram
+                  className="litters--upcoming--instagram--icon"
+                  size={38}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/k9dogs.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook
+                  className="litters--upcoming--facebook--icon"
+                  size={38}
+                />
+              </a>
+            </div>
+          </div>
         )}
       </div>
       <div className="arrow--divider">

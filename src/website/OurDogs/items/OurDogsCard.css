@@ -9,6 +9,8 @@
   justify-content: center;
   margin: 20px;
   height: 340px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .ourdogs--card--info {
@@ -154,7 +156,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px 0px 0px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .ourdogs--card--card--btn {

@@ -6,8 +6,10 @@ export default function UpcomingLitters() {
   return (
     <>
       <div className="upcoming--litters--container">
-        <p className="upcoming--litters--title">New Litter Coming!</p>
-        <p className="upcoming--litters--date">August, 2020</p>
+        <div className="upcoming--litters--container--text">
+          <p className="upcoming--litters--title">New Litter Coming!</p>
+          <p className="upcoming--litters--date">August, 2020</p>
+        </div>
       </div>
       <div className="upcoming--litters--grid">
         <div className="upcoming--litters--first">

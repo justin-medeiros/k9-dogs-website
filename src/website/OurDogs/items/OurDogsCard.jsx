@@ -22,8 +22,8 @@ export default function OurDogsCard({ dogInfo }) {
             </div>
 
             <div className="ourdogs--card--secondrow--text">
-              <h2>{dogInfo.dam}</h2>
-              <h2>{dogInfo.sire}</h2>
+              <h2 className="ourdogs---card--dam">{dogInfo.dam.slice(5)}</h2>
+              <h2 className="ourdogs---card--sire">{dogInfo.sire.slice(6)}</h2>
             </div>
 
             <div className="ourdogs--card--info--thirdrow">

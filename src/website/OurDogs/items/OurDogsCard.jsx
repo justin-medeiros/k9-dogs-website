@@ -1,17 +1,45 @@
 import React from "react";
 import "./OurDogsCard.css";
 
-export default function OurDogsCard() {
+export default function OurDogsCard({ dogInfo }) {
   return (
-    <div className="ourdogs--card--container">
-      <div className="ourdogs--card--image--container">
-        <img className="ourdogs--card--image" src="/images/image-gs.jpeg"></img>
-      </div>
+    <div className="ourdogs--card--overall--container">
+      <div className="ourdogs--card--container">
+        <div className="ourdogs--card--image--container">
+          <img className="ourdogs--card--image" src={dogInfo.img}></img>
+        </div>
 
-      <div className="ourdogs--card--info">
-        <h1>Name</h1>
-        <h2>Subtitle</h2>
-        <p>About</p>
+        <div className="ourdogs--card--info">
+          <div className="ourdogs--card--info--firstrow">
+            <h1 className="ourdogs--card--name">{dogInfo.name}</h1>
+            {dogInfo.subtitle && (
+              <h1 className="ourdogs--card--subtitle">{dogInfo.subtitle}</h1>
+            )}
+          </div>
+
+          <div className="ourdogs--card--info--secondrow">
+            <h2 className="ourdogs--card--dam--title">Dam</h2>
+            <h2 className="ourdogs--card--sire--title">Sire</h2>
+            <div className="ourdogs--card--sire--container"></div>
+          </div>
+
+          <div className="ourdogs--card--secondrow--text">
+            <h2 className="ourdogs---card--dam">{dogInfo.dam.slice(5)}</h2>
+            <h2 className="ourdogs---card--sire">{dogInfo.sire.slice(6)}</h2>
+          </div>
+
+          <div className="ourdogs--card--info--thirdrow">
+            <h2 className="ourdogs--card--description--title">Description</h2>
+          </div>
+          <div className="ourdogs--card--desc--container">
+            <h2 className="ourdogs--card--description">
+              {dogInfo.description}
+            </h2>
+            <button className="ourdogs--card--card--btn">
+              Click for more!
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

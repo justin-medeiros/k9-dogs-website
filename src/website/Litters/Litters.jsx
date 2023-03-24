@@ -8,7 +8,7 @@ import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
 export default function Litters() {
-  const [upcomingLitters, setUpcomingLitters] = useState(false);
+  const [upcomingLitters, setUpcomingLitters] = useState(true);
   const [allPastLittersCards, setAllPastLittersCards] = useState();
 
   useEffect(() => {
@@ -50,7 +50,6 @@ export default function Litters() {
     <div className="litters--container">
       <div className="litters--upcoming--container">
         <h1 className="litters--upcoming--title">Upcoming Litters</h1>
-        <div className="litters--upcoming--title--underline"></div>
         {upcomingLitters ? (
           <UpcomingLitters />
         ) : (
@@ -104,7 +103,6 @@ export default function Litters() {
       </div>
       <div className="past--litters--container">
         <h1 className="past--litters--title">Past Litters</h1>
-        <div className="past--litters--underline"></div>
         <p className="past--litters--subtitle">
           Have a look at our past litters!
         </p>

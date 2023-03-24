@@ -7,51 +7,17 @@ import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
-export default function Litters() {
-  const [upcomingLitters, setUpcomingLitters] = useState(true);
-  const [allPastLittersCards, setAllPastLittersCards] = useState();
-
-  useEffect(() => {
-    async function getFilesInFolder() {
-      const folderRef = ref(storage, "past-litters");
-      const { prefixes } = await listAll(folderRef); // list all the folders
-      prefixes.sort((a, b) => b.name.localeCompare(a.name)); // sort descending order
-      const folderNames = prefixes.map((folderRef) => folderRef.name); // get all folder names
-      let allPastLitterCardsArr = []; // temp array to store pastLitterCards
-
-      for (let i in folderNames) {
-        const litterFolderRef = ref(storage, `past-litters/${folderNames[i]}`);
-        const { items } = await listAll(litterFolderRef);
-        let curKey;
-        const litterPhotos = await Promise.all(
-          items.map(async (itemRef, key) => {
-            curKey = key;
-            const url = await getDownloadURL(itemRef);
-            return url;
-          })
-        );
-
-        allPastLitterCardsArr.push(
-          <PastLittersCard
-            photos={litterPhotos}
-            date={folderNames[i]}
-            key={curKey}
-          />
-        );
-      }
-
-      setAllPastLittersCards(allPastLitterCardsArr);
-    }
-
-    getFilesInFolder();
-  }, []);
+export default function Litters({ pastLittersData, upcomingLittersData }) {
+  const allPastLitters = pastLittersData.map((data, id) => {
+    return <PastLittersCard photos={data.photos} date={data.dates} key={id} />;
+  });
 
   return (
     <div className="litters--container">
       <div className="litters--upcoming--container">
         <h1 className="litters--upcoming--title">Upcoming Litters</h1>
-        {upcomingLitters ? (
-          <UpcomingLitters />
+        {upcomingLittersData.isNewLitter ? (
+          <UpcomingLitters upcomingLittersData={upcomingLittersData} />
         ) : (
           <div>
             <p className="litters--upcoming--subtitle">
@@ -106,12 +72,7 @@ export default function Litters() {
         <p className="past--litters--subtitle">
           Have a look at our past litters!
         </p>
-        <div className="past--litters--cards--container">
-          {/* <PastLittersCard />
-          <PastLittersCard />
-          <PastLittersCard /> */}
-          {allPastLittersCards}
-        </div>
+        <div className="past--litters--cards--container">{allPastLitters}</div>
       </div>
     </div>
   );

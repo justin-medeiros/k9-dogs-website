@@ -5,12 +5,12 @@ import HomeOurDogs from "./components/HomeOurDogs";
 import HomeTestimonials from "./components/HomeTestimonials";
 import "./Home.css";
 
-export default function Home() {
+export default function Home({ dogData }) {
   return (
     <div className="home--container">
       <HeroSection />
       <About />
-      <HomeOurDogs />
+      <HomeOurDogs homeDogData={dogData} />
       <HomeTestimonials />
     </div>
   );

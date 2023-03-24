@@ -1,27 +1,15 @@
-import { collection, getDocs } from "firebase/firestore";
-import React, { useEffect, useState } from "react";
-import { db } from "../../firebase-config";
+import React from "react";
 import OurDogsCard from "./items/OurDogsCard";
 import "./OurDogs.css";
 
-export default function OurDogs() {
-  const [ourDogs, setOurDogs] = useState([]);
-
-  useEffect(() => {
-    async function getDogs() {
-      const querySnapshot = await getDocs(collection(db, "dogs"));
-      const allDogs = querySnapshot.docs.map((doc) => {
-        const dogData = doc.data();
-        return (
-          <div key={doc.id}>
-            <OurDogsCard dogInfo={dogData} />
-          </div>
-        );
-      });
-      setOurDogs(allDogs);
-    }
-    getDogs();
-  }, []);
+export default function OurDogs({ dogData }) {
+  const allDogCards = dogData.map((data, id) => {
+    return (
+      <div key={id}>
+        <OurDogsCard dogInfo={data} />
+      </div>
+    );
+  });
 
   return (
     <div className="ourdogs--container">
@@ -31,7 +19,7 @@ export default function OurDogs() {
         </div>
         <h3 className="ourdogs--subtitle">Meet the stars of our kennel!</h3>
       </div>
-      <div className="ourdogs--dogs--container">{ourDogs}</div>
+      <div className="ourdogs--dogs--container">{allDogCards}</div>
     </div>
   );
 }

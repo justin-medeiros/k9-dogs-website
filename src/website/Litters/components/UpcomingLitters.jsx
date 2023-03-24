@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./UpcomingLitters.css";
 
-export default function UpcomingLitters() {
+export default function UpcomingLitters({ upcomingLittersData }) {
+  console.log(upcomingLittersData);
   return (
     <>
       <div className="upcoming--litters--container">
         <div className="upcoming--litters--container--text">
           <p className="upcoming--litters--title">New Litter Coming!</p>
-          <p className="upcoming--litters--date">August, 2020</p>
+          <p className="upcoming--litters--date">{upcomingLittersData.date}</p>
         </div>
       </div>
       <div className="upcoming--litters--grid">
@@ -16,19 +17,19 @@ export default function UpcomingLitters() {
           <div className="upcoming--litters--image--container">
             <img
               className="upcoming--litters--image"
-              src="/images/gallery/dog1.jpeg"
+              src={upcomingLittersData.sire}
             ></img>
           </div>
-          <h1>Sire</h1>
+          <h1>{upcomingLittersData.sire}</h1>
         </div>
         <div className="upcoming--litters--second">
           <div className="upcoming--litters--image--container">
             <img
               className="upcoming--litters--image"
-              src="/images/gallery/dog1.jpeg"
+              src={upcomingLittersData.damPhoto}
             ></img>
           </div>
-          <h1>Dam</h1>
+          <h1>{upcomingLittersData.dam}</h1>
         </div>
       </div>
       <div className="upcoming--litters--background"></div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./HomeOurDogs.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import HomeDogCard from "../items/HomeDogCard";
 
-export default function HomeOurDogs({ homeDogData }) {
+function HomeOurDogs({ homeDogData }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
   useEffect(() => {
@@ -59,3 +59,5 @@ export default function HomeOurDogs({ homeDogData }) {
     </div>
   );
 }
+
+export default memo(HomeOurDogs);

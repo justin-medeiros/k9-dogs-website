@@ -1,9 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import "./UpcomingLitters.css";
 
-export default function UpcomingLitters({ upcomingLittersData }) {
-  console.log(upcomingLittersData);
+function UpcomingLitters({ upcomingLittersData }) {
   return (
     <>
       <div className="upcoming--litters--container">
@@ -39,3 +38,5 @@ export default function UpcomingLitters({ upcomingLittersData }) {
     </>
   );
 }
+
+export default memo(UpcomingLitters);

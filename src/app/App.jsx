@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import MasterLogin from "../master-account/MasterLogin/MasterLogin";
-import ForgotPassword from "../master-account/ForgotPassword/ForgotPassword";
-import Master from "../master-account/Master/Master";
-import AddDogs from "../master-account/MasterEdit/Adds/AddDogs/AddDogs";
-import AddPuppies from "../master-account/MasterEdit/Adds/AddPuppies/AddPuppies";
-import AddPhotos from "../master-account/MasterEdit/Adds/AddPhotos/AddPhotos";
-import Home from "../website/Home/Home";
-import NavBar from "../website/NavBar/NavBar";
-import Footer from "../website/Footer/Footer";
+//import Home from "../website/Home/Home";
+//import NavBar from "../website/NavBar/NavBar";
+//import Footer from "../website/Footer/Footer";
 import Gallery from "../website/Gallery/Gallery";
-import OurDogs from "../website/OurDogs/OurDogs";
+//import OurDogs from "../website/OurDogs/OurDogs";
 import ContactUs from "../website/ContactUs/ContactUs";
 import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
-import Litters from "../website/Litters/Litters";
+//import Litters from "../website/Litters/Litters";
+
 import ScrollToTop from "../wrappers/ScrollToTop";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db, storage } from "../firebase-config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
-
 function App() {
   const [isLoaded, setIsLoaded] = useState({
     dogsFetched: false,
@@ -95,46 +89,54 @@ function App() {
     getUpcomingLitters();
   }, []);
 
+  const Home = lazy(() => import("../website/Home/Home"));
+  const NavBar = lazy(() => import("../website/NavBar/NavBar"));
+  const Footer = lazy(() => import("../website/Footer/Footer"));
+  // const Gallery = lazy(() => import("../website/Gallery/Gallery"));
+  const OurDogs = lazy(() => import("../website/OurDogs/OurDogs"));
+  //const ContactUs = lazy(() => import("../website/ContactUs/ContactUs"));
+  //const FAQ = lazy(() => import("../website/FAQ/FAQ"));
+  // const Testimonials = lazy(() =>
+  //   import("../website/Testimonials/Testimonials")
+  // );
+  const Litters = lazy(() => import("../website/Litters/Litters"));
+
   return (
-    <Router>
-      {isLoaded.dogsFetched &&
-      isLoaded.pastLittersFetched &&
-      isLoaded.upcomingLittersFetched ? (
-        <>
-          <ScrollToTop />
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home dogData={ourDogs} />}></Route>
-            <Route
-              path="/ourdogs"
-              element={<OurDogs dogData={ourDogs} />}
-            ></Route>
-            <Route path="/gallery" element={<Gallery />}></Route>
-            <Route
-              path="/litters"
-              element={
-                <Litters
-                  pastLittersData={allPastLittersCards}
-                  upcomingLittersData={upcomingLitters}
-                />
-              }
-            ></Route>
-            <Route path="/testimonials" element={<Testimonials />}></Route>
-            <Route path="/faq" element={<FAQ />}></Route>
-            <Route path="/contact" element={<ContactUs />}></Route>
-            <Route path="/master" element={<MasterLogin />}></Route>
-            <Route path="/reset" element={<ForgotPassword />} />
-            {/* <Route path="/master-edit" element={<Master />} />
-      <Route path="/master-edit/addkennel" element={<AddDogs />} />
-      <Route path="/master-edit/addpuppies" element={<AddPuppies />} />
-      <Route path="/master-edit/addphotos" element={<AddPhotos />} /> */}
-          </Routes>
-          <Footer />
-        </>
-      ) : (
-        <div>Loading...</div>
-      )}
-    </Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        {isLoaded.dogsFetched &&
+        isLoaded.pastLittersFetched &&
+        isLoaded.upcomingLittersFetched ? (
+          <>
+            <ScrollToTop />
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home dogData={ourDogs} />}></Route>
+              <Route
+                path="/ourdogs"
+                element={<OurDogs dogData={ourDogs} />}
+              ></Route>
+              <Route path="/gallery" element={<Gallery />}></Route>
+              <Route
+                path="/litters"
+                element={
+                  <Litters
+                    pastLittersData={allPastLittersCards}
+                    upcomingLittersData={upcomingLitters}
+                  />
+                }
+              ></Route>
+              <Route path="/testimonials" element={<Testimonials />}></Route>
+              <Route path="/faq" element={<FAQ />}></Route>
+              <Route path="/contact" element={<ContactUs />}></Route>
+            </Routes>
+            <Footer />
+          </>
+        ) : (
+          <div>Loading...</div>
+        )}
+      </Router>
+    </Suspense>
   );
 }
 

@@ -68,6 +68,7 @@
   font-size: 14px;
   width: 440px;
   margin: 0;
+  padding: 10px;
   margin: 20px 0px;
   background-color: transparent;
   border: 3px solid var(--red);
@@ -86,7 +87,6 @@
 
 .testimonials--share--textarea {
   height: 10em;
-  padding: 10px;
   resize: none;
   text-align: left;
   display: block;

@@ -8,24 +8,33 @@
   align-items: center;
   justify-content: center;
   margin: 20px;
-  height: 340px;
+  height: 380px;
   width: 1290px;
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .ourdogs--card--info {
-  width: 65%;
+  width: 60%;
   height: 100%;
   background-color: var(--black);
-  border-left: 14px solid var(--light-grey);
+  border-left: 7px solid var(--light-grey);
   display: flex;
   flex-direction: column;
   border-radius: 0px 20px 20px 0px;
 }
 
+.ourdogs--card--desc--container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
 .ourdogs--card--info--firstrow {
-  border-bottom: 14px solid var(--light-grey);
+  border-bottom: 7px solid var(--light-grey);
 }
 
 .ourdogs--card--name {
@@ -34,9 +43,22 @@
   color: white;
   z-index: 0;
   width: auto;
-  margin: 10px 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   margin-left: 40px;
   font-size: 30px;
+}
+
+.ourdogs--card--subtitle {
+  position: relative;
+  color: white;
+  z-index: 0;
+  width: auto;
+  margin-left: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: -5px;
+  margin-bottom: 6px;
 }
 
 .ourdogs--card--name::after {
@@ -84,7 +106,7 @@
   width: 50%;
   color: white;
   font-weight: 400;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .ourdogs---card--dam {
@@ -101,7 +123,7 @@
   justify-content: space-between;
   margin-right: 200px;
   margin-left: 40px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .ourdogs--card--dam--title::after,
@@ -123,14 +145,14 @@
   font-size: 14px;
   color: white;
   font-weight: 400;
-  padding: 10px 40px;
+  padding: 4px 40px;
   width: 100%;
   max-width: 100%;
   word-wrap: break-word;
 }
 
 .ourdogs--card--image--container {
-  width: 35%;
+  width: 40%;
   height: 100%;
   align-self: center;
   display: flex;
@@ -148,12 +170,11 @@
 
 .ourdogs--card--card--btn {
   background-color: var(--red);
-  align-self: center;
   cursor: pointer;
   border: none;
   padding: 4px 12px;
   margin-left: 40px;
-  margin-top: 5px;
+  margin-bottom: 20px;
   color: white;
   font-size: 18px;
   font-weight: 500;
@@ -179,32 +200,29 @@
 @media only screen and (max-width: 1450px) {
   .ourdogs--card--container {
     width: 1020px;
-    height: 310px;
+    height: 360px;
   }
 
   .ourdogs--card--image--container {
-    width: 40%;
+    width: 45%;
   }
 
   .ourdogs--card--info {
-    width: 60%;
-  }
-  .ourdogs--card--info--firstrow {
-    border-bottom: 10px solid var(--light-grey);
-  }
-
-  .ourdogs--card--info {
-    border-left: 10px solid var(--light-grey);
+    width: 55%;
   }
 
   .ourdogs--card--name {
-    font-size: 25px;
+    font-size: 23px;
     margin-left: 30px;
     border-bottom: none;
   }
 
+  .ourdogs--card--subtitle {
+    margin-left: 30px;
+  }
+
   .ourdogs--card--name::after {
-    bottom: 7px;
+    bottom: 5px;
   }
 
   .ourdogs--card--info--secondrow,
@@ -238,13 +256,13 @@
 @media only screen and (max-width: 1150px) {
   .ourdogs--card--container {
     width: 860px;
-    height: 280px;
+    height: 300px;
   }
   .ourdogs--card--image--container {
-    width: 43%;
+    width: 44%;
   }
   .ourdogs--card--info {
-    width: 57%;
+    width: 56%;
   }
   .ourdogs--card--info--firstrow {
     border-bottom: 5px solid var(--light-grey);
@@ -255,8 +273,12 @@
   }
 
   .ourdogs--card--name {
-    font-size: 18px;
+    font-size: 17px;
     margin-left: 30px;
+  }
+
+  .ourdogs--card--subtitle {
+    font-size: 14px;
   }
 
   .ourdogs--card--name::after {
@@ -267,7 +289,7 @@
   .ourdogs--card--dam--title,
   .ourdogs--card--sire--title,
   .ourdogs--card--description--title {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .ourdogs--card--dam--title::after,
@@ -279,11 +301,12 @@
 
   .ourdogs--card--secondrow--text > h2,
   .ourdogs--card--description {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .ourdogs--card--card--btn {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 14px;
   }
 }
 
@@ -383,6 +406,10 @@
     margin-left: 30px;
   }
 
+  .ourdogs--card--subtitle {
+    font-size: 14px;
+  }
+
   .ourdogs--card--name::after {
     bottom: 4px;
     height: 8px;
@@ -408,6 +435,8 @@
 
   .ourdogs--card--card--btn {
     font-size: 13px;
+    margin-top: 14px;
+    margin-bottom: 0px;
   }
 }
 
@@ -427,6 +456,10 @@
   .ourdogs--card--name {
     font-size: 16px;
     margin-left: 30px;
+  }
+
+  .ourdogs--card--subtitle {
+    font-size: 13px;
   }
 
   .ourdogs--card--name::after {

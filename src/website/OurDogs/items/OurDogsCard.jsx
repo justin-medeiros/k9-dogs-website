@@ -10,25 +10,28 @@ export default function OurDogsCard({ dogInfo }) {
         </div>
 
         <div className="ourdogs--card--info">
-          <div className="ourdogs--card--info--text">
-            <div className="ourdogs--card--info--firstrow">
-              <h1 className="ourdogs--card--name">{dogInfo.name}</h1>
-            </div>
+          <div className="ourdogs--card--info--firstrow">
+            <h1 className="ourdogs--card--name">{dogInfo.name}</h1>
+            {dogInfo.subtitle && (
+              <h1 className="ourdogs--card--subtitle">{dogInfo.subtitle}</h1>
+            )}
+          </div>
 
-            <div className="ourdogs--card--info--secondrow">
-              <h2 className="ourdogs--card--dam--title">Dam</h2>
-              <h2 className="ourdogs--card--sire--title">Sire</h2>
-              <div className="ourdogs--card--sire--container"></div>
-            </div>
+          <div className="ourdogs--card--info--secondrow">
+            <h2 className="ourdogs--card--dam--title">Dam</h2>
+            <h2 className="ourdogs--card--sire--title">Sire</h2>
+            <div className="ourdogs--card--sire--container"></div>
+          </div>
 
-            <div className="ourdogs--card--secondrow--text">
-              <h2 className="ourdogs---card--dam">{dogInfo.dam.slice(5)}</h2>
-              <h2 className="ourdogs---card--sire">{dogInfo.sire.slice(6)}</h2>
-            </div>
+          <div className="ourdogs--card--secondrow--text">
+            <h2 className="ourdogs---card--dam">{dogInfo.dam.slice(5)}</h2>
+            <h2 className="ourdogs---card--sire">{dogInfo.sire.slice(6)}</h2>
+          </div>
 
-            <div className="ourdogs--card--info--thirdrow">
-              <h2 className="ourdogs--card--description--title">Description</h2>
-            </div>
+          <div className="ourdogs--card--info--thirdrow">
+            <h2 className="ourdogs--card--description--title">Description</h2>
+          </div>
+          <div className="ourdogs--card--desc--container">
             <h2 className="ourdogs--card--description">
               {dogInfo.description}
             </h2>

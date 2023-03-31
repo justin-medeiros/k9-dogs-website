@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./HomeOurDogs.css";
-import DogCard from "../items/HomeDogCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { db } from "../../../firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import HomeDogCard from "../items/HomeDogCard";
 
-export default function HomeOurDogs() {
+function HomeOurDogs({ homeDogData }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
-  const [ourDogs, setOurDogs] = useState([]);
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -32,21 +29,13 @@ export default function HomeOurDogs() {
     }
   }, [windowWidth]);
 
-  useEffect(() => {
-    async function getDogs() {
-      const querySnapshot = await getDocs(collection(db, "dogs"));
-      const allDogs = querySnapshot.docs.map((doc) => {
-        const dogData = doc.data();
-        return (
-          <div key={doc.id}>
-            <DogCard dog={dogData} />
-          </div>
-        );
-      });
-      setOurDogs(allDogs);
-    }
-    getDogs();
-  }, []);
+  const allDogCards = homeDogData.map((data, id) => {
+    return (
+      <div key={id}>
+        <HomeDogCard dogInfo={data} />
+      </div>
+    );
+  });
 
   const settings = {
     dots: true,
@@ -62,7 +51,7 @@ export default function HomeOurDogs() {
     <div className="home--dogs--overall--container">
       <h1 className="home--dogs--title">Our Dogs</h1>
       <div className="home--dogs--swiper--container">
-        <Slider {...settings}>{ourDogs}</Slider>
+        <Slider {...settings}>{allDogCards}</Slider>
       </div>
       <Link to="/ourdogs" className="home--dogs--see--more">
         Click to see more!
@@ -70,3 +59,5 @@ export default function HomeOurDogs() {
     </div>
   );
 }
+
+export default memo(HomeOurDogs);

@@ -18,7 +18,6 @@ export default function About() {
     <div className="overall--container">
       <div className="about--container">
         <h1 className="about--title">About Us</h1>
-        <div className="about--underline"></div>
         {aboutTextMap}
       </div>
       <img className="about--image" src="/images/about--us--image.JPEG"></img>

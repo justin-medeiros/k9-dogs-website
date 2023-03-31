@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import Slider from "react-slick";
 import "./PastLittersCard.css";
 
-export default function PastLittersCard({ photos, date }) {
+function PastLittersCard({ photos, date }) {
   const sliderRef = useRef(null);
   const settings = {
     dots: true,
@@ -52,3 +52,5 @@ export default function PastLittersCard({ photos, date }) {
     </div>
   );
 }
+
+export default memo(PastLittersCard);

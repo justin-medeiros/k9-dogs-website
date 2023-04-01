@@ -22,11 +22,13 @@ import {
 } from "firebase/firestore";
 import { db, storage } from "../firebase-config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
+import { motion, AnimatePresence } from "framer-motion";
+import Loaded from "../website/LoadingScreen/Loaded";
 function App() {
   const [isLoaded, setIsLoaded] = useState({
     dogsFetched: false,
     pastLittersFetched: false,
-    upcomingLittersFetched: true,
+    upcomingLittersFetched: false,
   });
   const [ourDogs, setOurDogs] = useState([]);
   const [allPastLittersCards, setAllPastLittersCards] = useState();
@@ -117,29 +119,32 @@ function App() {
         isLoaded.pastLittersFetched &&
         isLoaded.upcomingLittersFetched ? (
           <>
-            <ScrollToTop />
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Home dogData={ourDogs} />}></Route>
-              <Route
-                path="/ourdogs"
-                element={<OurDogs dogData={ourDogs} />}
-              ></Route>
-              <Route path="/gallery" element={<Gallery />}></Route>
-              <Route
-                path="/litters"
-                element={
-                  <Litters
-                    pastLittersData={allPastLittersCards}
-                    upcomingLittersData={upcomingLitters}
-                  />
-                }
-              ></Route>
-              <Route path="/testimonials" element={<Testimonials />}></Route>
-              <Route path="/faq" element={<FAQ />}></Route>
-              <Route path="/contact" element={<ContactUs />}></Route>
-            </Routes>
-            <Footer />
+            <AnimatePresence mode="wait">
+              <Loaded />
+              <ScrollToTop />
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Home dogData={ourDogs} />}></Route>
+                <Route
+                  path="/ourdogs"
+                  element={<OurDogs dogData={ourDogs} />}
+                ></Route>
+                <Route path="/gallery" element={<Gallery />}></Route>
+                <Route
+                  path="/litters"
+                  element={
+                    <Litters
+                      pastLittersData={allPastLittersCards}
+                      upcomingLittersData={upcomingLitters}
+                    />
+                  }
+                ></Route>
+                <Route path="/testimonials" element={<Testimonials />}></Route>
+                <Route path="/faq" element={<FAQ />}></Route>
+                <Route path="/contact" element={<ContactUs />}></Route>
+              </Routes>
+              <Footer />
+            </AnimatePresence>
           </>
         ) : (
           <div>Loading...</div>

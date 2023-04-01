@@ -12,7 +12,14 @@ import Testimonials from "../website/Testimonials/Testimonials";
 //import Litters from "../website/Litters/Litters";
 
 import ScrollToTop from "../wrappers/ScrollToTop";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  orderBy,
+  query,
+} from "firebase/firestore";
 import { db, storage } from "../firebase-config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 function App() {
@@ -28,7 +35,9 @@ function App() {
   // Get all dogs for home page and our dogs page
   useEffect(() => {
     async function getDogs() {
-      const querySnapshot = await getDocs(collection(db, "dogs"));
+      const querySnapshot = await getDocs(
+        query(collection(db, "dogs"), orderBy("id"))
+      );
       const allDogs = querySnapshot.docs.map((doc) => {
         return doc.data();
       });

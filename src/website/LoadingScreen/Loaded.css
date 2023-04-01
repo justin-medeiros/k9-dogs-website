@@ -1,0 +1,14 @@
+.loading--overall--container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading--container {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  background-color: black;
+}

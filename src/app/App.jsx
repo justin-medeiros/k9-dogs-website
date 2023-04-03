@@ -24,6 +24,7 @@ import { db, storage } from "../firebase-config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { motion, AnimatePresence } from "framer-motion";
 import Loaded from "../website/LoadingScreen/Loaded";
+import { SpinnerCircular } from "spinners-react";
 function App() {
   const [isLoaded, setIsLoaded] = useState({
     dogsFetched: false,
@@ -112,8 +113,20 @@ function App() {
   // );
   const Litters = lazy(() => import("../website/Litters/Litters"));
 
+  const spinnerVariants = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="app--container"></div>}>
       <Router>
         {isLoaded.dogsFetched &&
         isLoaded.pastLittersFetched &&
@@ -147,7 +160,17 @@ function App() {
             </AnimatePresence>
           </>
         ) : (
-          <div>Loading...</div>
+          <AnimatePresence>
+            <div className="app--container">
+              <motion.div
+                initial="initial"
+                animate="animate"
+                variants={spinnerVariants}
+              >
+                <SpinnerCircular color="red" size={200} />
+              </motion.div>
+            </div>
+          </AnimatePresence>
         )}
       </Router>
     </Suspense>

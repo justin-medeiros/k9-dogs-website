@@ -1,4 +1,4 @@
-.loading--overall--container {
+.loaded--overall--container {
   position: absolute;
   inset: 0;
   display: flex;
@@ -6,9 +6,16 @@
   align-items: center;
 }
 
-.loading--container {
+.loaded--container {
   position: relative;
   z-index: 50;
   width: 100%;
-  background-color: black;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaded--logo {
+  width: 600px;
 }

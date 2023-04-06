@@ -14,8 +14,40 @@ export default function Loaded() {
       height: 0,
       top: "100vh",
       transition: {
-        duration: 1.5,
-        delay: 1,
+        duration: 1,
+        ease: [0.87, 0, 0.13, 1],
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const imageContainer = {
+    initial: {
+      opacity: 1,
+      backgroundPositionY: "0%",
+    },
+    animate: {
+      opacity: 0,
+      backgroundPositionY: "100%",
+      transition: {
+        duration: 0.5,
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const image = {
+    initial: {
+      y: 0,
+      filter: "grayscale(100%)",
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1.5,
+      filter: "grayscale(0%)",
+      transition: {
+        duration: 1,
         ease: [0.87, 0, 0.13, 1],
       },
     },
@@ -31,14 +63,23 @@ export default function Loaded() {
   };
 
   return (
-    <div className="loading--overall--container">
+    <div className="loaded--overall--container">
       <motion.div
-        className="loading--container"
+        className="loaded--container"
         initial="initial"
         animate="animate"
         variants={blackBox}
         onAnimationComplete={handleAnimationComplete}
-      />
+      >
+        <motion.div variants={imageContainer}>
+          <motion.img
+            src="images/logo.png"
+            className="loaded--logo"
+            variants={image}
+            style={{ fill: "url(#pattern)" }}
+          />
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

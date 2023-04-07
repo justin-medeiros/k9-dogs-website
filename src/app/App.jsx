@@ -101,28 +101,6 @@ function App() {
     getUpcomingLitters();
   }, []);
 
-  // const Home = lazy(() => import("../website/Home/Home"));
-  // const NavBar = lazy(() => import("../website/NavBar/NavBar"));
-  // const Footer = lazy(() => import("../website/Footer/Footer"));
-  // // const Gallery = lazy(() => import("../website/Gallery/Gallery"));
-  // const OurDogs = lazy(() => import("../website/OurDogs/OurDogs"));
-  // //const ContactUs = lazy(() => import("../website/ContactUs/ContactUs"));
-  // //const FAQ = lazy(() => import("../website/FAQ/FAQ"));
-  // // const Testimonials = lazy(() =>
-  // //   import("../website/Testimonials/Testimonials")
-  // // );
-  // const Litters = lazy(() => import("../website/Litters/Litters"));
-
-  const spinnerVariants = {
-    initial: {
-      opacity: 1,
-    },
-    animate: {
-      opacity: 1,
-    },
-    exit: { opacity: 0, transition: { duration: 0.5 } },
-  };
-
   return (
     <>
       {isLoaded.dogsFetched &&
@@ -157,18 +135,9 @@ function App() {
           </AnimatePresence>
         </Router>
       ) : (
-        <AnimatePresence mode="wait">
-          <div className="app--container">
-            <motion.div
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={spinnerVariants}
-            >
-              <SpinnerCircular color="red" size={200} />
-            </motion.div>
-          </div>
-        </AnimatePresence>
+        <div className="app--container">
+          <SpinnerCircular color="red" size={200} />
+        </div>
       )}
     </>
   );

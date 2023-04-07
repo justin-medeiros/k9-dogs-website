@@ -63,23 +63,24 @@ export default function Loaded() {
   };
 
   return (
-    <div className="loaded--overall--container">
-      <motion.div
-        className="loaded--container"
-        initial="initial"
-        animate="animate"
-        variants={blackBox}
-        onAnimationComplete={handleAnimationComplete}
-      >
-        <motion.div variants={imageContainer}>
-          <motion.img
-            src="images/logo.png"
-            className="loaded--logo"
-            variants={image}
-            style={{ fill: "url(#pattern)" }}
-          />
+    !animationComplete && (
+      <div className="loaded--overall--container">
+        <motion.div
+          className="loaded--container"
+          initial="initial"
+          animate="animate"
+          variants={blackBox}
+          onAnimationComplete={handleAnimationComplete}
+        >
+          <motion.div variants={imageContainer}>
+            <motion.img
+              src="images/logo.png"
+              className="loaded--logo"
+              variants={image}
+            />
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    )
   );
 }

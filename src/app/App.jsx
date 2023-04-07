@@ -1,15 +1,15 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-//import Home from "../website/Home/Home";
-//import NavBar from "../website/NavBar/NavBar";
-//import Footer from "../website/Footer/Footer";
+import Home from "../website/Home/Home";
+import NavBar from "../website/NavBar/NavBar";
+import Footer from "../website/Footer/Footer";
 import Gallery from "../website/Gallery/Gallery";
-//import OurDogs from "../website/OurDogs/OurDogs";
+import OurDogs from "../website/OurDogs/OurDogs";
 import ContactUs from "../website/ContactUs/ContactUs";
 import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
-//import Litters from "../website/Litters/Litters";
+import Litters from "../website/Litters/Litters";
 
 import ScrollToTop from "../wrappers/ScrollToTop";
 import {
@@ -101,79 +101,76 @@ function App() {
     getUpcomingLitters();
   }, []);
 
-  const Home = lazy(() => import("../website/Home/Home"));
-  const NavBar = lazy(() => import("../website/NavBar/NavBar"));
-  const Footer = lazy(() => import("../website/Footer/Footer"));
-  // const Gallery = lazy(() => import("../website/Gallery/Gallery"));
-  const OurDogs = lazy(() => import("../website/OurDogs/OurDogs"));
-  //const ContactUs = lazy(() => import("../website/ContactUs/ContactUs"));
-  //const FAQ = lazy(() => import("../website/FAQ/FAQ"));
-  // const Testimonials = lazy(() =>
-  //   import("../website/Testimonials/Testimonials")
-  // );
-  const Litters = lazy(() => import("../website/Litters/Litters"));
+  // const Home = lazy(() => import("../website/Home/Home"));
+  // const NavBar = lazy(() => import("../website/NavBar/NavBar"));
+  // const Footer = lazy(() => import("../website/Footer/Footer"));
+  // // const Gallery = lazy(() => import("../website/Gallery/Gallery"));
+  // const OurDogs = lazy(() => import("../website/OurDogs/OurDogs"));
+  // //const ContactUs = lazy(() => import("../website/ContactUs/ContactUs"));
+  // //const FAQ = lazy(() => import("../website/FAQ/FAQ"));
+  // // const Testimonials = lazy(() =>
+  // //   import("../website/Testimonials/Testimonials")
+  // // );
+  // const Litters = lazy(() => import("../website/Litters/Litters"));
 
   const spinnerVariants = {
     initial: {
       opacity: 1,
     },
     animate: {
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-      },
+      opacity: 1,
     },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
   };
 
   return (
-    <Suspense fallback={<div className="app--container"></div>}>
-      <Router>
-        {isLoaded.dogsFetched &&
-        isLoaded.pastLittersFetched &&
-        isLoaded.upcomingLittersFetched ? (
-          <>
-            <AnimatePresence mode="wait">
-              <Loaded />
-              <ScrollToTop />
-              <NavBar />
-              <Routes>
-                <Route path="/" element={<Home dogData={ourDogs} />}></Route>
-                <Route
-                  path="/ourdogs"
-                  element={<OurDogs dogData={ourDogs} />}
-                ></Route>
-                <Route path="/gallery" element={<Gallery />}></Route>
-                <Route
-                  path="/litters"
-                  element={
-                    <Litters
-                      pastLittersData={allPastLittersCards}
-                      upcomingLittersData={upcomingLitters}
-                    />
-                  }
-                ></Route>
-                <Route path="/testimonials" element={<Testimonials />}></Route>
-                <Route path="/faq" element={<FAQ />}></Route>
-                <Route path="/contact" element={<ContactUs />}></Route>
-              </Routes>
-              <Footer />
-            </AnimatePresence>
-          </>
-        ) : (
-          <AnimatePresence>
-            <div className="app--container">
-              <motion.div
-                initial="initial"
-                animate="animate"
-                variants={spinnerVariants}
-              >
-                <SpinnerCircular color="red" size={200} />
-              </motion.div>
-            </div>
+    <>
+      {isLoaded.dogsFetched &&
+      isLoaded.pastLittersFetched &&
+      isLoaded.upcomingLittersFetched ? (
+        <Router>
+          <AnimatePresence mode="wait">
+            <Loaded />
+            <ScrollToTop />
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home dogData={ourDogs} />}></Route>
+              <Route
+                path="/ourdogs"
+                element={<OurDogs dogData={ourDogs} />}
+              ></Route>
+              <Route path="/gallery" element={<Gallery />}></Route>
+              <Route
+                path="/litters"
+                element={
+                  <Litters
+                    pastLittersData={allPastLittersCards}
+                    upcomingLittersData={upcomingLitters}
+                  />
+                }
+              ></Route>
+              <Route path="/testimonials" element={<Testimonials />}></Route>
+              <Route path="/faq" element={<FAQ />}></Route>
+              <Route path="/contact" element={<ContactUs />}></Route>
+            </Routes>
+            <Footer />
           </AnimatePresence>
-        )}
-      </Router>
-    </Suspense>
+        </Router>
+      ) : (
+        <AnimatePresence mode="wait">
+          <div className="app--container">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={spinnerVariants}
+            >
+              <SpinnerCircular color="red" size={200} />
+            </motion.div>
+          </div>
+        </AnimatePresence>
+      )}
+    </>
   );
 }
 

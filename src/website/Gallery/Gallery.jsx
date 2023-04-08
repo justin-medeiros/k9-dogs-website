@@ -3,6 +3,7 @@ import { storage } from "../../firebase-config";
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import { SpinnerCircular } from "spinners-react";
+import { motion } from "framer-motion";
 
 export default function Gallery() {
   const [allPhotos, setAllPhotos] = useState([]);
@@ -29,7 +30,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="gallery--container">
+    <motion.div exit={{ opacity: 0 }} className="gallery--container">
       <div className="gallery--title--background">
         <h1 className="gallery--title">Photo Gallery</h1>
       </div>
@@ -41,6 +42,6 @@ export default function Gallery() {
         {isLoading && <SpinnerCircular color="red" size={200} />}
         <div className="gallery--photos--container">{allPhotos}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }

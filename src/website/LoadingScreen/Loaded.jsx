@@ -24,13 +24,12 @@ export default function Loaded() {
   const imageContainer = {
     initial: {
       opacity: 1,
-      backgroundPositionY: "0%",
     },
     animate: {
       opacity: 0,
-      backgroundPositionY: "100%",
       transition: {
-        duration: 0.5,
+        delay: 1,
+        duration: 1,
         when: "afterChildren",
       },
     },
@@ -38,28 +37,28 @@ export default function Loaded() {
 
   const image = {
     initial: {
-      y: 0,
-      filter: "grayscale(100%)",
       opacity: 0,
     },
     animate: {
-      y: 0,
-      opacity: 1.5,
-      filter: "grayscale(0%)",
+      opacity: 1,
       transition: {
         duration: 1,
+        delay: 1.5,
         ease: [0.87, 0, 0.13, 1],
       },
     },
   };
 
-  if (!animationComplete) {
-    document.body.style.overflow = "hidden";
-  }
+  useEffect(() => {
+    if (!animationComplete) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [animationComplete]);
 
   const handleAnimationComplete = () => {
     setAnimationComplete(true);
-    document.body.style.overflow = "auto";
   };
 
   return (
@@ -72,7 +71,7 @@ export default function Loaded() {
           variants={blackBox}
           onAnimationComplete={handleAnimationComplete}
         >
-          <motion.div variants={imageContainer}>
+          <motion.div variants={imageContainer} className="loaded--logo">
             <motion.img
               src="images/logo.png"
               className="loaded--logo"

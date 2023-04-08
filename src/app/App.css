@@ -10,6 +10,7 @@ html {
   --black: #161a1d;
   --light-grey: #3f4950;
   --dark-grey: #2a3136;
+  background-color: var(--black);
 }
 
 .app--container {

@@ -1,5 +1,5 @@
-import React, { useEffect, useState, lazy, Suspense } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "../website/Home/Home";
 import NavBar from "../website/NavBar/NavBar";
@@ -26,6 +26,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Loaded from "../website/LoadingScreen/Loaded";
 import { SpinnerCircular } from "spinners-react";
 function App() {
+  const location = useLocation();
   const [isLoaded, setIsLoaded] = useState({
     dogsFetched: false,
     pastLittersFetched: false,
@@ -106,12 +107,12 @@ function App() {
       {isLoaded.dogsFetched &&
       isLoaded.pastLittersFetched &&
       isLoaded.upcomingLittersFetched ? (
-        <Router>
+        <>
+          <Loaded />
+          <ScrollToTop />
+          <NavBar />
           <AnimatePresence mode="wait">
-            <Loaded />
-            <ScrollToTop />
-            <NavBar />
-            <Routes>
+            <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home dogData={ourDogs} />}></Route>
               <Route
                 path="/ourdogs"
@@ -131,9 +132,9 @@ function App() {
               <Route path="/faq" element={<FAQ />}></Route>
               <Route path="/contact" element={<ContactUs />}></Route>
             </Routes>
-            <Footer />
           </AnimatePresence>
-        </Router>
+          <Footer />
+        </>
       ) : (
         <div className="app--container">
           <SpinnerCircular color="red" size={200} />

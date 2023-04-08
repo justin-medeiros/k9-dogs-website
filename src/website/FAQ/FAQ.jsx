@@ -3,6 +3,7 @@ import "./FAQ.css";
 import FAQCard from "./items/FAQCard";
 import data from "../../data.json";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function FAQ() {
   const [allFAQ, setAllFAQ] = useState([]);
@@ -15,7 +16,7 @@ export default function FAQ() {
   }, []);
 
   return (
-    <div className="faq--container">
+    <motion.div exit={{ opacity: 0 }} className="faq--container">
       <h1 className="faq--title">Frequently Asked Questions</h1>
       {allFAQ}
       <p className="faq--contact">
@@ -27,6 +28,6 @@ export default function FAQ() {
         </span>
         .
       </p>
-    </div>
+    </motion.div>
   );
 }

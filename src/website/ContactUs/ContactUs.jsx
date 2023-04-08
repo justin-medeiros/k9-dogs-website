@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 export default function ContactUs() {
   const formDataEmptyObject = {
@@ -39,7 +40,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="contactus--overall--container">
+    <motion.div exit={{ opacity: 0 }} className="contactus--overall--container">
       <div className="contactus--container">
         <div className="contactus--text--container">
           <h1>Contact Us</h1>
@@ -112,6 +113,6 @@ export default function ContactUs() {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

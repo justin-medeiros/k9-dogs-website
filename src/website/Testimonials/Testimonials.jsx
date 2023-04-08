@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TestimonialCard from "./items/TestimonialCard";
 import data from "../../data.json";
 import emailjs from "@emailjs/browser";
-
+import { motion } from "framer-motion";
 import "./Testimonials.css";
 
 export default function Testimonials() {
@@ -44,7 +44,10 @@ export default function Testimonials() {
   });
 
   return (
-    <div className="testimonials--overall--container">
+    <motion.div
+      exit={{ opacity: 0 }}
+      className="testimonials--overall--container"
+    >
       <h1 className="testimonials--title">Testimonials</h1>
       <h2 className="testimonials--subtitle">
         See why clients trust us for their German Shepherd needs!
@@ -109,6 +112,6 @@ export default function Testimonials() {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

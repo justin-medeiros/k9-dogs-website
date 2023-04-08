@@ -7,13 +7,14 @@ import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
+import { motion } from "framer-motion";
 export default function Litters({ pastLittersData, upcomingLittersData }) {
   const allPastLitters = pastLittersData.map((data, id) => {
     return <PastLittersCard photos={data.photos} date={data.dates} key={id} />;
   });
 
   return (
-    <div className="litters--container">
+    <motion.div exit={{ opacity: 0 }} className="litters--container">
       <div className="litters--upcoming--container">
         <h1 className="litters--upcoming--title">Upcoming Litters</h1>
         {upcomingLittersData.isNewLitter ? (
@@ -74,6 +75,6 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
         </p>
         <div className="past--litters--cards--container">{allPastLitters}</div>
       </div>
-    </div>
+    </motion.div>
   );
 }

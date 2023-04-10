@@ -29,19 +29,52 @@ export default function Gallery() {
     getPhotos();
   }, []);
 
+  const content = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const element = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
   return (
-    <motion.div exit={{ opacity: 0 }} className="gallery--container">
-      <div className="gallery--title--background">
-        <h1 className="gallery--title">Photo Gallery</h1>
-      </div>
-      <div
-        className={
-          isLoading ? "gallery--spinner" : "gallery--photos--background"
-        }
+    <motion.div exit={{ opacity: 0 }}>
+      <motion.div
+        variants={content}
+        animate="animate"
+        initial="initial"
+        className="gallery--container"
       >
-        {isLoading && <SpinnerCircular color="red" size={200} />}
-        <div className="gallery--photos--container">{allPhotos}</div>
-      </div>
+        <motion.div
+          variants={element}
+          animate="animate"
+          initial="initial"
+          className="gallery--title--background"
+        >
+          <h1 className="gallery--title">Photo Gallery</h1>
+        </motion.div>
+        <motion.div
+          variants={element}
+          animate="animate"
+          initial="initial"
+          className={
+            isLoading ? "gallery--spinner" : "gallery--photos--background"
+          }
+        >
+          {isLoading && <SpinnerCircular color="red" size={200} />}
+          <div className="gallery--photos--container">{allPhotos}</div>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 }

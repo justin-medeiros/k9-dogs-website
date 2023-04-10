@@ -39,9 +39,26 @@ export default function ContactUs() {
     }
   };
 
+  const content = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
   return (
     <motion.div exit={{ opacity: 0 }} className="contactus--overall--container">
-      <div className="contactus--container">
+      <motion.div
+        variants={content}
+        animate="animate"
+        initial="initial"
+        className="contactus--container"
+      >
         <div className="contactus--text--container">
           <h1>Contact Us</h1>
           <p>Send us a message!</p>
@@ -112,7 +129,7 @@ export default function ContactUs() {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

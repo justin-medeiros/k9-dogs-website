@@ -10,8 +10,18 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Litters({ pastLittersData, upcomingLittersData }) {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
+  const controlTitle = useAnimation();
+  const [refTitle, inViewTitle] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const controlContainer = useAnimation();
+  const [refContainer, inViewContainer] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const element = {
     initial: { y: -20, opacity: 0 },
     animate: {
@@ -47,10 +57,14 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
   });
 
   useEffect(() => {
-    if (inView) {
-      control.start("animate");
+    if (inViewTitle) {
+      controlTitle.start("animate");
     }
-  }, [control, inView]);
+
+    if (inViewContainer) {
+      controlContainer.start("animate");
+    }
+  }, [controlTitle, controlContainer, inViewTitle, inViewContainer]);
 
   return (
     <motion.div exit={{ opacity: 0 }}>
@@ -131,28 +145,28 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
           className="past--litters--container"
         >
           <motion.h1
-            ref={ref}
+            ref={refTitle}
             variants={elementScroll}
             initial="initial"
-            animate={control}
+            animate={controlTitle}
             className="past--litters--title"
           >
             Past Litters
           </motion.h1>
           <motion.p
-            ref={ref}
+            ref={refTitle}
             variants={elementScroll}
             initial="initial"
-            animate={control}
+            animate={controlTitle}
             className="past--litters--subtitle"
           >
             Have a look at our past litters!
           </motion.p>
           <motion.div
-            ref={ref}
+            ref={refContainer}
             variants={elementScroll}
             initial="initial"
-            animate={control}
+            animate={controlContainer}
             className="past--litters--cards--container"
           >
             {allPastLitters}

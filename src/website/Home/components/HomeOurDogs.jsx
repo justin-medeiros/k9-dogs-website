@@ -11,8 +11,46 @@ import { useInView } from "react-intersection-observer";
 function HomeOurDogs({ homeDogData }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
-  const control = useAnimation();
-  const [ref, inView] = useInView();
+
+  const controlTitle = useAnimation();
+  const [refTitle, inViewTitle] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const controlContainer = useAnimation();
+  const [refContainer, inViewContainer] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const controlButton = useAnimation();
+  const [refButton, inViewButton] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inViewTitle) {
+      controlTitle.start("animate");
+    }
+
+    if (inViewContainer) {
+      controlContainer.start("animate");
+    }
+
+    if (inViewButton) {
+      controlButton.start("animate");
+    }
+  }, [
+    controlTitle,
+    controlContainer,
+    controlButton,
+    inViewTitle,
+    inViewContainer,
+    inViewButton,
+  ]);
+
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -69,34 +107,22 @@ function HomeOurDogs({ homeDogData }) {
     },
   };
 
-  useEffect(() => {
-    if (inView) {
-      control.start("animate");
-    }
-  }, [control, inView]);
-
   return (
-    <motion.div
-      ref={ref}
-      variants={content}
-      initial="initial"
-      animate={control}
-      className="home--dogs--overall--container"
-    >
+    <div className="home--dogs--overall--container">
       <motion.h1
-        ref={ref}
+        ref={refTitle}
         variants={element}
         initial="initial"
-        animate={control}
+        animate={controlTitle}
         className="home--dogs--title"
       >
         Our Dogs
       </motion.h1>
       <motion.div
-        ref={ref}
+        ref={refContainer}
         variants={element}
         initial="initial"
-        animate={control}
+        animate={controlContainer}
         className="home--dogs--swiper--container"
       >
         <Slider {...settings}>{allDogCards}</Slider>
@@ -104,15 +130,15 @@ function HomeOurDogs({ homeDogData }) {
 
       <Link to="/ourdogs" className="home--dogs--see--more">
         <motion.div
-          ref={ref}
+          ref={refButton}
           variants={element}
           initial="initial"
-          animate={control}
+          animate={controlButton}
         >
           Click to see more!
         </motion.div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 

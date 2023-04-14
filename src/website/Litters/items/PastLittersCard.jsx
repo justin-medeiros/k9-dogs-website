@@ -24,7 +24,11 @@ function PastLittersCard({ photos, date }) {
   const pastLittersPhotos = photos.map((photoUrl, key) => {
     return (
       <div className="litters--card--image--container" key={key}>
-        <img className="litters--card--image" src={photoUrl}></img>
+        <img
+          className="litters--card--image"
+          src={photoUrl}
+          loading="lazy"
+        ></img>
       </div>
     );
   });

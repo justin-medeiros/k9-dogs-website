@@ -18,7 +18,7 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.0,
+        duration: 0.7,
         ease: [0.6, -0.05, 0.01, 0.99],
       },
     },
@@ -60,13 +60,13 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
         initial="initial"
         className="litters--container"
       >
-        <motion.div variants={content} className="litters--upcoming--container">
-          <motion.h1
-            variants={element}
-            animate="animate"
-            initial="initial"
-            className="litters--upcoming--title"
-          >
+        <motion.div
+          variants={content}
+          animate="animate"
+          initial="initial"
+          className="litters--upcoming--container"
+        >
+          <motion.h1 variants={element} className="litters--upcoming--title">
             Upcoming Litters
           </motion.h1>
           {upcomingLittersData.isNewLitter ? (
@@ -75,8 +75,6 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
             <div>
               <motion.p
                 variants={element}
-                animate="animate"
-                initial="initial"
                 className="litters--upcoming--subtitle"
               >
                 There are no upcoming litters at the moment. Please follow us on
@@ -84,8 +82,6 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
               </motion.p>
               <motion.div
                 variants={element}
-                animate="animate"
-                initial="initial"
                 className="litters--upcoming--icons--container"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -128,7 +124,12 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
             ></path>
           </svg>
         </div>
-        <motion.div variants={content} className="past--litters--container">
+        <motion.div
+          variants={content}
+          animate="animate"
+          initial="initial"
+          className="past--litters--container"
+        >
           <motion.h1
             ref={ref}
             variants={elementScroll}

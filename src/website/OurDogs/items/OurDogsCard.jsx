@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./OurDogsCard.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function OurDogsCard({ dogInfo }) {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const element = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("animate");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="ourdogs--card--overall--container">
+    <motion.div
+      ref={ref}
+      variants={element}
+      initial="initial"
+      animate={control}
+      className="ourdogs--card--overall--container"
+    >
       <div className="ourdogs--card--container">
         <div className="ourdogs--card--image--container">
           <img className="ourdogs--card--image" src={dogInfo.img}></img>
@@ -41,6 +70,6 @@ export default function OurDogsCard({ dogInfo }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

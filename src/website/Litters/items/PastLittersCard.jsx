@@ -1,9 +1,13 @@
-import React, { memo, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "./PastLittersCard.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function PastLittersCard({ photos, date }) {
   const sliderRef = useRef(null);
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   const settings = {
     dots: true,
     infinite: true,
@@ -13,12 +17,24 @@ function PastLittersCard({ photos, date }) {
     arrows: false,
   };
 
+  const element = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
   const handleNextClick = () => {
-    sliderRef.current.slickNext(); // Call slickNext() method to go to the next slide
+    sliderRef.current.slickNext();
   };
 
   const handlePrevClick = () => {
-    sliderRef.current.slickPrev(); // Call slickNext() method to go to the next slide
+    sliderRef.current.slickPrev();
   };
 
   const pastLittersPhotos = photos.map((photoUrl, key) => {
@@ -33,8 +49,20 @@ function PastLittersCard({ photos, date }) {
     );
   });
 
+  useEffect(() => {
+    if (inView) {
+      control.start("animate");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="litters--card--container">
+    <motion.div
+      ref={ref}
+      variants={element}
+      initial="initial"
+      animate={control}
+      className="litters--card--container"
+    >
       <div className="litters--card--slider--container">
         <div className="slider--buttons--container">
           <div className="prev--button" onClick={handlePrevClick}>
@@ -53,7 +81,7 @@ function PastLittersCard({ photos, date }) {
       <div className="litters--card--text--container">
         <p className="litters--date">{date}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

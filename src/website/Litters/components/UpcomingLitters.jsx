@@ -66,7 +66,10 @@ function UpcomingLitters({ upcomingLittersData }) {
           <h1>{upcomingLittersData.dam}</h1>
         </div>
       </motion.div>
-      <div className="upcoming--litters--background"></div>
+      <motion.div
+        variants={element}
+        className="upcoming--litters--background"
+      ></motion.div>
       <motion.div variants={element}>
         <Link to="/contact" className="upcoming--litters--contact">
           Contact us to reserve your puppy now!

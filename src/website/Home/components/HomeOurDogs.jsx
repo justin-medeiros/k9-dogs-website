@@ -5,10 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import HomeDogCard from "../items/HomeDogCard";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function HomeOurDogs({ homeDogData }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [slidesToShow, setSlidesToShow] = useState(3);
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -47,16 +51,68 @@ function HomeOurDogs({ homeDogData }) {
     prevArrow: <button className="prev--button">Previous</button>,
   };
 
+  const content = {
+    animate: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const element = {
+    initial: { y: -20, opacity: 0 },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.0,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("animate");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="home--dogs--overall--container">
-      <h1 className="home--dogs--title">Our Dogs</h1>
-      <div className="home--dogs--swiper--container">
+    <motion.div
+      ref={ref}
+      variants={content}
+      initial="initial"
+      animate={control}
+      className="home--dogs--overall--container"
+    >
+      <motion.h1
+        ref={ref}
+        variants={element}
+        initial="initial"
+        animate={control}
+        className="home--dogs--title"
+      >
+        Our Dogs
+      </motion.h1>
+      <motion.div
+        ref={ref}
+        variants={element}
+        initial="initial"
+        animate={control}
+        className="home--dogs--swiper--container"
+      >
         <Slider {...settings}>{allDogCards}</Slider>
-      </div>
+      </motion.div>
+
       <Link to="/ourdogs" className="home--dogs--see--more">
-        Click to see more!
+        <motion.div
+          ref={ref}
+          variants={element}
+          initial="initial"
+          animate={control}
+        >
+          Click to see more!
+        </motion.div>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

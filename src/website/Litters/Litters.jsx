@@ -61,7 +61,12 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
         className="litters--container"
       >
         <motion.div variants={content} className="litters--upcoming--container">
-          <motion.h1 variants={element} className="litters--upcoming--title">
+          <motion.h1
+            variants={element}
+            animate="animate"
+            initial="initial"
+            className="litters--upcoming--title"
+          >
             Upcoming Litters
           </motion.h1>
           {upcomingLittersData.isNewLitter ? (
@@ -70,6 +75,8 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
             <div>
               <motion.p
                 variants={element}
+                animate="animate"
+                initial="initial"
                 className="litters--upcoming--subtitle"
               >
                 There are no upcoming litters at the moment. Please follow us on
@@ -77,6 +84,8 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
               </motion.p>
               <motion.div
                 variants={element}
+                animate="animate"
+                initial="initial"
                 className="litters--upcoming--icons--container"
                 target="_blank"
                 rel="noopener noreferrer"

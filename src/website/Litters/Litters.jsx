@@ -1,8 +1,5 @@
-import { async } from "@firebase/util";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Facebook, Instagram } from "react-feather";
-import { storage } from "../../firebase-config";
 import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";

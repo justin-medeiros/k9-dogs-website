@@ -1,21 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
   return (
     <div className="footer--overall--container">
       <div className="footer--container">
-        <img className="footer--logo" src="images/logo.png"></img>
+        <Link to="/" className="footer--logo--container">
+          <img className="footer--logo" src="images/logo.png"></img>
+        </Link>
 
         <div className="footer--mobile">
           <div className="footer--quick--links">
             <h1>Quick Links</h1>
             <Link to="/">Home</Link>
             <Link to="/ourdogs">Our Dogs</Link>
-            <Link to="/puppies">Puppies</Link>
+            <Link to="/litters">Litters</Link>
+            <Link to="/gallery">Gallery</Link>
             <Link to="/testimonials">Testimonials</Link>
-            <Link to="/ourdogs">FAQ</Link>
+            <Link to="/faq">FAQ</Link>
           </div>
           <div className="footer--contact--container">
             <h1>Contact Me</h1>

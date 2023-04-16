@@ -14,7 +14,14 @@
 .footer--logo {
   width: 320px;
   object-fit: contain;
+}
+
+.footer--logo--container {
+  align-self: center;
+  margin-top: 4px;
+
   display: flex;
+  align-items: center;
 }
 
 .footer--quick--links {

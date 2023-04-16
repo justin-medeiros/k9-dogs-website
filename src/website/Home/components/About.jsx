@@ -33,7 +33,7 @@ export default function About() {
 
   const aboutTextMap = aboutText.map((item, key) => {
     return (
-      <div className="about--text">
+      <div className="about--text" key={key}>
         {item}
         {key !== aboutText.length - 1 && <br />}
       </div>

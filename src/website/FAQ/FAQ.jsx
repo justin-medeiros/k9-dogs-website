@@ -27,9 +27,14 @@ export default function FAQ() {
   };
 
   useEffect(() => {
-    const faqCards = data.faq.map((data) => {
+    const faqCards = data.faq.map((data, key) => {
       return (
-        <motion.div variants={element} animate="animate" initial="initial">
+        <motion.div
+          key={key}
+          variants={element}
+          animate="animate"
+          initial="initial"
+        >
           <FAQCard key={data.key} data={data} />
         </motion.div>
       );

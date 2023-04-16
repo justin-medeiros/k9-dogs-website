@@ -21,13 +21,13 @@ export default function Footer() {
             <Link to="/faq">FAQ</Link>
           </div>
           <div className="footer--contact--container">
-            <h1>Contact Me</h1>
+            <h1>Contact Us</h1>
             <div className="footer--email">
               <i className="fa-solid fa-envelope"></i>
               <p>clarotk9dogs@gmail.ca</p>
             </div>
             <Link to="/contact" className="footer--contact--link">
-              Contact Me Now!
+              Contact Us Now!
             </Link>
           </div>
           <div className="footer--affiliates">

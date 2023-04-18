@@ -28,7 +28,9 @@ export default function HomeDogCard({ dogInfo }) {
             {dogInfo.dam}
           </p>
         </div>
-        <button className="dogcard--btn">Click More!</button>
+        <a href={dogInfo.link} target="_blank" rel="noreferrer">
+          <button className="dogcard--btn">Click More!</button>
+        </a>
       </div>
     </div>
   );

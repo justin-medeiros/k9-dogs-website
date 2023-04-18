@@ -135,6 +135,7 @@
   align-items: center;
   background-color: var(--dark-grey);
   padding: 10px 20px;
+  margin-top: 20px;
 }
 
 .footer--icons--container {

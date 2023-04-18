@@ -64,9 +64,11 @@ export default function OurDogsCard({ dogInfo }) {
             <h2 className="ourdogs--card--description">
               {dogInfo.description}
             </h2>
-            <button className="ourdogs--card--card--btn">
-              Click for more!
-            </button>
+            <a href={dogInfo.link} target="_blank" rel="noreferrer">
+              <button className="ourdogs--card--card--btn" href="">
+                Click for more!
+              </button>
+            </a>
           </div>
         </div>
       </div>

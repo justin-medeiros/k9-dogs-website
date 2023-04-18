@@ -214,8 +214,8 @@
     gap: 20px;
     padding: 0px;
     margin: 0px;
-    align-self: center;
   }
+
   .footer--logo {
     width: 260px;
     margin: 0;
@@ -272,21 +272,22 @@
     justify-content: center;
     align-items: center;
   }
+
   .footer--affiliates > h1 {
     font-size: 20px;
-    margin-bottom: 10px;
   }
 
   .footer--ckc--img,
   .footer--gsscc--img {
-    width: 130px;
     margin: 0;
   }
 
   .footer--affiliates--images {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -12px;
   }
 
   .fa-brands.fa-square-facebook {
@@ -319,30 +320,18 @@
 @media only screen and (max-width: 768px) {
   .footer--mobile {
     gap: 40px;
-    padding: 0px;
   }
+
   .footer--logo {
     width: 220px;
-    padding: 0px;
-    justify-self: center;
-    align-self: center;
-    display: flex;
   }
 
   .footer--quick--links > h1 {
     font-size: 16px;
-    margin: 0;
   }
 
   .footer--quick--links > a {
     font-size: 12px;
-  }
-
-  .footer--contact--container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
   }
 
   .footer--contact--container > h1 {
@@ -365,28 +354,14 @@
     font-size: 12px;
   }
 
-  .footer--affiliates {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .footer--affiliates > h1 {
     font-size: 16px;
-    margin-bottom: 4px;
+    margin-top: -12px;
   }
 
   .footer--ckc--img,
   .footer--gsscc--img {
     width: 100px;
-    margin: 0;
-  }
-
-  .footer--affiliates--images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .fa-brands.fa-square-facebook {

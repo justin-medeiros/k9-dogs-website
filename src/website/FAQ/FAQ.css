@@ -9,7 +9,7 @@
 .faq--title {
   color: white;
   font-size: 36px;
-  padding: 30px 0px;
+  padding: 30px 10px;
   border-radius: 20px;
   margin: 40px;
   width: 90%;
@@ -24,6 +24,7 @@
   color: white;
   font-weight: 500;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .faq--contact--us {
@@ -57,5 +58,11 @@
 
   .faq--contact {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .faq--contact {
+    font-size: 15px;
   }
 }

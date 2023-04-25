@@ -28,6 +28,7 @@
   outline: 1px solid white;
   transition: background-color 800ms, outline 400ms;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .faq--card--title {

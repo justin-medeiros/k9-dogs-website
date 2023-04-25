@@ -88,6 +88,10 @@
     width: 500px;
   }
 
+  .faq--card--top--section:hover {
+    outline: none;
+  }
+
   .faq--card--title {
     font-size: 16px;
   }

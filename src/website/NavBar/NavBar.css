@@ -171,3 +171,13 @@
     border-radius: 0;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .menu--icon {
+    font-size: 1.4rem;
+  }
+
+  .navbar--logo {
+    width: 160px;
+  }
+}

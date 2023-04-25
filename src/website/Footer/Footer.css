@@ -220,8 +220,8 @@
   .footer--logo {
     width: 260px;
     margin: 0;
-    margin-top: 20px;
-    margin-bottom: 10px;
+
+    margin-bottom: 20px;
     justify-self: center;
     align-self: center;
     display: flex;
@@ -389,5 +389,48 @@
     text-decoration: none;
     color: white;
     font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer--mobile {
+    gap: 10px;
+  }
+
+  .footer--logo {
+    width: 180px;
+  }
+
+  .footer--quick--links > h1 {
+    font-size: 14px;
+  }
+
+  .footer--quick--links > a {
+    font-size: 12px;
+  }
+
+  .footer--contact--container > h1 {
+    font-size: 14px;
+  }
+
+  .footer--affiliates > h1 {
+    font-size: 14px;
+    margin-top: -12px;
+  }
+
+  .fa-brands.fa-square-facebook {
+    font-size: 14px;
+  }
+
+  .fa-brands.fa-instagram {
+    font-size: 14px;
+  }
+
+  .footer--copyright--text {
+    font-size: 9px;
+  }
+
+  .footer--copyright--container > a {
+    font-size: 9px;
   }
 }

@@ -169,7 +169,7 @@
 
 @media only screen and (max-width: 768px) {
   .litters--upcoming--title {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .litters--upcoming--subtitle {
@@ -180,6 +180,6 @@
     font-size: 16px;
   }
   .past--litters--title {
-    font-size: 28px;
+    font-size: 30px;
   }
 }

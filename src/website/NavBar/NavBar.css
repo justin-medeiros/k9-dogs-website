@@ -53,6 +53,7 @@
   color: white;
   font-weight: 500;
   position: relative;
+  background: transparent;
 }
 
 .navbar--links.active::before {
@@ -139,6 +140,10 @@
 
   .navbar--links.active::before {
     background-color: transparent;
+  }
+
+  .navbar--links.active {
+    background: var(--red);
   }
 
   .navbar--items.mobile {

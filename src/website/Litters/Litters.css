@@ -88,7 +88,6 @@
 }
 
 .past--litters--container {
-  margin-bottom: 20px;
   background-color: white;
 }
 
@@ -138,7 +137,7 @@
 
 @media only screen and (max-width: 960px) {
   .litters--upcoming--title {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .litters--upcoming--title::after,
@@ -170,7 +169,7 @@
 
 @media only screen and (max-width: 768px) {
   .litters--upcoming--title {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .litters--upcoming--subtitle {
@@ -181,6 +180,6 @@
     font-size: 16px;
   }
   .past--litters--title {
-    font-size: 28px;
+    font-size: 30px;
   }
 }

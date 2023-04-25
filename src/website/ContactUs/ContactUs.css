@@ -147,7 +147,7 @@
   }
 
   .contactus--text--container > h1 {
-    font-size: 42px;
+    font-size: 32px;
     text-align: center;
     border-bottom: 4px solid var(--red);
     padding-bottom: 4px;
@@ -166,7 +166,7 @@
 
 @media only screen and (max-width: 768px) {
   .contactus--text--container > h1 {
-    font-size: 38px;
+    font-size: 30px;
   }
 
   .contactus--text--container > p {
@@ -203,5 +203,16 @@
 
   .contactus--button {
     font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contactus--form > form,
+  .contactus--form {
+    width: 100%;
+  }
+  .contactus--input--box,
+  .contactus--input--textarea {
+    width: 100%;
   }
 }

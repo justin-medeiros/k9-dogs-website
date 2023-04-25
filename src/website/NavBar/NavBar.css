@@ -53,6 +53,7 @@
   color: white;
   font-weight: 500;
   position: relative;
+  background: transparent;
 }
 
 .navbar--links.active::before {
@@ -141,6 +142,10 @@
     background-color: transparent;
   }
 
+  .navbar--links.active {
+    background: var(--red);
+  }
+
   .navbar--items.mobile {
     background: var(--black);
     left: 0;
@@ -169,5 +174,15 @@
     color: white;
     background-color: var(--red);
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .menu--icon {
+    font-size: 1.4rem;
+  }
+
+  .navbar--logo {
+    width: 180px;
   }
 }

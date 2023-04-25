@@ -83,7 +83,7 @@ export default function HeroSection() {
           >
             <Instagram
               className="instagram--icon"
-              size={windowWidth > 960 ? 42 : 36}
+              size={windowWidth > 960 ? 42 : windowWidth > 499 ? 36 : 32}
             />
           </a>
           <a

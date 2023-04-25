@@ -68,7 +68,7 @@
 
 @media only screen and (max-width: 768px) {
   .gallery--title {
-    font-size: 28px;
+    font-size: 30px;
   }
   .gallery--photos--container {
     -webkit-column-count: 1;

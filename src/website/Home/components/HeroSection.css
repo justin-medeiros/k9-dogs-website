@@ -20,6 +20,7 @@
 .hero--text {
   font-size: 24px;
   font-weight: 400;
+  text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   color: white;
 }
@@ -72,18 +73,21 @@
   }
 
   .hero--image {
-    min-width: 600px;
+    min-width: 90%;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .hero--image {
-    min-width: 500px;
+    min-width: 100%;
   }
-}
 
-@media only screen and (max-width: 500px) {
-  .hero--image {
-    min-width: 480px;
+  .hero--socials > p {
+    font-size: 16px;
+  }
+
+  .hero--text {
+    font-size: 16px;
+    padding: 0px 80px;
   }
 }

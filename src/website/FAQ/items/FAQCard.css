@@ -28,6 +28,7 @@
   outline: 1px solid white;
   transition: background-color 800ms, outline 400ms;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .faq--card--title {
@@ -87,6 +88,10 @@
     width: 500px;
   }
 
+  .faq--card--top--section:hover {
+    outline: none;
+  }
+
   .faq--card--title {
     font-size: 16px;
   }
@@ -103,5 +108,11 @@
 @media only screen and (max-width: 500px) {
   .faq--card--container {
     width: 400px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .faq--card--container {
+    width: 380px;
   }
 }

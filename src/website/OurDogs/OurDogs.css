@@ -79,6 +79,12 @@
 }
 
 @media only screen and (max-width: 960px) {
+  .ourdogs--title {
+    font-size: 30px;
+  }
+  .ourdogs--subtitle {
+    font-size: 20px;
+  }
   .ourdogs--dogs--container {
     flex-direction: column;
   }

@@ -65,5 +65,16 @@
       "title": "6. How much are your puppies?",
       "body": "This question varies slightly. Most puppies are sold as pets with a non breeding agreement. The price is variable depending on the breeding that we have done."
     }
+  ],
+  "litters": [
+    {
+      "id": 0,
+      "parents": "V 24 (BSZS) IGP2 Gemma Vom Frankengold x VA1 Oargos Dei Precision IGP 3 KKL"
+    },
+    { "id": 1, "parents": "BH Clarot's Chloe x Voodoo vom Frankengold IGP3" },
+    {
+      "id": 2,
+      "parents": "VA2 Ivey Dei Precision IGP 2 x Voodoo Vom Frankengold IGP 3"
+    }
   ]
 }

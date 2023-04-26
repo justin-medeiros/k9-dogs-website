@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import "./PastLittersCard.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import data from "../../../data.json";
 
-function PastLittersCard({ photos, date }) {
+function PastLittersCard({ photos, date, parents }) {
   const sliderRef = useRef(null);
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -80,6 +81,9 @@ function PastLittersCard({ photos, date }) {
       <div className="litters--card--dot--container"></div>
       <div className="litters--card--text--container">
         <p className="litters--date">{date}</p>
+        <div className="litters--card--border"></div>
+        <p className="litters--parents--title">Parents</p>
+        <p className="litters--parents">{parents}</p>
       </div>
     </motion.div>
   );

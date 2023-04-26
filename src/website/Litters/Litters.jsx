@@ -5,6 +5,7 @@ import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import dataJson from "../../data.json";
 
 export default function Litters({ pastLittersData, upcomingLittersData }) {
   const controlTitle = useAnimation();
@@ -50,7 +51,14 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
   };
 
   const allPastLitters = pastLittersData.map((data, id) => {
-    return <PastLittersCard photos={data.photos} date={data.dates} key={id} />;
+    return (
+      <PastLittersCard
+        photos={data.photos}
+        date={data.dates}
+        parents={dataJson.litters[id].parents}
+        key={id}
+      />
+    );
   });
 
   useEffect(() => {

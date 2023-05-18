@@ -21,7 +21,7 @@ export default function Footer() {
             <h1>Contact Me</h1>
             <div className="footer--email">
               <i className="fa-solid fa-envelope"></i>
-              <p>clarotk9dogs@gmail.ca</p>
+              <p>clarotk9dogs@gmail.com</p>
             </div>
             <Link to="/contact" className="footer--contact--link">
               Contact Me Now!

@@ -53,6 +53,7 @@
   color: white;
   font-weight: 500;
   position: relative;
+  background: transparent;
 }
 
 .navbar--links.active::before {
@@ -102,7 +103,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .fa-solid.fa-xmark {
+  .menu--icon > .fa-solid.fa-xmark {
     font-size: 28px !important;
     color: white !important;
   }
@@ -131,13 +132,18 @@
     width: 100%;
     position: absolute;
     top: 80px;
-    left: -100%;
+    left: -120%;
     opacity: 1;
     transition: all 0.5s ease;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
   }
 
   .navbar--links.active::before {
     background-color: transparent;
+  }
+
+  .navbar--links.active {
+    background: var(--red);
   }
 
   .navbar--items.mobile {
@@ -168,5 +174,15 @@
     color: white;
     background-color: var(--red);
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .menu--icon {
+    font-size: 1.4rem;
+  }
+
+  .navbar--logo {
+    width: 180px;
   }
 }

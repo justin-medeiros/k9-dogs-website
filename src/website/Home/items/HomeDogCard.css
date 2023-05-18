@@ -80,6 +80,7 @@
   color: white;
   text-decoration: none;
   border: none;
+  width: 100%;
   margin-top: 10px;
   font-size: 18px;
   font-weight: 500;
@@ -180,5 +181,36 @@
   .dogcard--overall--container {
     width: 330px;
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dogcard--overall--container {
+    width: 250px;
+    height: 390px;
+  }
+
+  .dogcard--img--container {
+    height: 55%;
+  }
+
+  .dogcard--text--container {
+    height: 215px;
+  }
+
+  .dogcard--title {
+    font-size: 14px;
+  }
+
+  .dogcard--subtitle {
+    font-size: 11px;
+  }
+
+  .dogcard--text--about {
+    font-size: 11px;
+  }
+
+  .dogcard--btn {
+    font-size: 11px;
   }
 }

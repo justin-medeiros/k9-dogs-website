@@ -10,7 +10,6 @@ import ContactUs from "../website/ContactUs/ContactUs";
 import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
 import Litters from "../website/Litters/Litters";
-
 import ScrollToTop from "../wrappers/ScrollToTop";
 import {
   collection,
@@ -22,7 +21,7 @@ import {
 } from "firebase/firestore";
 import { db, storage } from "../firebase-config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Loaded from "../website/LoadingScreen/Loaded";
 import { SpinnerCircular } from "spinners-react";
 function App() {
@@ -118,7 +117,6 @@ function App() {
                 path="/ourdogs"
                 element={<OurDogs dogData={ourDogs} />}
               ></Route>
-              <Route path="/gallery" element={<Gallery />}></Route>
               <Route
                 path="/litters"
                 element={
@@ -128,6 +126,7 @@ function App() {
                   />
                 }
               ></Route>
+              <Route path="/gallery" element={<Gallery />}></Route>
               <Route path="/testimonials" element={<Testimonials />}></Route>
               <Route path="/faq" element={<FAQ />}></Route>
               <Route path="/contact" element={<ContactUs />}></Route>

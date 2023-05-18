@@ -119,7 +119,7 @@
 
 @media only screen and (max-width: 768px) {
   .home--dogs--title {
-    font-size: 34px;
+    font-size: 30px;
   }
   .home--dogs--title::after {
     bottom: 9px;
@@ -128,5 +128,16 @@
 
   .home--dogs--see--more {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 18px !important;
+  }
+
+  .home--dogs--swiper--container .slick-next {
+    margin-right: -8px;
   }
 }

@@ -28,8 +28,8 @@ export default function Loaded() {
     animate: {
       opacity: 0,
       transition: {
-        delay: 1,
-        duration: 1,
+        delay: 0.5,
+        duration: 0.5,
         when: "afterChildren",
       },
     },
@@ -43,7 +43,7 @@ export default function Loaded() {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 1.5,
+        delay: 0.5,
         ease: [0.87, 0, 0.13, 1],
       },
     },

@@ -6,42 +6,46 @@ export default function Footer() {
   return (
     <div className="footer--overall--container">
       <div className="footer--container">
-        <img className="footer--logo" src="images/logo.png"></img>
+        <Link to="/" className="footer--logo--container">
+          <img className="footer--logo" src="images/logo.png"></img>
+        </Link>
 
         <div className="footer--mobile">
           <div className="footer--quick--links">
             <h1>Quick Links</h1>
             <Link to="/">Home</Link>
             <Link to="/ourdogs">Our Dogs</Link>
-            <Link to="/puppies">Puppies</Link>
+            <Link to="/litters">Litters</Link>
+            <Link to="/gallery">Gallery</Link>
             <Link to="/testimonials">Testimonials</Link>
-            <Link to="/ourdogs">FAQ</Link>
+            <Link to="/faq">FAQ</Link>
           </div>
           <div className="footer--contact--container">
-            <h1>Contact Me</h1>
+            <h1>Contact Us</h1>
             <div className="footer--email">
               <i className="fa-solid fa-envelope"></i>
               <p>clarotk9dogs@gmail.com</p>
             </div>
             <Link to="/contact" className="footer--contact--link">
-              Contact Me Now!
+              Contact Us Now!
             </Link>
           </div>
           <div className="footer--affiliates">
             <h1>Affiliates</h1>
-            <div className="footer--affiliates--images"></div>
-            <a href="https://www.ckc.ca/en" target="_blank" rel="noreferrer">
-              <img
-                src="/images/ckc-logo.png"
-                className="footer--ckc--img"
-              ></img>
-            </a>
-            <a href="http://www.gsscc.ca/" target="_blank" rel="noreferrer">
-              <img
-                src="/images/gsscc-logo.png"
-                className="footer--gsscc--img"
-              ></img>
-            </a>
+            <div className="footer--affiliates--images">
+              <a href="https://www.ckc.ca/en" target="_blank" rel="noreferrer">
+                <img
+                  src="/images/ckc-logo.png"
+                  className="footer--ckc--img"
+                ></img>
+              </a>
+              <a href="http://www.gsscc.ca/" target="_blank" rel="noreferrer">
+                <img
+                  src="/images/gsscc-logo.png"
+                  className="footer--gsscc--img"
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -78,20 +78,35 @@
   fill: #3f4950;
 }
 
-@media only screen and (max-width: 1450px) {
-}
-
-@media only screen and (max-width: 1150px) {
-}
-
 @media only screen and (max-width: 960px) {
+  .ourdogs--title {
+    font-size: 32px;
+  }
+  .ourdogs--subtitle {
+    font-size: 18px;
+  }
   .ourdogs--dogs--container {
     flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .ourdogs--title {
+    font-size: 30px;
+  }
+  .ourdogs--subtitle {
+    font-size: 16px;
+  }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 420px) {
+  .ourdogs--dogs--container {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .ourdogs--dogs--container {
+    padding: 4px 0px;
+  }
 }

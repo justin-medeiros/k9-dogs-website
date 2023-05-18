@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 export default function NavBar() {
   const [navButton, setNavButton] = useState(false);
   const [click, setClick] = useState(false);
+  const menuRef = useRef(null);
 
   const onMenuIconClick = () => {
     setClick((prevClick) => {
@@ -24,7 +25,24 @@ export default function NavBar() {
     }
   };
 
-  window.addEventListener("resize", showNavButton);
+  useEffect(() => {
+    window.addEventListener("resize", showNavButton);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      window.removeEventListener("resize", showNavButton);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      !event.target.closest(".menu--icon")
+    ) {
+      closeMobileMenu();
+    }
+  };
 
   return (
     <nav className="navbar">
@@ -32,7 +50,10 @@ export default function NavBar() {
         <NavLink to="/">
           <img className="navbar--logo" src="images/logo.png"></img>
         </NavLink>
-        <ul className={click ? "navbar--items mobile" : "navbar--items"}>
+        <ul
+          ref={menuRef}
+          className={click ? "navbar--items mobile" : "navbar--items"}
+        >
           <li>
             <NavLink
               to="/"

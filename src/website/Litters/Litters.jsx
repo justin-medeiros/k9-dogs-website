@@ -1,13 +1,11 @@
-import { async } from "@firebase/util";
-import { getDownloadURL, listAll, ref } from "firebase/storage";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Facebook, Instagram } from "react-feather";
-import { storage } from "../../firebase-config";
 import UpcomingLitters from "./components/UpcomingLitters";
 import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import dataJson from "../../data.json";
 
 export default function Litters({ pastLittersData, upcomingLittersData }) {
   const controlTitle = useAnimation();
@@ -53,7 +51,14 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
   };
 
   const allPastLitters = pastLittersData.map((data, id) => {
-    return <PastLittersCard photos={data.photos} date={data.dates} key={id} />;
+    return (
+      <PastLittersCard
+        photos={data.photos}
+        date={data.dates}
+        parents={dataJson.litters[id].parents}
+        key={id}
+      />
+    );
   });
 
   useEffect(() => {

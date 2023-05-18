@@ -196,7 +196,7 @@
   }
 
   .testimonials--share--text--container > h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .testimonials--share--text--container > p {
@@ -221,7 +221,7 @@
 
 @media only screen and (max-width: 768px) {
   .testimonials--title {
-    font-size: 28px;
+    font-size: 30px;
   }
   .testimonials--subtitle {
     font-size: 16px;
@@ -234,11 +234,11 @@
   }
 
   .testimonials--share--text--container > h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .testimonials--share--text--container > p {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
   }
 
@@ -249,6 +249,39 @@
   .testimonials--share--box,
   .testimonials--share--textarea {
     font-size: 12px;
+  }
+
+  .testimonials--share--button {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials--container {
+    padding: 60px 0px;
+    border-radius: 50% 50% 50% 50% / 2%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .testimonials--share--text--container > p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .testimonials--share--form,
+  .testimonials--share--form > form {
+    width: 100%;
+  }
+
+  .testimonials--share--valid--text {
+    font-size: 14px;
+  }
+
+  .testimonials--share--box,
+  .testimonials--share--textarea {
+    font-size: 12px;
+    width: 100%;
   }
 
   .testimonials--share--button {

@@ -104,7 +104,7 @@
 
 @media only screen and (max-width: 768px) {
   .about--title {
-    font-size: 34px;
+    font-size: 30px;
     color: white;
   }
 
@@ -125,5 +125,21 @@
   .about--image {
     width: 400px;
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about--title::after {
+    bottom: 9px;
+    height: 10px;
+  }
+
+  .about--text {
+    font-size: 15px;
+  }
+
+  .about--image {
+    width: 340px;
+    height: 340px;
   }
 }

@@ -12,6 +12,7 @@ A website that presents German Shepherds. It offers a wealth of information abou
 * CSS
 * React.js
 * Firebase
+* Vite
 
 ## Libraries Used
 * <a href="https://reactrouter.com/en/main">React Router</a>

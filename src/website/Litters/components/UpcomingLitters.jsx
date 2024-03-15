@@ -42,38 +42,44 @@ function UpcomingLitters({ upcomingLittersData }) {
     >
       <motion.div variants={date} className="upcoming--litters--container">
         <div className="upcoming--litters--container--text">
-          <p className="upcoming--litters--title">New Litter Coming!</p>
+          <p className="upcoming--litters--title">
+            Very excited to announce the arrival of our new litter.
+          </p>
           <p className="upcoming--litters--date">{upcomingLittersData.date}</p>
         </div>
       </motion.div>
-      <motion.div variants={element} className="upcoming--litters--grid">
-        <div className="upcoming--litters--first">
-          <div className="upcoming--litters--image--container">
-            <img
-              className="upcoming--litters--image"
-              src={upcomingLittersData.sire}
-            ></img>
+      <motion.div variants={element} className="upcoming--litters--background">
+        <motion.div variants={element} className="upcoming--litters--grid">
+          <div className="upcoming--litters--second">
+            <div className="upcoming--litters--image--container">
+              <img
+                className="upcoming--litters--image"
+                src={upcomingLittersData.damPhoto}
+              ></img>
+            </div>
+            <h1>Dam: {upcomingLittersData.dam}</h1>
+            {upcomingLittersData.damSecondaryText !== "" && (
+              <h1>{upcomingLittersData.damSecondaryText}</h1>
+            )}
           </div>
-          <h1>{upcomingLittersData.sire}</h1>
-        </div>
-        <div className="upcoming--litters--second">
-          <div className="upcoming--litters--image--container">
-            <img
-              className="upcoming--litters--image"
-              src={upcomingLittersData.damPhoto}
-            ></img>
+          <div className="upcoming--litters--first">
+            <div className="upcoming--litters--image--container">
+              <img
+                className="upcoming--litters--image"
+                src={upcomingLittersData.sirePhoto}
+              ></img>
+            </div>
+            <h1>Sire: {upcomingLittersData.sire}</h1>
+            {upcomingLittersData.sireSecondaryText !== "" && (
+              <h1>{upcomingLittersData.sireSecondaryText}</h1>
+            )}
           </div>
-          <h1>{upcomingLittersData.dam}</h1>
-        </div>
-      </motion.div>
-      <motion.div
-        variants={element}
-        className="upcoming--litters--background"
-      ></motion.div>
-      <motion.div variants={element}>
-        <Link to="/contact" className="upcoming--litters--contact">
-          Contact us to reserve your puppy now!
-        </Link>
+        </motion.div>
+        <motion.div variants={element}>
+          <Link to="/contact" className="upcoming--litters--contact">
+            Contact us to reserve your puppy now!
+          </Link>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -57,8 +57,8 @@ function App() {
   useEffect(() => {
     async function getFilesInFolder() {
       const folderRef = ref(storage, "past-litters");
-      const { prefixes } = await listAll(folderRef); // list all the folders
-      prefixes.sort((a, b) => b.name.localeCompare(a.name)); // sort descending order
+      const { prefixes } = await listAll(folderRef); // list all the folder
+      prefixes.sort((a, b) => new Date(b.name) - new Date(a.name)); // sort descending order
       const folderNames = prefixes.map((folderRef) => folderRef.name); // get all folder names
       let allPastLitterCardsArr = []; // temp array to store pastLitterCards
       for (let i in folderNames) {

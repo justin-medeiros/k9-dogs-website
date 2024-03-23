@@ -1,0 +1,33 @@
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.banner-description {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.banner-close {
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.banner-close:hover {
+  scale: 1.1;
+}
+
+@media screen and (max-width: 960px) {
+  .banner-description {
+    font-size: 20px;
+  }
+}

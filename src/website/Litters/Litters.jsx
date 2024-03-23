@@ -156,7 +156,7 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
             animate={controlTitle}
             className="past--litters--title"
           >
-            Past Litters
+            Litters
           </motion.h1>
           <motion.p
             ref={refTitle}

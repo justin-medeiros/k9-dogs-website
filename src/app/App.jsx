@@ -24,16 +24,19 @@ import { getDownloadURL, listAll, ref } from "firebase/storage";
 import { AnimatePresence } from "framer-motion";
 import Loaded from "../website/LoadingScreen/Loaded";
 import { SpinnerCircular } from "spinners-react";
+import Banner from "../components/Banner/Banner";
 function App() {
   const location = useLocation();
   const [isLoaded, setIsLoaded] = useState({
     dogsFetched: false,
     pastLittersFetched: false,
     upcomingLittersFetched: false,
+    bannerFetched: false,
   });
   const [ourDogs, setOurDogs] = useState([]);
   const [allPastLittersCards, setAllPastLittersCards] = useState();
   const [upcomingLitters, setUpcomingLitters] = useState();
+  const [bannerData, setBannerData] = useState();
 
   // Get all dogs for home page and our dogs page
   useEffect(() => {
@@ -101,15 +104,36 @@ function App() {
     getUpcomingLitters();
   }, []);
 
+  // Get upcoming litters data
+  useEffect(() => {
+    async function getBanner() {
+      const docSnapshot = await getDoc(doc(db, "banner", "banner")); // Replace "document-id" with the ID of the document you want to fetch
+      const bannerData = docSnapshot.data();
+      setBannerData(bannerData);
+      setIsLoaded((prevState) => ({
+        ...prevState,
+        bannerFetched: true,
+      }));
+    }
+    getBanner();
+  }, []);
+
   return (
     <>
       {isLoaded.dogsFetched &&
       isLoaded.pastLittersFetched &&
-      isLoaded.upcomingLittersFetched ? (
+      isLoaded.upcomingLittersFetched &&
+      isLoaded.bannerFetched ? (
         <>
           <Loaded />
           <ScrollToTop />
           <NavBar />
+          {bannerData.showBanner && (
+            <Banner
+              description={bannerData.description}
+              setBannerData={setBannerData}
+            />
+          )}
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home dogData={ourDogs} />}></Route>

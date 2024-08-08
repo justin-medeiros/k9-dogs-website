@@ -17,11 +17,11 @@
 }
 
 .loaded--logo {
-  width: 600px;
+  width: 400px;
 }
 
 @media only screen and (max-width: 960px) {
   .loaded--logo {
-    width: 400px;
+    width: 300px;
   }
 }

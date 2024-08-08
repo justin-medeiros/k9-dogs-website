@@ -44,7 +44,7 @@ export default function HeroSection() {
         animate="animate"
         initial="initial"
         className="hero--image"
-        src="/images/logo.png"
+        src="/images/cgs_logo.png"
       ></motion.img>
       <motion.p
         variants={element}

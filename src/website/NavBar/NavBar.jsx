@@ -48,7 +48,7 @@ export default function NavBar() {
     <nav className="navbar">
       <div className="navbar--container">
         <NavLink to="/">
-          <img className="navbar--logo" src="images/logo.png"></img>
+          <img className="navbar--logo" src="images/cgs_long_logo.png"></img>
         </NavLink>
         <ul
           ref={menuRef}

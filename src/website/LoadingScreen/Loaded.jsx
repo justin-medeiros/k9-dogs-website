@@ -73,7 +73,7 @@ export default function Loaded() {
         >
           <motion.div variants={imageContainer} className="loaded--logo">
             <motion.img
-              src="images/logo.png"
+              src="images/cgs_logo.png"
               className="loaded--logo"
               variants={image}
             />

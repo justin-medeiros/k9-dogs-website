@@ -13,20 +13,6 @@
           "description": "SG1 Clarot’s Brooke"
         }
       ]
-    },
-    {
-      "date": "May 15, 2025",
-      "text": "Another significant milestone in our K9 training program. This month we've seen remarkable progress in our specialized detection training, with several dogs mastering complex scent discrimination tasks.",
-      "images": [
-        {
-          "url": "/path-to-your-image3.jpg",
-          "description": "Advanced scent detection training in progress."
-        },
-        {
-          "url": "/path-to-your-image4.jpg",
-          "description": "K9 team participating in regional competition."
-        }
-      ]
     }
   ]
 }

@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="footer--overall--container">
       <div className="footer--container">
         <Link to="/" className="footer--logo--container">
-          <img className="footer--logo" src="images/logo.png"></img>
+          <img className="footer--logo" src="images/cgs_long_logo.png"></img>
         </Link>
 
         <div className="footer--mobile">

@@ -11,7 +11,6 @@ import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
 import Litters from "../website/Litters/Litters";
 import NewsFlash from "../website/NewsFlash/NewsFlash";
-import NewsPost from "../website/NewsPost/NewsPost";
 import ScrollToTop from "../wrappers/ScrollToTop";
 import {
   collection,
@@ -131,10 +130,7 @@ function App() {
           <ScrollToTop />
           <NavBar />
           {bannerData.showBanner && (
-            <Banner
-              description={bannerData.description}
-              setBannerData={setBannerData}
-            />
+            <Banner bannerData={bannerData} setBannerData={setBannerData} />
           )}
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
@@ -157,7 +153,6 @@ function App() {
               <Route path="/faq" element={<FAQ />}></Route>
               <Route path="/contact" element={<ContactUs />}></Route>
               <Route path="/news" element={<NewsFlash />}></Route>
-              <Route path="/news/:id" element={<NewsPost />}></Route>
             </Routes>
           </AnimatePresence>
           <Footer />

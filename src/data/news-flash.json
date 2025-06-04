@@ -1,0 +1,32 @@
+{
+  "newsSections": [
+    {
+      "date": "June 4, 2025",
+      "text": "Great results from this past weekend at the GSSCC Ontario Regional Breed Show with SV Judge Rainer Mast. Hosted by Grand River Schutzhund club.  Both Ben and Brooke placed first in their class 18-24 months. Special thanks to Frank Anthony Plesa for your top handling.",
+      "images": [
+        {
+          "url": "/images/newsFlash/ben-first.png",
+          "description": "SG1 Clarot’s Ben"
+        },
+        {
+          "url": "/images/newsFlash/brook-first.png",
+          "description": "SG1 Clarot’s Brooke"
+        }
+      ]
+    },
+    {
+      "date": "May 15, 2025",
+      "text": "Another significant milestone in our K9 training program. This month we've seen remarkable progress in our specialized detection training, with several dogs mastering complex scent discrimination tasks.",
+      "images": [
+        {
+          "url": "/path-to-your-image3.jpg",
+          "description": "Advanced scent detection training in progress."
+        },
+        {
+          "url": "/path-to-your-image4.jpg",
+          "description": "K9 team participating in regional competition."
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,8 @@ import ContactUs from "../website/ContactUs/ContactUs";
 import FAQ from "../website/FAQ/FAQ";
 import Testimonials from "../website/Testimonials/Testimonials";
 import Litters from "../website/Litters/Litters";
+import NewsFlash from "../website/NewsFlash/NewsFlash";
+import NewsPost from "../website/NewsPost/NewsPost";
 import ScrollToTop from "../wrappers/ScrollToTop";
 import {
   collection,
@@ -154,6 +156,8 @@ function App() {
               <Route path="/testimonials" element={<Testimonials />}></Route>
               <Route path="/faq" element={<FAQ />}></Route>
               <Route path="/contact" element={<ContactUs />}></Route>
+              <Route path="/news" element={<NewsFlash />}></Route>
+              <Route path="/news/:id" element={<NewsPost />}></Route>
             </Routes>
           </AnimatePresence>
           <Footer />

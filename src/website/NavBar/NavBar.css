@@ -28,7 +28,7 @@
 
 .navbar--items {
   display: grid;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(8, auto);
   column-gap: 40px;
   margin-right: 50px;
   text-decoration: none;

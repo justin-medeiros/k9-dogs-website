@@ -100,6 +100,17 @@ export default function NavBar() {
           </li>
           <li>
             <NavLink
+              to="/news"
+              className={
+                click && navButton ? "navbar--mobile--links" : "navbar--links"
+              }
+              onClick={closeMobileMenu}
+            >
+              News Flash
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/testimonials"
               className={
                 click && navButton ? "navbar--mobile--links" : "navbar--links"

@@ -5,7 +5,7 @@ import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import dataJson from "../../data.json";
+import dataJson from "../../data/litters.json";
 
 export default function Litters() {
   const controlTitle = useAnimation();

@@ -15,10 +15,10 @@ import ScrollToTop from "../wrappers/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
 import Banner from "../components/Banner/Banner";
 import dataJson from "../data.json";
+import ourDogs from "../data/dogs.json";
 
 function App() {
   const location = useLocation();
-  const ourDogs = dataJson.dogs;
 
   const [bannerData, setBannerData] = useState(dataJson.banner);
 

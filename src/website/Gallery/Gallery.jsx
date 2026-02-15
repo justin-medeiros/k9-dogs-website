@@ -1,9 +1,10 @@
-import { ref, listAll, getDownloadURL } from "firebase/storage";
-import { storage } from "../../firebase-config";
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import { SpinnerCircular } from "spinners-react";
 import { motion } from "framer-motion";
+
+const API_KEY = import.meta.env.VITE_GOOGLE_DRIVE_API_KEY;
+const FOLDER_ID = import.meta.env.VITE_GOOGLE_DRIVE_FOLDER_ID;
 
 export default function Gallery() {
   const [allPhotos, setAllPhotos] = useState([]);
@@ -11,18 +12,23 @@ export default function Gallery() {
 
   useEffect(() => {
     async function getPhotos() {
-      const folderRef = ref(storage, "gallery");
-      const { items } = await listAll(folderRef);
-      const photos = await Promise.all(
-        items.map(async (itemRef, key) => {
-          const url = await getDownloadURL(itemRef);
-          return (
-            <div className="gallery--picture" key={key}>
-              <img src={url}></img>
-            </div>
-          );
-        })
+      const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents&fields=files(id,name,mimeType,createdTime)&orderBy=createdTime+desc&key=${API_KEY}`;
+
+      const res = await fetch(url);
+
+      const data = await res.json();
+      const imageFiles = (data.files || []).filter((f) =>
+        f.mimeType.startsWith("image/")
       );
+      const photos = imageFiles.map((file) => (
+        <div className="gallery--picture" key={file.id}>
+          <img
+            src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
+            alt={file.name}
+            referrerPolicy="no-referrer"
+          />
+        </div>
+      ));
       setAllPhotos(photos);
       setIsLoading(false);
     }

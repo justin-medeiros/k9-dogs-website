@@ -2,75 +2,12 @@
   "about": {
     "text": "At Clarot’s German Shepherds, we strive to produce dogs who embody superior temperament, correct conformation, a keen will to work and above all great health. Our selective breeding program allows you to choose from the finest blood lines Germany has to offer. Our love for the German Shepherd dog started over 30 years ago. I have enjoyed working with my dogs both in the sport of Schutzhund and in the show ring. The ideal German Shepherd dog is a working dog with a reliable character that shows a strong degree of beauty and nobility.\n\nI am among countless people worldwide whose lives are richer for knowing and loving a German Shepherd, the most versatile of dog breeds. The breed was developed to serve man and woman, and also to work for us and with us.\n\nAs a breeder, it is my goal to continue producing dogs that are loyal and amazing companions that are able to succeed and adapt to the lifestyle that they are given."
   },
-  "dogs": [
-    {
-      "img": "/images/dogs/gemma.jpeg",
-      "link": "https://www.pedigreedatabase.com/german_shepherd_dog/dog.html?id=3233188-gemma-vom-frankengold?_v=20230417171141",
-      "gender": "F",
-      "name": "V 24 (BSZS) IGP2 Gemma Vom Frankengold",
-      "subtitle": "“a” normal, elbows normal",
-      "description": "Gemma is a world class female that placed V24 in 2019 at the German Sieger Show. She is a vital part of our breeding program. She has produced puppies that have excellent temperament that have been suitable for both show, working and family companions.",
-      "dam": "ANUSCH VOM FRANKENGOLD",
-      "sire": "VA Fred Vom Rumbachtal"
-    },
-    {
-      "img": "/images/dogs/quinoa.jpg",
-      "link": "https://www.pedigreedatabase.com/german_shepherd_dog/dog.html?id=3233180-quinoa-dei-precision?_v=20230417161109",
-      "gender": "F",
-      "name": "Quinoa Dei Precision",
-      "subtitle": "“a” normal, elbows normal",
-      "description": "Quinoa is a beautiful black and red female with an excellent temperament. She will be the future of our breeding program. Quinoa is a Gary Huhnegrab granddaughter and her mother is out of VA8 Jax Dei Precision.",
-      "dam": "SG BSZS ADEL WESTBACK IGP! KKl",
-      "sire": "Team Leiksaid Wuller"
-    },
-    {
-      "img": "/images/dogs/alie.png",
-      "link": "https://www.pedigreedatabase.com/german_shepherd_dog/dog.html?id=3233187-clarots-alie?_v=20230417192217",
-      "gender": "F",
-      "name": "SG1 Clarot's Alie",
-      "subtitle": "",
-      "description": "Alie is a long coat female that shows to be very promising at this young age. She is out of our newest import Gemma Vom Frankengold IGP 1. We are looking forward to showing her in the upcoming shows. ",
-      "dam": "V24( BSZS) Gemma Vom Frankengold IGP 2",
-      "sire": "VA1 Oargos Dei Precision IGP 3 KKL"
-    },
-    {
-      "img": "/images/dogs/ben.jpg",
-      "link": "https://www.pedigreedatabase.com/german_shepherd_dog/dog.html?id=3285935-clarots-ben?_v=20240829105051",
-      "gender": "M",
-      "name": "SG1 Clarot's Ben",
-      "subtitle": "",
-      "description": "Ben is a gorgeous long coat Male. He has super Blk and red pigmentation, dark mask, excellent bone and overall amazing temperament. He is now 3 x SG1 in his early show career. His future is very bright.",
-      "dam": "Quinoa Dei Precision",
-      "sire": "V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal"
-    },
-    {
-      "img": "/images/dogs/brooke.png",
-      "link": "https://www.pedigreedatabase.com/german_shepherd_dog/dog.html?id=3285936-clarots-brooke?_v=20240829110700",
-      "gender": "F",
-      "name": "SG1 Clarot's Brooke",
-      "subtitle": "",
-      "description": "Brooke is a beautiful black and red female with excellent anatomy and super temperament. Wonderful addition for our future breeding program.",
-      "dam": "Quinoa Dei Precision",
-      "sire": "V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal"
-    }
-  ],
   "banner": {
     "showBanner": false,
     "description": "",
     "linkPath": "",
     "linkText": ""
   },
-  "upcomingLitters": {
-    "isNewLitter": false,
-    "date": "",
-    "dam": "",
-    "damPhoto": "",
-    "damSecondaryText": "",
-    "sire": "",
-    "sirePhoto": "",
-    "sireSecondaryText": ""
-  },
-
   "testimonials": [
     {
       "id": 0,
@@ -133,76 +70,6 @@
       "id": 5,
       "title": "6. How much are your puppies?",
       "body": "This question varies slightly. Most puppies are sold as pets with a non breeding agreement. The price is variable depending on the breeding that we have done."
-    }
-  ],
-  "litters": [
-    {
-      "id": 0,
-      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal",
-      "date": "March 2024",
-      "photos": [
-        "/images/litters/march-2024/0.jpeg",
-        "/images/litters/march-2024/1.jpeg",
-        "/images/litters/march-2024/2.jpeg",
-        "/images/litters/march-2024/3.jpeg"
-      ]
-    },
-    {
-      "id": 1,
-      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal",
-      "date": "July 2023",
-      "photos": [
-        "/images/litters/july-2023/0.jpg",
-        "/images/litters/july-2023/1.jpg",
-        "/images/litters/july-2023/2.jpg",
-        "/images/litters/july-2023/3.jpg",
-        "/images/litters/july-2023/4.jpg",
-        "/images/litters/july-2023/5.jpg",
-        "/images/litters/july-2023/6.jpg",
-        "/images/litters/july-2023/7.jpg"
-      ]
-    },
-    {
-      "id": 2,
-      "parents": "V 24 (BSZS) IGP2 Gemma Vom Frankengold x VA1 Oargos Dei Precision IGP 3 KKL",
-      "date": "October 2022",
-      "photos": [
-        "/images/litters/october-2022/0.jpg",
-        "/images/litters/october-2022/1.jpg",
-        "/images/litters/october-2022/2.jpg",
-        "/images/litters/october-2022/3.jpeg",
-        "/images/litters/october-2022/4.jpeg"
-      ]
-    },
-    {
-      "id": 3,
-      "parents": "BH Clarot's Chloe x Voodoo vom Frankengold IGP3",
-      "date": "May 2021",
-      "photos": [
-        "/images/litters/may-2021/0.jpg",
-        "/images/litters/may-2021/1.jpg",
-        "/images/litters/may-2021/2.jpg",
-        "/images/litters/may-2021/3.jpg",
-        "/images/litters/may-2021/4.jpg",
-        "/images/litters/may-2021/5.jpg",
-        "/images/litters/may-2021/6.jpg",
-        "/images/litters/may-2021/7.jpg",
-        "/images/litters/may-2021/8.jpg"
-      ]
-    },
-    {
-      "id": 4,
-      "parents": "VA2 Ivey Dei Precision IGP 2 x Voodoo Vom Frankengold IGP 3",
-      "date": "June 2019",
-      "photos": [
-        "/images/litters/june-2019/0.JPG",
-        "/images/litters/june-2019/1.jpg",
-        "/images/litters/june-2019/2.jpg",
-        "/images/litters/june-2019/3.jpg",
-        "/images/litters/june-2019/4.JPG",
-        "/images/litters/june-2019/5.jpg",
-        "/images/litters/june-2019/6.jpg"
-      ]
     }
   ]
 }

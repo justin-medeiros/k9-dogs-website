@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+html {
+  --red: #e5383b;
+  --black: #161a1d;
+  --light-grey: #3f4950;
+  --dark-grey: #2a3136;
+  background-color: var(--black);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app--container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

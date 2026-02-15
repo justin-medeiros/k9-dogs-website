@@ -2,58 +2,27 @@
   "name": "k9-dogs-website",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "eslint": "^8.35.0",
     "framer-motion": "^10.10.0",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
-    "nth-check": "^2.1.1",
-    "object-path": "^0.11.8",
+    "next": "^16.1.6",
     "react": "^18.2.0",
     "react-collapse": "^5.1.1",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-intersection-observer": "^9.4.3",
-    "react-router-dom": "^6.6.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "sort-by": "^0.0.2",
-    "spinners-react": "^1.0.7",
-    "web-vitals": "^2.1.4"
+    "spinners-react": "^1.0.7"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.1.4",
-    "eslint-plugin-react": "^7.32.2",
-    "json-loader": "^0.5.7",
-    "vite": "^7.3.1"
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.1.6"
   }
 }

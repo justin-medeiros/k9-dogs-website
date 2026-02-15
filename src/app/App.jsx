@@ -19,8 +19,7 @@ import dataJson from "../data.json";
 function App() {
   const location = useLocation();
   const ourDogs = dataJson.dogs;
-  const upcomingLitters = dataJson.upcomingLitters;
-  const pastLittersData = dataJson.litters;
+
   const [bannerData, setBannerData] = useState(dataJson.banner);
 
   return (

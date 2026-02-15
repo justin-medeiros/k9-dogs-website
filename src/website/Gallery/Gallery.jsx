@@ -12,25 +12,29 @@ export default function Gallery() {
 
   useEffect(() => {
     async function getPhotos() {
-      const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents&fields=files(id,name,mimeType,createdTime)&orderBy=createdTime+desc&key=${API_KEY}`;
+      try {
+        const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents&fields=files(id,name,mimeType,createdTime)&orderBy=createdTime+desc&key=${API_KEY}`;
 
-      const res = await fetch(url);
+        const res = await fetch(url);
 
-      const data = await res.json();
-      const imageFiles = (data.files || []).filter((f) =>
-        f.mimeType.startsWith("image/")
-      );
-      const photos = imageFiles.map((file) => (
-        <div className="gallery--picture" key={file.id}>
-          <img
-            src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
-            alt={file.name}
-            referrerPolicy="no-referrer"
-          />
-        </div>
-      ));
-      setAllPhotos(photos);
-      setIsLoading(false);
+        const data = await res.json();
+        const imageFiles = (data.files || []).filter((f) =>
+          f.mimeType.startsWith("image/")
+        );
+        const photos = imageFiles.map((file) => (
+          <div className="gallery--picture" key={file.id}>
+            <img
+              src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
+              alt={file.name}
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        ));
+        setAllPhotos(photos);
+        setIsLoading(false);
+      } catch (e) {
+        console.log("error", e);
+      }
     }
     getPhotos();
   }, []);

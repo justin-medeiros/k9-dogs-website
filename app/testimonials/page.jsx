@@ -5,6 +5,9 @@ export const metadata = {
     "German Shepherd Puppy Reviews & Testimonials | Clarot's German Shepherds",
   description:
     "Read reviews from families who purchased German Shepherd puppies from Clarot's German Shepherds. See why Ontario families trust our 30+ year breeding program for their German Shepherd dogs.",
+  alternates: {
+    canonical: "/testimonials",
+  },
   openGraph: {
     title:
       "Customer Reviews | Clarot's German Shepherds",

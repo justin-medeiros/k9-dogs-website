@@ -5,6 +5,9 @@ export const metadata = {
     "Contact Clarot's German Shepherds | Inquire About Puppies | Ontario Breeder",
   description:
     "Contact Clarot's German Shepherds to inquire about German Shepherd puppies for sale in Ontario. Ask about upcoming litters, pricing, and reservations. Over 30 years of breeding experience.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Us | Clarot's German Shepherds",
     description:

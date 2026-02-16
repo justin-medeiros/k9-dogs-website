@@ -6,6 +6,9 @@ export const metadata = {
     "German Shepherd Puppy FAQ | Pricing, Care & Breeding | Clarot's German Shepherds",
   description:
     "Frequently asked questions about buying German Shepherd puppies from Clarot's German Shepherds. Learn about puppy pricing, male vs female temperament, puppy care, and our breeding program in Ontario.",
+  alternates: {
+    canonical: "/faq",
+  },
   openGraph: {
     title:
       "German Shepherd Puppy FAQ | Clarot's German Shepherds",

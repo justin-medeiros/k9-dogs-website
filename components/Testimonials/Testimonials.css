@@ -7,20 +7,18 @@
 
 .testimonials--title {
   color: white;
-  font-size: 36px;
+  font-size: 48px;
+  font-weight: 700;
   margin-top: 30px;
   margin-bottom: 10px;
-  border-bottom: 4px solid var(--red);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .testimonials--subtitle {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   text-align: center;
-  color: white;
-  font-weight: 500;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #ccc;
+  font-weight: 400;
 }
 
 .testimonials--container {
@@ -162,7 +160,6 @@
 }
 
 .testimonials--share--text--container > h1 > span {
-  border-bottom: 4px solid var(--red);
 }
 
 .testimonials--share--text--container > p {
@@ -179,11 +176,11 @@
     flex-direction: column;
   }
   .testimonials--title {
-    font-size: 32px;
+    font-size: 36px;
   }
   .testimonials--subtitle {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .testimonials--share--container {

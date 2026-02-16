@@ -1,12 +1,13 @@
 "use client";
 
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect } from "react";
 import "./HomeOurDogs.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Link from "next/link";
 import HomeDogCard from "./items/HomeDogCard";
+import { ChevronRight } from "react-feather";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -107,16 +108,16 @@ function HomeOurDogs({ homeDogData }) {
         <Slider {...settings}>{allDogCards}</Slider>
       </motion.div>
 
-      <Link href="/ourdogs" className="home--dogs--see--more">
-        <motion.div
-          ref={refButton}
-          variants={element}
-          initial="initial"
-          animate={controlButton}
-        >
-          Click to see more!
-        </motion.div>
-      </Link>
+      <motion.div
+        ref={refButton}
+        variants={element}
+        initial="initial"
+        animate={controlButton}
+      >
+        <Link href="/ourdogs" className="home--dogs--see--more">
+          View All Dogs <ChevronRight size={18} />
+        </Link>
+      </motion.div>
     </div>
   );
 }

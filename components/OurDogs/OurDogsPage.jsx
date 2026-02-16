@@ -23,14 +23,6 @@ export default function OurDogsPage({ dogData }) {
     },
   };
 
-  const allDogCards = dogData.map((data) => {
-    return (
-      <div key={data.name}>
-        <OurDogsCard dogInfo={data} />
-      </div>
-    );
-  });
-
   return (
     <motion.div
       variants={content}
@@ -47,17 +39,19 @@ export default function OurDogsPage({ dogData }) {
         >
           <h1 className="ourdogs--title">Our Dogs</h1>
         </motion.div>
-        <motion.h3
+        <motion.p
           variants={element}
           animate="animate"
           initial="initial"
           className="ourdogs--subtitle"
         >
-          Meet the stars of our kennel!
-        </motion.h3>
+          Meet the stars of our kennel
+        </motion.p>
       </motion.div>
       <motion.div variants={element} className="ourdogs--dogs--container">
-        {allDogCards}
+        {dogData.map((data) => (
+          <OurDogsCard key={data.name} dogInfo={data} />
+        ))}
       </motion.div>
     </motion.div>
   );

@@ -10,7 +10,8 @@
 }
 
 .contactus--text--container > h1 {
-  font-size: 62px;
+  font-size: 48px;
+  font-weight: 700;
   color: white;
 }
 
@@ -149,8 +150,6 @@
   .contactus--text--container > h1 {
     font-size: 32px;
     text-align: center;
-    border-bottom: 4px solid var(--red);
-    padding-bottom: 4px;
     margin-bottom: 10px;
   }
 

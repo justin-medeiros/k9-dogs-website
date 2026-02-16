@@ -1,216 +1,133 @@
 .dogcard--overall--container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 380px;
-  height: 480px;
-  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.dogcard--container {
+.dogcard--card {
   width: 100%;
-  height: 100%;
-  padding: 20px;
-  border-radius: 20px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .dogcard--img--container {
   width: 100%;
-  height: 65%;
+  height: 260px;
+  flex-shrink: 0;
+  position: relative;
 }
 
 .dogcard--img {
-  object-fit: cover;
-  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  display: block;
 }
 
-.dogcard--text--container {
-  position: relative;
-  margin-top: -160px;
-  padding: 20px 25px;
-  width: 95%;
-  border-radius: 10px;
+.dogcard--info {
   background-color: var(--black);
-  margin-bottom: 20px;
-  height: 240px;
+  padding: 18px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 240px;
+  flex-shrink: 0;
 }
 
-.dogcard--title--container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dogcard--title {
+.dogcard--name {
   color: white;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2px;
 }
 
 .dogcard--subtitle {
-  color: white;
-  margin: 4px 0px;
-  font-size: 16px;
+  color: #aaa;
+  font-size: 12px;
   font-weight: 400;
 }
 
-.dogcard--text--line {
-  height: 6px;
-  width: 50%;
-  margin: 6px 0px;
-  background-color: var(--red);
+.dogcard--parents {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  margin-top: 8px;
 }
 
-.dogcard--text--about {
+.dogcard--parent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dogcard--parent--label {
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dogcard--parent--value {
   color: white;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dogcard--btn-container {
+  margin-top: auto;
 }
 
 .dogcard--btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background-color: var(--red);
   cursor: pointer;
+  border: 2px solid var(--red);
+  padding: 6px 16px;
   color: white;
-  text-decoration: none;
-  border: none;
-  width: 100%;
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 0 white;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .dogcard--btn:hover {
+  background-color: transparent;
   color: var(--red);
-  background-color: white;
-  box-shadow: inset 400px 0 0 0 white;
 }
 
 .dogcard--btn:active {
+  opacity: 0.7;
   transition: 0s;
-  opacity: 0.5;
-}
-
-.fa-solid.fa-mars,
-.fa-solid.fa-venus {
-  font-size: 26px;
-  color: var(--red);
-}
-
-@media only screen and (max-width: 1300px) {
-  .dogcard--overall--container {
-    width: 360px;
-    height: 460px;
-  }
-
-  .dogcard--title {
-    font-size: 16px;
-  }
-
-  .dogcard--text--container {
-    height: 220px;
-  }
-
-  .dogcard--subtitle {
-    font-size: 12px;
-  }
-
-  .dogcard--text--about {
-    font-size: 12px;
-  }
-
-  .dogcard--btn {
-    font-size: 14px;
-  }
-  .fa-solid.fa-mars {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-  .dogcard--overall--container {
-    width: 360px;
-    height: 460px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .dogcard--overall--container {
-    width: 360px;
-    height: 460px;
-  }
-
-  .dogcard--text--container {
-    height: 200px;
-  }
-
-  .dogcard--title {
-    font-size: 15px;
-  }
-
-  .dogcard--subtitle {
-    font-size: 12px;
-  }
-
-  .dogcard--text--about {
-    font-size: 12px;
-  }
-
-  .dogcard--btn {
-    font-size: 12px;
-  }
-
-  .fa-solid.fa-mars {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  .dogcard--overall--container {
-    width: 330px;
-    height: 400px;
-  }
 }
 
 @media only screen and (max-width: 480px) {
-  .dogcard--overall--container {
-    width: 250px;
-    height: 390px;
+  .dogcard--card {
+    height: 440px;
   }
 
   .dogcard--img--container {
-    height: 55%;
+    height: 200px;
   }
 
-  .dogcard--text--container {
-    height: 215px;
+  .dogcard--name {
+    font-size: 16px;
   }
 
-  .dogcard--title {
-    font-size: 14px;
-  }
-
-  .dogcard--subtitle {
-    font-size: 11px;
-  }
-
-  .dogcard--text--about {
+  .dogcard--parent--value {
     font-size: 11px;
   }
 
   .dogcard--btn {
-    font-size: 11px;
+    font-size: 12px;
+    padding: 5px 14px;
   }
 }

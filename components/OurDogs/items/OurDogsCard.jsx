@@ -4,11 +4,15 @@ import { useEffect } from "react";
 import "./OurDogsCard.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ChevronRight } from "react-feather";
 import Image from "next/image";
 
 export default function OurDogsCard({ dogInfo }) {
   const control = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   const element = {
     initial: { y: -20, opacity: 0 },
@@ -47,33 +51,33 @@ export default function OurDogsCard({ dogInfo }) {
 
         <div className="ourdogs--card--info">
           <div className="ourdogs--card--info--firstrow">
-            <h1 className="ourdogs--card--name">{dogInfo.name}</h1>
+            <h2 className="ourdogs--card--name">{dogInfo.name}</h2>
             {dogInfo.subtitle && (
-              <h1 className="ourdogs--card--subtitle">{dogInfo.subtitle}</h1>
+              <p className="ourdogs--card--subtitle">{dogInfo.subtitle}</p>
             )}
           </div>
 
-          <div className="ourdogs--card--info--secondrow">
-            <h2 className="ourdogs--card--dam--title">Dam</h2>
-            <h2 className="ourdogs--card--sire--title">Sire</h2>
-            <div className="ourdogs--card--sire--container"></div>
+          <div className="ourdogs--card--parents--row">
+            <div className="ourdogs--card--parent">
+              <span className="ourdogs--card--parent--label">Dam</span>
+              <span className="ourdogs--card--parent--value">
+                {dogInfo.dam}
+              </span>
+            </div>
+            <div className="ourdogs--card--parent">
+              <span className="ourdogs--card--parent--label">Sire</span>
+              <span className="ourdogs--card--parent--value">
+                {dogInfo.sire}
+              </span>
+            </div>
           </div>
 
-          <div className="ourdogs--card--secondrow--text">
-            <h2 className="ourdogs---card--dam">{dogInfo.dam}</h2>
-            <h2 className="ourdogs---card--sire">{dogInfo.sire}</h2>
-          </div>
+          <p className="ourdogs--card--description">{dogInfo.description}</p>
 
-          <div className="ourdogs--card--info--thirdrow">
-            <h2 className="ourdogs--card--description--title">Description</h2>
-          </div>
-          <div className="ourdogs--card--desc--container">
-            <h2 className="ourdogs--card--description">
-              {dogInfo.description}
-            </h2>
+          <div className="ourdogs--card--btn-container">
             <a href={dogInfo.link} target="_blank" rel="noreferrer">
               <button className="ourdogs--card--card--btn">
-                Click for more!
+                View Details <ChevronRight size={18} />
               </button>
             </a>
           </div>

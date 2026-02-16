@@ -7,12 +7,12 @@ import dogData from "@/data/dogs.json";
 
 export const metadata = {
   title:
-    "Clarot's German Shepherds | German Shepherd Puppies for Sale in Ontario",
+    "Clarot German Shepherds | German Shepherd Puppies for Sale in Ontario",
   description:
-    "Looking for German Shepherd puppies for sale? Clarot's German Shepherds offers top-quality German Shepherd puppies with exceptional working abilities and outstanding temperament in Ontario, Canada.",
+    "Looking for German Shepherd puppies for sale? Clarot German Shepherds offers top-quality German Shepherd puppies with exceptional working abilities and outstanding temperament in Ontario, Canada.",
   openGraph: {
     title:
-      "Clarot's German Shepherds | German Shepherd Puppies for Sale in Ontario",
+      "Clarot German Shepherds | German Shepherd Puppies for Sale in Ontario",
     description:
       "Find your perfect German Shepherd puppy from our reputable Ontario breeder with 30+ years of experience.",
   },

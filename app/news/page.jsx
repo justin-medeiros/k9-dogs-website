@@ -4,15 +4,15 @@ import newsFlashData from "@/data/news-flash.json";
 
 export const metadata = {
   title:
-    "German Shepherd Show Results & Breeder News | Clarot's German Shepherds Ontario",
+    "German Shepherd Show Results & Breeder News | Clarot German Shepherds Ontario",
   description:
-    "Latest news from Clarot's German Shepherds in Ontario — show results, new litter announcements, and updates from our German Shepherd breeding program.",
+    "Latest news from Clarot German Shepherds in Ontario — show results, new litter announcements, and updates from our German Shepherd breeding program.",
   alternates: {
     canonical: "/news",
   },
   openGraph: {
     title:
-      "Latest News | Clarot's German Shepherds",
+      "Latest News | Clarot German Shepherds",
     description:
       "Show results, litter announcements, and updates from our Ontario German Shepherd breeding program.",
   },

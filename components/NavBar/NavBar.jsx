@@ -55,7 +55,7 @@ export default function NavBar() {
           <Image
             className="navbar--logo"
             src="/images/cgs_long_logo.png"
-            alt="Clarot's German Shepherds Logo"
+            alt="Clarot German Shepherds Logo"
             width={140}
             height={40}
             priority

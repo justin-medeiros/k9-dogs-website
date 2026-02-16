@@ -10,7 +10,7 @@ export default function Footer() {
           <Image
             className="footer--logo"
             src="/images/cgs_long_logo.png"
-            alt="Clarot's German Shepherds Logo"
+            alt="Clarot German Shepherds Logo"
           />
         </Link>
 

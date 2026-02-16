@@ -79,7 +79,7 @@ export default function GalleryClient() {
             <div className="gallery--picture" key={file.id}>
               <Image
                 src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
-                alt={`German Shepherd from Clarot's German Shepherds`}
+                alt={`German Shepherd from Clarot German Shepherds`}
                 referrerPolicy="no-referrer"
               />
             </div>

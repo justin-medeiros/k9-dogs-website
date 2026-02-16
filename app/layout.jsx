@@ -47,8 +47,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Clarot's German Shepherds",
-              image:
-                "https://firebasestorage.googleapis.com/v0/b/k9-dogs-website.appspot.com/o/logo%2Fclarot-german-shep-logo.png?alt=media&token=96b6d1f6-ff5e-41d1-bcb4-71876aaa1331",
+              image: "https://k9dogs.ca/images/clarot-german-shep-logo.png",
               description:
                 "Professional German Shepherd breeder offering top-quality puppies with exceptional working abilities and outstanding temperament.",
               address: {

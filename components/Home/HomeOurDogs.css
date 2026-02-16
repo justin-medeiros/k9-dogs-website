@@ -1,0 +1,150 @@
+.home--dogs--overall--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.home--dogs--title {
+  align-self: center;
+  font-size: 42px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.home--dogs--swiper--container {
+  width: 100%;
+  padding: 0 80px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.home--dogs--swiper--container .slick-dots {
+  margin-top: 15px;
+  position: relative;
+  bottom: 0;
+}
+
+.slick-dots li button::before {
+  color: white !important;
+  font-size: 10px !important;
+}
+
+.slick-dots li button:focus:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.home--dogs--swiper--container .slick-prev,
+.home--dogs--swiper--container .slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}
+
+.home--dogs--swiper--container .slick-prev {
+  left: -50px;
+}
+
+.home--dogs--swiper--container .slick-next {
+  right: -50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white !important;
+  font-size: 30px !important;
+  opacity: 1 !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.slick-prev:focus:before,
+.slick-next:focus:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.home--dogs--see--more {
+  align-self: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  color: white;
+  border: 2px solid var(--red);
+  background-color: var(--red);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.home--dogs--see--more:hover {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.home--dogs--see--more:active {
+  transition: 0s;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 960px) {
+  .home--dogs--swiper--container {
+    padding: 0 70px;
+  }
+
+  .home--dogs--title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home--dogs--title {
+    font-size: 30px;
+  }
+
+  .home--dogs--see--more {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .home--dogs--swiper--container {
+    padding: 0 60px;
+  }
+
+  .home--dogs--swiper--container .slick-prev {
+    left: -45px;
+  }
+
+  .home--dogs--swiper--container .slick-next {
+    right: -45px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 20px !important;
+  }
+
+  .home--dogs--swiper--container {
+    padding: 0 50px;
+  }
+
+  .home--dogs--swiper--container .slick-prev {
+    left: -35px;
+  }
+
+  .home--dogs--swiper--container .slick-next {
+    right: -35px;
+  }
+}

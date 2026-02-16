@@ -1,0 +1,76 @@
+.ourdogs--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.ourdogs--top--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 20px 30px;
+}
+
+.ourdogs--title--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourdogs--title {
+  color: var(--black);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.ourdogs--subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 12px;
+}
+
+.ourdogs--dogs--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 960px) {
+  .ourdogs--title {
+    font-size: 38px;
+  }
+  .ourdogs--subtitle {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ourdogs--title {
+    font-size: 32px;
+  }
+  .ourdogs--subtitle {
+    font-size: 15px;
+  }
+  .ourdogs--dogs--container {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ourdogs--container {
+    padding-bottom: 40px;
+  }
+  .ourdogs--top--container {
+    padding: 30px 15px 20px;
+  }
+}

@@ -1,0 +1,189 @@
+.ourdogs--card--overall--container {
+  width: 100%;
+}
+
+.ourdogs--card--container {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  height: 360px;
+}
+
+.ourdogs--card--image--container {
+  width: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ourdogs--card--image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ourdogs--card--info {
+  width: 60%;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.ourdogs--card--info--firstrow {
+  margin-bottom: 12px;
+}
+
+.ourdogs--card--name {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.ourdogs--card--subtitle {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ourdogs--card--parents--row {
+  display: flex;
+  gap: 40px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.ourdogs--card--parent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ourdogs--card--parent--label {
+  color: #999;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ourdogs--card--parent--value {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ourdogs--card--description {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.ourdogs--card--btn-container {
+  margin-top: 12px;
+}
+
+.ourdogs--card--card--btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--red);
+  cursor: pointer;
+  border: 2px solid var(--red);
+  padding: 8px 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.ourdogs--card--card--btn:hover {
+  background-color: transparent;
+  color: var(--red);
+}
+
+.ourdogs--card--card--btn:active {
+  opacity: 0.7;
+  transition: 0s;
+}
+
+/* Tablet */
+@media only screen and (max-width: 960px) {
+  .ourdogs--card--container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ourdogs--card--image--container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .ourdogs--card--info {
+    width: 100%;
+    padding: 20px 25px;
+  }
+
+  .ourdogs--card--name {
+    font-size: 22px;
+  }
+
+  .ourdogs--card--parents--row {
+    gap: 30px;
+  }
+}
+
+/* Small tablet */
+@media only screen and (max-width: 600px) {
+  .ourdogs--card--image--container {
+    min-height: 250px;
+    max-height: 300px;
+  }
+
+  .ourdogs--card--info {
+    padding: 20px;
+  }
+
+  .ourdogs--card--name {
+    font-size: 19px;
+  }
+
+  .ourdogs--card--subtitle {
+    font-size: 13px;
+  }
+
+  .ourdogs--card--parents--row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ourdogs--card--description {
+    font-size: 13px;
+  }
+
+  .ourdogs--card--card--btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  .ourdogs--card--info {
+    padding: 16px;
+  }
+
+  .ourdogs--card--name {
+    font-size: 17px;
+  }
+}

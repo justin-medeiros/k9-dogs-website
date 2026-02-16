@@ -1,0 +1,82 @@
+{
+  "litters": [
+    {
+      "id": 0,
+      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal",
+      "date": "March 2024",
+      "photos": [
+        "/images/litters/march-2024/0.jpeg",
+        "/images/litters/march-2024/1.jpeg",
+        "/images/litters/march-2024/2.jpeg",
+        "/images/litters/march-2024/3.jpeg"
+      ]
+    },
+    {
+      "id": 1,
+      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal",
+      "date": "July 2023",
+      "photos": [
+        "/images/litters/july-2023/0.jpg",
+        "/images/litters/july-2023/1.jpg",
+        "/images/litters/july-2023/2.jpg",
+        "/images/litters/july-2023/3.jpg",
+        "/images/litters/july-2023/4.jpg",
+        "/images/litters/july-2023/5.jpg",
+        "/images/litters/july-2023/6.jpg",
+        "/images/litters/july-2023/7.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "parents": "V 24 (BSZS) IGP2 Gemma Vom Frankengold x VA1 Oargos Dei Precision IGP 3 KKL",
+      "date": "October 2022",
+      "photos": [
+        "/images/litters/october-2022/0.jpg",
+        "/images/litters/october-2022/1.jpg",
+        "/images/litters/october-2022/2.jpg",
+        "/images/litters/october-2022/3.jpeg",
+        "/images/litters/october-2022/4.jpeg"
+      ]
+    },
+    {
+      "id": 3,
+      "parents": "BH Clarot's Chloe x Voodoo vom Frankengold IGP3",
+      "date": "May 2021",
+      "photos": [
+        "/images/litters/may-2021/0.jpg",
+        "/images/litters/may-2021/1.jpg",
+        "/images/litters/may-2021/2.jpg",
+        "/images/litters/may-2021/3.jpg",
+        "/images/litters/may-2021/4.jpg",
+        "/images/litters/may-2021/5.jpg",
+        "/images/litters/may-2021/6.jpg",
+        "/images/litters/may-2021/7.jpg",
+        "/images/litters/may-2021/8.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "parents": "VA2 Ivey Dei Precision IGP 2 x Voodoo Vom Frankengold IGP 3",
+      "date": "June 2019",
+      "photos": [
+        "/images/litters/june-2019/0.JPG",
+        "/images/litters/june-2019/1.jpg",
+        "/images/litters/june-2019/2.jpg",
+        "/images/litters/june-2019/3.jpg",
+        "/images/litters/june-2019/4.JPG",
+        "/images/litters/june-2019/5.jpg",
+        "/images/litters/june-2019/6.jpg"
+      ]
+    }
+  ],
+  "upcomingLitters": {
+    "isNewLitter": false,
+    "date": "",
+    "dam": "",
+    "damPhoto": "",
+    "damSecondaryText": "",
+    "sire": "",
+    "sirePhoto": "",
+    "sireSecondaryText": ""
+  }
+}

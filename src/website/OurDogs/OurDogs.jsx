@@ -35,9 +35,9 @@ export default function OurDogs({ dogData }) {
     },
   };
 
-  const allDogCards = dogData.map((data, id) => {
+  const allDogCards = dogData.map((data) => {
     return (
-      <div key={id}>
+      <div key={data.name}>
         <OurDogsCard dogInfo={data} />
       </div>
     );

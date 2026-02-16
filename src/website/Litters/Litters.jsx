@@ -5,10 +5,12 @@ import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import dataJson from "../../data.json";
+import dataJson from "../../data/litters.json";
 
-export default function Litters({ pastLittersData, upcomingLittersData }) {
+export default function Litters() {
   const controlTitle = useAnimation();
+  const upcomingLittersData = dataJson.upcomingLitters;
+  const pastLittersData = dataJson.litters;
   const [refTitle, inViewTitle] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -54,7 +56,7 @@ export default function Litters({ pastLittersData, upcomingLittersData }) {
     return (
       <PastLittersCard
         photos={data.photos}
-        date={data.dates}
+        date={data.date}
         parents={dataJson.litters[id].parents}
         key={id}
       />

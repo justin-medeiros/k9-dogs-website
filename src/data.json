@@ -2,6 +2,12 @@
   "about": {
     "text": "At Clarot’s German Shepherds, we strive to produce dogs who embody superior temperament, correct conformation, a keen will to work and above all great health. Our selective breeding program allows you to choose from the finest blood lines Germany has to offer. Our love for the German Shepherd dog started over 30 years ago. I have enjoyed working with my dogs both in the sport of Schutzhund and in the show ring. The ideal German Shepherd dog is a working dog with a reliable character that shows a strong degree of beauty and nobility.\n\nI am among countless people worldwide whose lives are richer for knowing and loving a German Shepherd, the most versatile of dog breeds. The breed was developed to serve man and woman, and also to work for us and with us.\n\nAs a breeder, it is my goal to continue producing dogs that are loyal and amazing companions that are able to succeed and adapt to the lifestyle that they are given."
   },
+  "banner": {
+    "showBanner": false,
+    "description": "",
+    "linkPath": "",
+    "linkText": ""
+  },
   "testimonials": [
     {
       "id": 0,
@@ -64,25 +70,6 @@
       "id": 5,
       "title": "6. How much are your puppies?",
       "body": "This question varies slightly. Most puppies are sold as pets with a non breeding agreement. The price is variable depending on the breeding that we have done."
-    }
-  ],
-  "litters": [
-    {
-      "id": 0,
-      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal"
-    },
-    {
-      "id": 1,
-      "parents": "Quinoa Dei Precision x V7 BSZS 2019, VA4 ITA V(BSZS) Falco von Farhantal"
-    },
-    {
-      "id": 2,
-      "parents": "V 24 (BSZS) IGP2 Gemma Vom Frankengold x VA1 Oargos Dei Precision IGP 3 KKL"
-    },
-    { "id": 3, "parents": "BH Clarot's Chloe x Voodoo vom Frankengold IGP3" },
-    {
-      "id": 4,
-      "parents": "VA2 Ivey Dei Precision IGP 2 x Voodoo Vom Frankengold IGP 3"
     }
   ]
 }

@@ -11,9 +11,6 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 function HomeOurDogs({ homeDogData }) {
-  const [windowWidth, setWindowWidth] = useState(1024);
-  const [slidesToShow, setSlidesToShow] = useState(3);
-
   const controlTitle = useAnimation();
   const [refTitle, inViewTitle] = useInView({
     triggerOnce: true,
@@ -45,25 +42,6 @@ function HomeOurDogs({ homeDogData }) {
     inViewButton,
   ]);
 
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (windowWidth < 865) {
-      setSlidesToShow(1);
-    } else if (windowWidth < 1150) {
-      setSlidesToShow(2);
-    } else {
-      setSlidesToShow(3);
-    }
-  }, [windowWidth]);
-
   const allDogCards = homeDogData.map((data, id) => {
     return (
       <div key={id}>
@@ -76,10 +54,24 @@ function HomeOurDogs({ homeDogData }) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <button className="next--button">Next</button>,
     prevArrow: <button className="prev--button">Previous</button>,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 865,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const element = {

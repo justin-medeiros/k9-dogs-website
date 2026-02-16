@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "./Gallery.css";
 import { SpinnerCircular } from "spinners-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;
 const FOLDER_ID = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_FOLDER_ID;
@@ -76,9 +77,9 @@ export default function GalleryClient() {
         <div className="gallery--photos--container">
           {allPhotos.map((file) => (
             <div className="gallery--picture" key={file.id}>
-              <img
+              <Image
                 src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
-                alt={file.name}
+                alt={`German Shepherd from Clarot's German Shepherds`}
                 referrerPolicy="no-referrer"
               />
             </div>

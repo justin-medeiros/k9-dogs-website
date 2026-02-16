@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./NewsSection.css";
 
 const NewsSection = ({ date, text, images }) => {
@@ -8,7 +9,7 @@ const NewsSection = ({ date, text, images }) => {
       <div className="news-images">
         {images.map((image, index) => (
           <div key={index} className="news-image-container">
-            <img
+            <Image
               src={image.url}
               alt={image.description}
               className="news-image"

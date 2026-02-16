@@ -1,12 +1,13 @@
 import Link from "next/link";
 import "./Footer.css";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <div className="footer--overall--container">
       <div className="footer--container">
         <Link href="/" className="footer--logo--container">
-          <img
+          <Image
             className="footer--logo"
             src="/images/cgs_long_logo.png"
             alt="Clarot's German Shepherds Logo"
@@ -37,17 +38,17 @@ export default function Footer() {
             <h1>Affiliates</h1>
             <div className="footer--affiliates--images">
               <a href="https://www.ckc.ca/en" target="_blank" rel="noreferrer">
-                <img
+                <Image
                   src="/images/ckc-logo.png"
                   className="footer--ckc--img"
                   alt="Canadian Kennel Club"
                 />
               </a>
               <a href="http://www.gsscc.ca/" target="_blank" rel="noreferrer">
-                <img
+                <Image
                   src="/images/gsscc-logo.png"
                   className="footer--gsscc--img"
-                  alt="GSSCC"
+                  alt="German Shepherd Schutzhund Club of Canada"
                 />
               </a>
             </div>

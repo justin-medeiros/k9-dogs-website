@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "./TestimonialCard.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export default function TestimonialCard(props) {
   const control = useAnimation();
@@ -35,10 +36,10 @@ export default function TestimonialCard(props) {
       animate={control}
       className="testimonial--card--container"
     >
-      <img
+      <Image
         className="testimonial--card--quotation"
         src="/images/quotation.png"
-        alt="Quote"
+        alt="Testimonial quote from a German Shepherd puppy owner"
       />
       <p className="testimonial--card--quote">
         &rdquo;{props.info.text}&rdquo;

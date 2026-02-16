@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "./PastLittersCard.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 function PastLittersCard({ photos, date, parents }) {
   const sliderRef = useRef(null);
@@ -42,11 +43,13 @@ function PastLittersCard({ photos, date, parents }) {
   const pastLittersPhotos = photos.map((photoUrl, key) => {
     return (
       <div className="litters--card--image--container" key={key}>
-        <img
+        <Image
           className="litters--card--image"
           src={photoUrl}
           loading="lazy"
-          alt={`Litter photo ${key + 1}`}
+          alt={`German Shepherd puppy from ${parents} litter - photo ${
+            key + 1
+          }`}
         />
       </div>
     );

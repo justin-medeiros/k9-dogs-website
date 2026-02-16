@@ -64,6 +64,27 @@
   transition: 0.2s ease-in-out;
 }
 
+.instagram--icon,
+.facebook--icon {
+  width: 42px;
+  height: 42px;
+}
+
+@media (max-width: 960px) {
+  .instagram--icon,
+  .facebook--icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 499px) {
+  .instagram--icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .hero--socials > p {
     font-size: 18px;

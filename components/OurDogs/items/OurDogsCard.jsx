@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "./OurDogsCard.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export default function OurDogsCard({ dogInfo }) {
   const control = useAnimation();
@@ -37,7 +38,11 @@ export default function OurDogsCard({ dogInfo }) {
     >
       <div className="ourdogs--card--container">
         <div className="ourdogs--card--image--container">
-          <img className="ourdogs--card--image" src={dogInfo.img} alt={dogInfo.name} />
+          <Image
+            className="ourdogs--card--image"
+            src={dogInfo.img}
+            alt={dogInfo.name}
+          />
         </div>
 
         <div className="ourdogs--card--info">

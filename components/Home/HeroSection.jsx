@@ -6,17 +6,6 @@ import "./HeroSection.css";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const [windowWidth, setWindowWidth] = useState(1024);
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    function handleResize() {
-      setWindowWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const content = {
     animate: {
       transition: { staggerChildren: 0.1 },
@@ -56,7 +45,8 @@ export default function HeroSection() {
         initial="initial"
         className="hero--text"
       >
-        German Shepherd Puppies for Sale in Ontario — Breeding Excellence for Over 30 Years
+        German Shepherd Puppies for Sale in Ontario — Breeding Excellence for
+        Over 30 Years
       </motion.h1>
       <motion.div
         variants={element}
@@ -83,20 +73,14 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram
-              className="instagram--icon"
-              size={windowWidth > 960 ? 42 : windowWidth > 499 ? 36 : 32}
-            />
+            <Instagram className="instagram--icon" />
           </a>
           <a
             href="https://www.facebook.com/k9dogs.ca/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Facebook
-              className="facebook--icon"
-              size={windowWidth > 960 ? 42 : 36}
-            />
+            <Facebook className="facebook--icon" />
           </a>
         </motion.div>
       </motion.div>

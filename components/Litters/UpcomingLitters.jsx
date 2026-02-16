@@ -4,6 +4,7 @@ import { memo } from "react";
 import Link from "next/link";
 import "./UpcomingLitters.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function UpcomingLitters({ upcomingLittersData }) {
   const element = {
@@ -43,7 +44,7 @@ function UpcomingLitters({ upcomingLittersData }) {
         <motion.div variants={element} className="upcoming--litters--grid">
           <div className="upcoming--litters--second">
             <div className="upcoming--litters--image--container">
-              <img
+              <Image
                 className="upcoming--litters--image"
                 src={upcomingLittersData.damPhoto}
                 alt={`Dam: ${upcomingLittersData.dam}`}
@@ -56,7 +57,7 @@ function UpcomingLitters({ upcomingLittersData }) {
           </div>
           <div className="upcoming--litters--first">
             <div className="upcoming--litters--image--container">
-              <img
+              <Image
                 className="upcoming--litters--image"
                 src={upcomingLittersData.sirePhoto}
                 alt={`Sire: ${upcomingLittersData.sire}`}

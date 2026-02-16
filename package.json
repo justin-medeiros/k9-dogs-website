@@ -2,6 +2,7 @@
   "name": "k9-dogs-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "framer-motion": "^10.10.0",
@@ -19,10 +20,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "^9.0.0",
-    "eslint-config-next": "^16.1.6"
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.1.6",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1"
   }
 }

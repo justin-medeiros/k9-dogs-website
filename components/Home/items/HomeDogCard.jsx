@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import "./HomeDogCard.css";
 
 export default function HomeDogCard({ dogInfo }) {
@@ -7,7 +8,11 @@ export default function HomeDogCard({ dogInfo }) {
     <div className="dogcard--overall--container">
       <div className="dogcard--container">
         <div className="dogcard--img--container">
-          <img className="dogcard--img" src={dogInfo.img} alt={dogInfo.name} />
+          <Image
+            className="dogcard--img"
+            src={dogInfo.img}
+            alt={dogInfo.name}
+          />
         </div>
       </div>
       <div className="dogcard--text--container">

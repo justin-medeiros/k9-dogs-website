@@ -6,6 +6,9 @@ export const metadata = {
     "Our German Shepherd Breeding Dogs | Champion Bloodlines | Clarot's German Shepherds",
   description:
     "Meet our German Shepherd breeding dogs with champion German bloodlines. View pedigrees, show titles, and hip/elbow certifications. Sires and dams producing top-quality German Shepherd puppies in Ontario.",
+  alternates: {
+    canonical: "/ourdogs",
+  },
   openGraph: {
     title:
       "Our German Shepherd Breeding Dogs | Clarot's German Shepherds",

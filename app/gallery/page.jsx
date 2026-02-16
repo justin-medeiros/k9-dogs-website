@@ -5,6 +5,9 @@ export const metadata = {
     "German Shepherd Photos | Puppies & Dogs Gallery | Clarot's German Shepherds Ontario",
   description:
     "Browse photos of our German Shepherd puppies and breeding dogs from Clarot's German Shepherds in Ontario. See our champion bloodline German Shepherds and past litter puppies.",
+  alternates: {
+    canonical: "/gallery",
+  },
   openGraph: {
     title:
       "German Shepherd Photos | Clarot's German Shepherds",

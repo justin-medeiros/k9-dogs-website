@@ -6,6 +6,9 @@ export const metadata = {
     "German Shepherd Puppies for Sale Ontario | Upcoming & Past Litters | Clarot's",
   description:
     "German Shepherd puppies for sale from Clarot's German Shepherds in Ontario, Canada. Browse our upcoming and past litters from champion German bloodlines. Reserve your German Shepherd puppy today.",
+  alternates: {
+    canonical: "/litters",
+  },
   openGraph: {
     title:
       "German Shepherd Puppies for Sale Ontario | Clarot's German Shepherds",

@@ -28,6 +28,9 @@ export const metadata = {
     url: "https://k9dogs.ca",
   },
   metadataBase: new URL("https://k9dogs.ca"),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }) {

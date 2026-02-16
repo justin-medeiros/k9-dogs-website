@@ -2,15 +2,15 @@ import GalleryClient from "@/components/Gallery/GalleryClient";
 
 export const metadata = {
   title:
-    "German Shepherd Photos | Puppies & Dogs Gallery | Clarot's German Shepherds Ontario",
+    "German Shepherd Photos | Puppies & Dogs Gallery | Clarot German Shepherds Ontario",
   description:
-    "Browse photos of our German Shepherd puppies and breeding dogs from Clarot's German Shepherds in Ontario. See our champion bloodline German Shepherds and past litter puppies.",
+    "Browse photos of our German Shepherd puppies and breeding dogs from Clarot German Shepherds in Ontario. See our champion bloodline German Shepherds and past litter puppies.",
   alternates: {
     canonical: "/gallery",
   },
   openGraph: {
     title:
-      "German Shepherd Photos | Clarot's German Shepherds",
+      "German Shepherd Photos | Clarot German Shepherds",
     description:
       "Photos of our German Shepherd puppies and champion breeding dogs in Ontario.",
   },

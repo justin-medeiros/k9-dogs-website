@@ -3,7 +3,7 @@ import dogData from "@/data/dogs.json";
 
 export const metadata = {
   title:
-    "Our German Shepherd Breeding Dogs | Champion Bloodlines | Clarot's German Shepherds",
+    "Our German Shepherd Breeding Dogs | Champion Bloodlines | Clarot German Shepherds",
   description:
     "Meet our German Shepherd breeding dogs with champion German bloodlines. View pedigrees, show titles, and hip/elbow certifications. Sires and dams producing top-quality German Shepherd puppies in Ontario.",
   alternates: {
@@ -11,7 +11,7 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Our German Shepherd Breeding Dogs | Clarot's German Shepherds",
+      "Our German Shepherd Breeding Dogs | Clarot German Shepherds",
     description:
       "Champion German Shepherd breeding dogs with exceptional pedigrees, show titles, and health certifications.",
   },

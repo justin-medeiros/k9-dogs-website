@@ -37,7 +37,7 @@ export default function HeroSection() {
         initial="initial"
         className="hero--image"
         src="/images/cgs_logo.png"
-        alt="Clarot's German Shepherds Logo"
+        alt="Clarot German Shepherds Logo"
       />
       <motion.h1
         variants={element}

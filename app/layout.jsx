@@ -15,13 +15,13 @@ const poppins = Poppins({
 
 export const metadata = {
   title:
-    "Clarot's German Shepherds - Ontario Breeder | German Shepherd Puppies for Sale",
+    "Clarot German Shepherds - Ontario Breeder | German Shepherd Puppies for Sale",
   description:
-    "Looking for German Shepherd puppies for sale? Clarot's German Shepherds offers top-quality German Shepherd puppies with exceptional working abilities and outstanding temperament. Browse our available German Shepherd puppies and learn about our 30+ years of breeding experience.",
+    "Looking for German Shepherd puppies for sale? Clarot German Shepherds offers top-quality German Shepherd puppies with exceptional working abilities and outstanding temperament. Browse our available German Shepherd puppies and learn about our 30+ years of breeding experience.",
   keywords:
     "German Shepherd puppies for sale, German Shepherd breeder, German Shepherd dogs, German Shepherd puppies Ontario, German Shepherd for sale, German Shepherd breeder Ontario, German Shepherd puppies for sale Ontario, German Shepherd puppies near me, German Shepherd breeder near me",
   openGraph: {
-    title: "Clarot's German Shepherds | German Shepherd Breeder",
+    title: "Clarot German Shepherds | German Shepherd Breeder",
     description:
       "Find your perfect German Shepherd puppy from our reputable breeder. We specialize in breeding German Shepherds with exceptional working abilities and outstanding temperament.",
     type: "website",
@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Clarot's German Shepherds",
+              name: "Clarot German Shepherds",
               image: "https://k9dogs.ca/images/clarot-german-shep-logo.png",
               description:
                 "Professional German Shepherd breeder offering top-quality puppies with exceptional working abilities and outstanding temperament.",

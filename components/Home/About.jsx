@@ -71,7 +71,7 @@ export default function About() {
         animate={controlImage}
         className="about--image"
         src="/images/about--us--image.JPEG"
-        alt="About Clarot's German Shepherds"
+        alt="About Clarot German Shepherds"
       />
     </motion.div>
   );

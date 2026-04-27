@@ -6,7 +6,7 @@ import PastLittersCard from "./items/PastLittersCard";
 import "./Litters.css";
 
 export default function LittersPage({ littersData }) {
-  const upcomingLittersData = littersData.upcomingLitters;
+  const showUpcomingLitter = true;
   const pastLittersData = littersData.litters;
 
   const allPastLitters = pastLittersData.map((data, id) => {
@@ -24,8 +24,8 @@ export default function LittersPage({ littersData }) {
     <div className="litters--container">
       <div className="litters--upcoming--container">
         <h1 className="litters--upcoming--title">Upcoming Litters</h1>
-        {upcomingLittersData.isNewLitter ? (
-          <UpcomingLitters upcomingLittersData={upcomingLittersData} />
+        {showUpcomingLitter ? (
+          <UpcomingLitters />
         ) : (
           <div>
             <p className="litters--upcoming--subtitle">

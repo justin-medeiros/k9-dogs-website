@@ -1,123 +1,72 @@
 "use client";
 
-import { memo, useEffect } from "react";
+import { memo, useRef } from "react";
 import "./HomeOurDogs.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Link from "next/link";
 import HomeDogCard from "./items/HomeDogCard";
 import { ChevronRight } from "react-feather";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 function HomeOurDogs({ homeDogData }) {
-  const controlTitle = useAnimation();
-  const [refTitle, inViewTitle] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const swiperRef = useRef(null);
 
-  const controlContainer = useAnimation();
-  const [refContainer, inViewContainer] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const controlButton = useAnimation();
-  const [refButton, inViewButton] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (inViewTitle) controlTitle.start("animate");
-    if (inViewContainer) controlContainer.start("animate");
-    if (inViewButton) controlButton.start("animate");
-  }, [
-    controlTitle,
-    controlContainer,
-    controlButton,
-    inViewTitle,
-    inViewContainer,
-    inViewButton,
-  ]);
-
-  const allDogCards = homeDogData.map((data, id) => {
-    return (
-      <div key={id}>
-        <HomeDogCard dogInfo={data} />
-      </div>
-    );
-  });
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <button className="next--button">Next</button>,
-    prevArrow: <button className="prev--button">Previous</button>,
-    responsive: [
-      {
-        breakpoint: 1150,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 865,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const handlePrevClick = () => {
+    swiperRef.current?.swiper?.slidePrev();
   };
 
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
+  const handleNextClick = () => {
+    swiperRef.current?.swiper?.slideNext();
   };
 
   return (
     <div className="home--dogs--overall--container">
-      <motion.h1
-        ref={refTitle}
-        variants={element}
-        initial="initial"
-        animate={controlTitle}
-        className="home--dogs--title"
-      >
-        Our Dogs
-      </motion.h1>
-      <motion.div
-        ref={refContainer}
-        variants={element}
-        initial="initial"
-        animate={controlContainer}
-        className="home--dogs--swiper--container"
-      >
-        <Slider {...settings}>{allDogCards}</Slider>
-      </motion.div>
+      <h1 className="home--dogs--title">Our Dogs</h1>
+      <div className="home--dogs--swiper--container">
+        <div className="custom-nav-buttons">
+          <button className="custom-prev-button" onClick={handlePrevClick}>
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <button className="custom-next-button" onClick={handleNextClick}>
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <Swiper
+          ref={swiperRef}
+          modules={[Pagination]}
+          spaceBetween={20}
+          slidesPerView={3}
+          pagination={{ clickable: true }}
+          loop={true}
+          speed={500}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            865: {
+              slidesPerView: 2,
+            },
+            1150: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {homeDogData.map((data, id) => (
+            <SwiperSlide key={id}>
+              <HomeDogCard dogInfo={data} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-      <motion.div
-        ref={refButton}
-        variants={element}
-        initial="initial"
-        animate={controlButton}
-      >
+      <div>
         <Link href="/ourdogs" className="home--dogs--see--more">
           View All Dogs <ChevronRight size={18} />
         </Link>
-      </motion.div>
+      </div>
     </div>
   );
 }

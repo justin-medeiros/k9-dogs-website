@@ -3,69 +3,52 @@
 import { useEffect, useState } from "react";
 import { Facebook, Instagram } from "react-feather";
 import "./HeroSection.css";
-import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const content = {
-    animate: {
-      transition: { staggerChildren: 0.1 },
-    },
-  };
 
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
 
   return (
-    <motion.div
-      variants={content}
-      animate="animate"
-      initial="initial"
+    <div
+      
+      
+      
       className="hero--container"
     >
-      <motion.img
-        variants={element}
-        animate="animate"
-        initial="initial"
+      <img
+        
+        
+        
         className="hero--image"
         src="/images/cgs_logo.png"
         alt="Clarot German Shepherds Logo"
       />
-      <motion.h1
-        variants={element}
-        animate="animate"
-        initial="initial"
+      <h1
+        
+        
+        
         className="hero--text"
       >
         German Shepherd Puppies for Sale in Ontario — Breeding Excellence for
         Over 30 Years
-      </motion.h1>
-      <motion.div
-        variants={element}
-        animate="animate"
-        initial="initial"
+      </h1>
+      <div
+        
+        
+        
         className="hero--socials"
       >
-        <motion.p
-          variants={element}
-          animate="animate"
-          initial="initial"
+        <p
+          
+          
+          
           className="hero--box"
         >
           Connect with me!
-        </motion.p>
-        <motion.div
-          variants={element}
-          animate="animate"
-          initial="initial"
+        </p>
+        <div
+          
+          
+          
           className="icons--container"
         >
           <a
@@ -82,8 +65,8 @@ export default function HeroSection() {
           >
             <Facebook className="facebook--icon" />
           </a>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import "./Gallery.css";
 import { SpinnerCircular } from "spinners-react";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;
 const FOLDER_ID = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_FOLDER_ID;
@@ -32,43 +30,27 @@ export default function GalleryClient() {
     getPhotos();
   }, []);
 
-  const content = {
-    animate: {
-      transition: { staggerChildren: 0.1 },
-    },
-  };
 
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
 
   return (
-    <motion.div
-      variants={content}
-      animate="animate"
-      initial="initial"
+    <div
+      
+      
+      
       className="gallery--container"
     >
-      <motion.div
-        variants={element}
-        animate="animate"
-        initial="initial"
+      <div
+        
+        
+        
         className="gallery--title--background"
       >
         <h1 className="gallery--title">Photo Gallery</h1>
-      </motion.div>
-      <motion.div
-        variants={element}
-        animate="animate"
-        initial="initial"
+      </div>
+      <div
+        
+        
+        
         className={
           isLoading ? "gallery--spinner" : "gallery--photos--background"
         }
@@ -77,7 +59,7 @@ export default function GalleryClient() {
         <div className="gallery--photos--container">
           {allPhotos.map((file) => (
             <div className="gallery--picture" key={file.id}>
-              <Image
+              <img
                 src={`https://lh3.googleusercontent.com/d/${file.id}=w1000`}
                 alt={`German Shepherd from Clarot German Shepherds`}
                 referrerPolicy="no-referrer"
@@ -85,7 +67,7 @@ export default function GalleryClient() {
             </div>
           ))}
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

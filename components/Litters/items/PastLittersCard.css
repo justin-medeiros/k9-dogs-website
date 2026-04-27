@@ -52,6 +52,7 @@
 .litters--card--image--container {
   height: 420px;
   border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
 }
 
 .litters--card--image {
@@ -61,14 +62,15 @@
   border-radius: 10px 10px 0px 0px;
 }
 
-.litters--card--slider--container .slick-dots li button::before {
-  color: white !important;
-  font-size: 10px !important;
-  margin-top: -4px;
+.litters--card--slider--container .swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5;
+  width: 10px !important;
+  height: 10px !important;
 }
 
-.litters--card--slider--container .slick-dots li button:focus:before {
-  color: white !important;
+.litters--card--slider--container .swiper-pagination-bullet-active {
+  opacity: 1 !important;
 }
 
 .litters--card--slider--container {

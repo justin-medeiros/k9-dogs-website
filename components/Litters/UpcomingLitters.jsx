@@ -3,79 +3,25 @@
 import { memo } from "react";
 import Link from "next/link";
 import "./UpcomingLitters.css";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
-function UpcomingLitters({ upcomingLittersData }) {
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
-
-  const content = {
-    animate: {
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
+function UpcomingLitters() {
   return (
-    <motion.div
-      variants={content}
-      animate="animate"
-      initial="initial"
-      className="upcoming--litters--overall--container"
-    >
-      <motion.div variants={element} className="upcoming--litters--container">
-        <div className="upcoming--litters--container--text">
-          <p className="upcoming--litters--title">
-            Very excited to announce the arrival of our new litter.
-          </p>
-          <p className="upcoming--litters--date">{upcomingLittersData.date}</p>
+    <div className="upcoming--litters--overall--container">
+      <div className="upcoming--litters--background">
+        <div className="upcoming--litters--poster--container">
+          <img
+            className="upcoming--litters--poster"
+            src="/images/upcomingLitters/poster-new-litter.jpg"
+            alt="Upcoming Litter Poster"
+          />
         </div>
-      </motion.div>
-      <motion.div variants={element} className="upcoming--litters--background">
-        <motion.div variants={element} className="upcoming--litters--grid">
-          <div className="upcoming--litters--second">
-            <div className="upcoming--litters--image--container">
-              <Image
-                className="upcoming--litters--image"
-                src={upcomingLittersData.damPhoto}
-                alt={`Dam: ${upcomingLittersData.dam}`}
-              />
-            </div>
-            <h1>Dam: {upcomingLittersData.dam}</h1>
-            {upcomingLittersData.damSecondaryText !== "" && (
-              <h1>{upcomingLittersData.damSecondaryText}</h1>
-            )}
-          </div>
-          <div className="upcoming--litters--first">
-            <div className="upcoming--litters--image--container">
-              <Image
-                className="upcoming--litters--image"
-                src={upcomingLittersData.sirePhoto}
-                alt={`Sire: ${upcomingLittersData.sire}`}
-              />
-            </div>
-            <h1>Sire: {upcomingLittersData.sire}</h1>
-            {upcomingLittersData.sireSecondaryText !== "" && (
-              <h1>{upcomingLittersData.sireSecondaryText}</h1>
-            )}
-          </div>
-        </motion.div>
-        <motion.div variants={element}>
+        <div>
           <Link href="/contact" className="upcoming--litters--contact">
             Contact us to reserve your puppy now!
           </Link>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }
 

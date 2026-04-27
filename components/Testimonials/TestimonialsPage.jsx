@@ -1,12 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TestimonialCard from "./items/TestimonialCard";
 import data from "@/data/data.json";
 import emailjs from "@emailjs/browser";
-import { motion, useAnimation } from "framer-motion";
 import "./Testimonials.css";
-import { useInView } from "react-intersection-observer";
 
 export default function TestimonialsPage() {
   const formDataEmptyObject = {
@@ -15,8 +13,6 @@ export default function TestimonialsPage() {
   };
   const [validationMessage, setValidationMessage] = useState(null);
   const [formData, setFormData] = useState(formDataEmptyObject);
-  const control = useAnimation();
-  const [ref, inView] = useInView();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -46,74 +42,50 @@ export default function TestimonialsPage() {
     return <TestimonialCard key={testCard.id} info={testCard} />;
   });
 
-  const content = {
-    animate: {
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
-
-  useEffect(() => {
-    if (inView) {
-      control.start("animate");
-    }
-  }, [control, inView]);
-
   return (
-    <motion.div
-      variants={content}
-      animate="animate"
-      initial="initial"
+    <div
+      
+      
+      
       className="testimonials--overall--container"
     >
-      <motion.h1
-        variants={element}
-        animate="animate"
-        initial="initial"
+      <h1
+        
+        
+        
         className="testimonials--title"
       >
         Testimonials
-      </motion.h1>
-      <motion.h2
-        variants={element}
-        animate="animate"
-        initial="initial"
+      </h1>
+      <h2
+        
+        
+        
         className="testimonials--subtitle"
       >
         See why clients trust us for their German Shepherd needs!
-      </motion.h2>
-      <motion.div
-        variants={element}
-        animate="animate"
-        initial="initial"
+      </h2>
+      <div
+        
+        
+        
         className="testimonials--container"
       >
-        <motion.div
-          variants={element}
-          initial="initial"
-          animate="animate"
+        <div
+          
+          
+          
           className="testimonials--cards"
         >
           {allTestimonials}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
-      <motion.div
-        ref={ref}
-        variants={element}
-        initial="initial"
-        animate={control}
+      <div
+        
+        
+        
+        
         className="testimonials--share--container"
       >
         <div className="testimonials--share--text--container">
@@ -170,7 +142,7 @@ export default function TestimonialsPage() {
             </div>
           </form>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

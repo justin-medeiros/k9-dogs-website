@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import "./HomeDogCard.css";
 import { ChevronRight } from "react-feather";
 
@@ -9,7 +8,7 @@ export default function HomeDogCard({ dogInfo }) {
     <div className="dogcard--overall--container">
       <div className="dogcard--card">
         <div className="dogcard--img--container">
-          <Image
+          <img
             className="dogcard--img"
             src={dogInfo.img}
             alt={dogInfo.name}

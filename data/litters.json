@@ -68,15 +68,5 @@
         "/images/litters/june-2019/6.jpg"
       ]
     }
-  ],
-  "upcomingLitters": {
-    "isNewLitter": false,
-    "date": "",
-    "dam": "",
-    "damPhoto": "",
-    "damSecondaryText": "",
-    "sire": "",
-    "sirePhoto": "",
-    "sireSecondaryText": ""
-  }
+  ]
 }

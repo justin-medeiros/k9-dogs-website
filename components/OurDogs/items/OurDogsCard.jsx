@@ -1,48 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
 import "./OurDogsCard.css";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { ChevronRight } from "react-feather";
-import Image from "next/image";
 
 export default function OurDogsCard({ dogInfo }) {
-  const control = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
-
-  useEffect(() => {
-    if (inView) {
-      control.start("animate");
-    }
-  }, [control, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      variants={element}
-      initial="initial"
-      animate={control}
+    <div
+      
+      
+      
       className="ourdogs--card--overall--container"
     >
       <div className="ourdogs--card--container">
         <div className="ourdogs--card--image--container">
-          <Image
+          <img
             className="ourdogs--card--image"
             src={dogInfo.img}
             alt={dogInfo.name}
@@ -83,6 +55,6 @@ export default function OurDogsCard({ dogInfo }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

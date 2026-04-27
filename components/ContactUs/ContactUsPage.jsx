@@ -3,7 +3,6 @@
 import { useState } from "react";
 import "./ContactUs.css";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 
 export default function ContactUsPage() {
   const formDataEmptyObject = {
@@ -39,24 +38,13 @@ export default function ContactUsPage() {
     }
   };
 
-  const content = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
 
   return (
     <div className="contactus--overall--container">
-      <motion.div
-        variants={content}
-        animate="animate"
-        initial="initial"
+      <div
+        
+        
+        
         className="contactus--container"
       >
         <div className="contactus--text--container">
@@ -129,7 +117,7 @@ export default function ContactUsPage() {
             </div>
           </form>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

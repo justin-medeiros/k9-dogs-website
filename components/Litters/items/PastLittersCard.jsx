@@ -1,72 +1,30 @@
 "use client";
 
-import { memo, useEffect, useRef } from "react";
-import Slider from "react-slick";
+import { memo, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./PastLittersCard.css";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 
 function PastLittersCard({ photos, date, parents }) {
-  const sliderRef = useRef(null);
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  };
+  const swiperRef = useRef(null);
 
-  const element = {
-    initial: { y: -20, opacity: 0 },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.7,
-        ease: [0.6, -0.05, 0.01, 0.99],
-      },
-    },
-  };
 
   const handleNextClick = () => {
-    sliderRef.current.slickNext();
+    swiperRef.current?.swiper?.slideNext();
   };
 
   const handlePrevClick = () => {
-    sliderRef.current.slickPrev();
+    swiperRef.current?.swiper?.slidePrev();
   };
 
-  const pastLittersPhotos = photos.map((photoUrl, key) => {
-    return (
-      <div className="litters--card--image--container" key={key}>
-        <Image
-          className="litters--card--image"
-          src={photoUrl}
-          loading="lazy"
-          alt={`German Shepherd puppy from ${parents} litter - photo ${
-            key + 1
-          }`}
-        />
-      </div>
-    );
-  });
-
-  useEffect(() => {
-    if (inView) {
-      control.start("animate");
-    }
-  }, [control, inView]);
-
   return (
-    <motion.div
-      ref={ref}
-      variants={element}
-      initial="initial"
-      animate={control}
+    <div
+      
+      
+      
       className="litters--card--container"
     >
       <div className="litters--card--slider--container">
@@ -79,9 +37,30 @@ function PastLittersCard({ photos, date, parents }) {
           </div>
         </div>
 
-        <Slider {...settings} ref={sliderRef}>
-          {pastLittersPhotos}
-        </Slider>
+        <Swiper
+          ref={swiperRef}
+          modules={[Navigation, Pagination]}
+          spaceBetween={0}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          loop={true}
+          speed={500}
+        >
+          {photos.map((photoUrl, key) => (
+            <SwiperSlide key={key}>
+              <div className="litters--card--image--container">
+                <img
+                  className="litters--card--image"
+                  src={photoUrl}
+                  loading="lazy"
+                  alt={`German Shepherd puppy from ${parents} litter - photo ${
+                    key + 1
+                  }`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="litters--card--dot--container"></div>
       <div className="litters--card--text--container">
@@ -90,7 +69,7 @@ function PastLittersCard({ photos, date, parents }) {
         <p className="litters--parents--title">Parents</p>
         <p className="litters--parents">{parents}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

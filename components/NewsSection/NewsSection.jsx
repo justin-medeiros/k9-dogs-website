@@ -9,7 +9,7 @@ const NewsSection = ({ date, text, images }) => {
       <div className="news-images">
         {images.map((image, index) => (
           <div key={index} className="news-image-container">
-            <Image
+            <img
               src={image.url}
               alt={image.description}
               className="news-image"

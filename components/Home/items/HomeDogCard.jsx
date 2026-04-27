@@ -9,7 +9,7 @@ export default function HomeDogCard({ dogInfo }) {
     <div className="dogcard--overall--container">
       <div className="dogcard--card">
         <div className="dogcard--img--container">
-          <Image
+          <img
             className="dogcard--img"
             src={dogInfo.img}
             alt={dogInfo.name}

@@ -3,7 +3,6 @@ import Script from "next/script";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
 import BannerWrapper from "@/components/Banner/BannerWrapper";
-import PageTransition from "@/components/PageTransition/PageTransition";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -91,7 +90,7 @@ export default function RootLayout({ children }) {
       <body>
         <NavBar />
         <BannerWrapper />
-        <PageTransition>{children}</PageTransition>
+        {children}
         <Footer />
       </body>
     </html>

@@ -52,13 +52,10 @@ export default function NavBar() {
     <nav className="navbar">
       <div className="navbar--container">
         <Link href="/">
-          <Image
+          <img
             className="navbar--logo"
             src="/images/cgs_long_logo.png"
             alt="Clarot German Shepherds Logo"
-            width={140}
-            height={40}
-            priority
           />
         </Link>
 

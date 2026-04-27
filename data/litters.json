@@ -70,13 +70,13 @@
     }
   ],
   "upcomingLitters": {
-    "isNewLitter": false,
-    "date": "",
-    "dam": "",
-    "damPhoto": "",
-    "damSecondaryText": "",
-    "sire": "",
-    "sirePhoto": "",
+    "isNewLitter": true,
+    "date": "April 2026",
+    "dam": "Quinoa Dei Precision",
+    "damPhoto": "/images/upcomingLitters/quiona-litter.jpeg",
+    "damSecondaryText": "V7 BSZS 2019, VA4 ITA V(BSZS)",
+    "sire": "DASHIELL VON BUSCHBUREN",
+    "sirePhoto": "/images/upcomingLitters/dash-litter.jpg",
     "sireSecondaryText": ""
   }
 }

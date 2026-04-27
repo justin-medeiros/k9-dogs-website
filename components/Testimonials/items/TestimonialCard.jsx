@@ -1,7 +1,6 @@
 "use client";
 
 import "./TestimonialCard.css";
-import Image from "next/image";
 
 export default function TestimonialCard(props) {
 

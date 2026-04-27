@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import "./HomeDogCard.css";
 import { ChevronRight } from "react-feather";
 

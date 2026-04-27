@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import "./Gallery.css";
 import { SpinnerCircular } from "spinners-react";
-import Image from "next/image";
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;
 const FOLDER_ID = process.env.NEXT_PUBLIC_GOOGLE_DRIVE_FOLDER_ID;

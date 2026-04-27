@@ -2,7 +2,6 @@
 
 import "./OurDogsCard.css";
 import { ChevronRight } from "react-feather";
-import Image from "next/image";
 
 export default function OurDogsCard({ dogInfo }) {
 

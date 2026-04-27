@@ -4,7 +4,6 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./NavBar.css";
-import Image from "next/image";
 
 export default function NavBar() {
   const [click, setClick] = useState(false);

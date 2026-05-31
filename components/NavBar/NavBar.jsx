@@ -36,16 +36,22 @@ export default function NavBar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [handleClickOutside]);
 
-  const navLinks = [
+  const mainLinks = [
     { href: "/", label: "Home" },
     { href: "/ourdogs", label: "Our Dogs" },
     { href: "/litters", label: "Litters" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/news", label: "News Flash" },
     { href: "/testimonials", label: "Testimonials" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact Us" },
   ];
+
+  const moreLinks = [
+    { href: "/news", label: "News Flash" },
+    { href: "/puppy-purchase-agreement", label: "Puppy Purchase Agreement" },
+  ];
+
+  const moreActive = moreLinks.some((link) => pathname === link.href);
 
   return (
     <nav className="navbar">
@@ -62,13 +68,44 @@ export default function NavBar() {
           ref={menuRef}
           className={click ? "navbar--items mobile" : "navbar--items"}
         >
-          {navLinks.map((link) => (
+          {mainLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`navbar--links${
-                  pathname === link.href ? " active" : ""
-                }`}
+                className={`navbar--links${pathname === link.href ? " active" : ""}`}
+                onClick={closeMobileMenu}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+
+          {/* Desktop: More dropdown (hidden on mobile) */}
+          <li className="more--item">
+            <span className={`navbar--links more--trigger${moreActive ? " active" : ""}`}>
+              More <i className="fa-solid fa-chevron-down more--chevron" />
+            </span>
+            <ul className="more--dropdown">
+              {moreLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`more--dropdown--link${pathname === link.href ? " active" : ""}`}
+                    onClick={closeMobileMenu}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+
+          {/* Mobile only: more links shown flat (hidden on desktop) */}
+          {moreLinks.map((link) => (
+            <li key={`m-${link.href}`} className="more--mobile--item">
+              <Link
+                href={link.href}
+                className={`navbar--links${pathname === link.href ? " active" : ""}`}
                 onClick={closeMobileMenu}
               >
                 {link.label}

@@ -1,6 +1,6 @@
 import "./NewsSection.css";
 
-const NewsSection = ({ date, text, images }) => {
+const NewsSection = ({ date, text, images, hideCaptions, imageRatio }) => {
   return (
     <div className="news-section">
       <div className="news-date">{date}</div>
@@ -12,8 +12,11 @@ const NewsSection = ({ date, text, images }) => {
               src={image.url}
               alt={image.description}
               className="news-image"
+              style={imageRatio ? { aspectRatio: imageRatio } : undefined}
             />
-            <p className="image-description">{image.description}</p>
+            {!hideCaptions && (
+              <p className="image-description">{image.description}</p>
+            )}
           </div>
         ))}
       </div>

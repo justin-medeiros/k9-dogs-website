@@ -30,6 +30,8 @@ export default function NewsPage() {
               date={section.date}
               text={section.text}
               images={section.images}
+              hideCaptions={section.hideCaptions}
+              imageRatio={section.imageRatio}
             />
           ))}
         </div>
